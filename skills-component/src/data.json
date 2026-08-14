@@ -1,0 +1,101 @@
+{
+  "skills": [
+    {
+      "id": "01",
+      "title": "MECHANICAL DESIGN",
+      "skills": ["Parametric Modeling of Aft Retainers", "Kinematic Analysis of 3 DOF Robotic Arms", "GD&T Application for Aerospace Tolerances"],
+      "tools": ["FUSION 360", "SOLIDWORKS", "CATIA"],
+      "activeApplication": "95%",
+      "modelPath": "/assets/drone.glb"
+    },
+    {
+      "id": "02",
+      "title": "AEROSPACE ENGINEERING",
+      "skills": ["Solid Motor Design", "Ballistic Telemetry", "Propellant Simulations"],
+      "tools": ["OPENMOTOR", "NASA CEA", "CAD TOOLS"],
+      "activeApplication": "80%"
+    },
+    {
+      "id": "03",
+      "title": "NUMERICAL SIMULATION",
+      "skills": ["Finite Element Analysis", "Computational Fluid Dynamics", "System Dynamics Modeling"],
+      "tools": ["ANSYS", "MATLAB", "SIMULINK"],
+      "activeApplication": "85%"
+    },
+    {
+      "id": "04",
+      "title": "SOFTWARE DEVELOPMENT",
+      "skills": ["Embedded Programming", "Computer Vision Pipelines", "Object Oriented Design"],
+      "tools": ["PYTHON", "C++", "JAVASCRIPT"],
+      "activeApplication": "80%"
+    },
+    {
+      "id": "05",
+      "title": "RESEARCH TRACEABILITY",
+      "skills": ["Simulation Validation", "Flight Data Correlation", "Academic Publishing"],
+      "tools": ["NPTEL", "IISER", "TDRSR"],
+      "activeApplication": "100%"
+    },
+    {
+      "id": "06",
+      "title": "STRATEGY & COMPLIANCE",
+      "skills": ["Patent Landscape Analysis (Aft Retainer)", "Systems Engineering Architecture (Jericho V1)", "ISO Standards Auditing for Payload Integration"],
+      "tools": ["PATENT SEARCH", "LATEX", "MS OFFICE"],
+      "activeApplication": "90%",
+      "visualization": {
+        "title": "Aft Retainer Patent Roadmap",
+        "milestones": [
+          "1. Prior Art Search (Completed)",
+          "2. Provisional Filing (In Progress)",
+          "3. Non-Provisional Draft (Pending)"
+        ]
+      }
+    }
+  ],
+  "hardwareProjects": [
+    {
+      "id": "HW-01",
+      "designation": "PROJECT_JERICHO // AFT_RETAINER",
+      "status": "VALIDATED",
+      "modelPath": "./assets/models/jericho_aft_retainer.glb",
+      "specs": {
+        "Material": "Al 7075-T6",
+        "Load_Vector": "45G Peak",
+        "Function": "High-impulse motor retention"
+      },
+      "description": "Optimized retention ring design for solid propulsion systems. Analyzed for structural integrity under high-acceleration flight profiles."
+    },
+    {
+      "id": "HW-02",
+      "designation": "PRARAMBH_1 // NOZZLE_ASSEMBLY",
+      "status": "SIMULATION_PHASE",
+      "modelPath": "./assets/models/prarambh_nozzle.glb",
+      "specs": {
+        "Type": "De Laval",
+        "Expansion_Ratio": "4.2",
+        "Thermal": "Ablative Coated"
+      },
+      "description": "Internal ballistics and thermodynamic design for Prarambh 1 motor. Mach contour optimized for sea-level expansion."
+    }
+  ],
+  "timelineMilestones": [
+    {
+      "id": "tm1",
+      "phase": "Academic Core",
+      "description": "IISER Pune Research Internship - Embedded Systems & Sensor Fusion",
+      "status": "Verified"
+    },
+    {
+      "id": "tm2",
+      "phase": "Aerospace Ops",
+      "description": "TDRSR Project Jericho - Lead Avionics Architecture & Flight Telemetry Integration",
+      "status": "Completed"
+    },
+    {
+      "id": "tm3",
+      "phase": "Certification",
+      "description": "NPTEL Advanced Engineering - Control Systems & Dynamics",
+      "status": "In Progress"
+    }
+  ]
+}
