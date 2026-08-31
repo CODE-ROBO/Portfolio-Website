@@ -2924,40 +2924,49 @@ section.overflow-y-auto {
 
 
 /* ========================================= */
-/* FINAL MOBILE OVERRIDE PROTOCOL            */
+/* AGGRESSIVE MOBILE OVERRIDE PROTOCOL       */
 /* ========================================= */
 @media screen and (max-width: 768px) {
-  /* Prevent horizontal screen bleeding */
-  html, body, .viewport-container {
+  /* 1. Force the entire screen to not exceed phone width */
+  html, body, .viewport-container, .spa-section {
     overflow-x: hidden !important;
     width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
   }
-
-  /* Keep navigation links from overflowing */
+  
+  /* 2. Fix the Navigation Bar bleeding */
+  .global-header {
+    height: auto !important;
+    padding-bottom: 10px !important;
+  }
   .nav-container {
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 10px !important;
+    gap: 10px !important;
   }
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
   }
-
-  /* Force Side-by-Side testing grids to stack vertically */
-  .diagnostics-split {
-    grid-template-columns: 1fr !important;
+  .nav-link {
+    font-size: 10px !important;
   }
-
-  /* Shrink contact form padding so it fits on a phone */
-  .minimal-contact-container {
-    padding: 20px !important;
-    max-width: 92% !important;
+  
+  /* 3. Fix the Terminal Box & Content Panels bleeding */
+  .home-viewport, .home-viewport-new, .hud-info-panel, .hud-terminal-console {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
-
-  /* Shrink giant popup windows */
-  .modal-frame, .cad-lightbox-panel {
-    width: 95% !important;
+  
+  .home-name-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .home-section, .home-viewport-new {
+    padding: 20px 15px !important;
   }
 }
