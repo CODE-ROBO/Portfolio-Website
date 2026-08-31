@@ -2923,4 +2923,41 @@ section.overflow-y-auto {
 }
 
 
+/* ========================================= */
+/* FINAL MOBILE OVERRIDE PROTOCOL            */
+/* ========================================= */
+@media screen and (max-width: 768px) {
+  /* Prevent horizontal screen bleeding */
+  html, body, .viewport-container {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
 
+  /* Keep navigation links from overflowing */
+  .nav-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Force Side-by-Side testing grids to stack vertically */
+  .diagnostics-split {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Shrink contact form padding so it fits on a phone */
+  .minimal-contact-container {
+    padding: 20px !important;
+    max-width: 92% !important;
+  }
+
+  /* Shrink giant popup windows */
+  .modal-frame, .cad-lightbox-panel {
+    width: 95% !important;
+  }
+}
