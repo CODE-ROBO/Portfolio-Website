@@ -2923,50 +2923,302 @@ section.overflow-y-auto {
 }
 
 
-/* ========================================= */
-/* AGGRESSIVE MOBILE OVERRIDE PROTOCOL       */
-/* ========================================= */
+/* ==========================================================================
+   COMPREHENSIVE MOBILE & TABLET RESPONSIVE ADAPTATION (iOS, ANDROID, TABLET)
+   ========================================================================== */
+
+/* --- TABLETS & MEDIUM SCREENS (max-width: 1024px) --- */
+@media screen and (max-width: 1024px) {
+  .project-split-card {
+    grid-template-columns: 1fr;
+  }
+  .project-schematic {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    min-height: 220px;
+  }
+  .projects-viewport, .skills-viewport, .research-viewport, .contact-viewport {
+    padding: 15px;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- SMARTPHONES & MOBILE SCREENS (max-width: 768px) --- */
 @media screen and (max-width: 768px) {
-  /* 1. Force the entire screen to not exceed phone width */
-  html, body, .viewport-container, .spa-section {
+  /* 1. Viewport & Body Safety */
+  html, body {
     overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100vw !important;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .spa-section {
+    padding-top: 130px !important;
+    padding-bottom: 40px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    width: 100% !important;
     box-sizing: border-box !important;
   }
-  
-  /* 2. Fix the Navigation Bar bleeding */
+
+  /* 2. Sleek Mobile Navigation Bar */
   .global-header {
     height: auto !important;
-    padding-bottom: 10px !important;
+    padding: 8px 10px !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
   }
+
   .nav-container {
     flex-direction: column !important;
-    height: auto !important;
-    padding: 10px !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    align-items: stretch !important;
+  }
+
+  .header-left-brand {
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  .header-right-hud {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 5px !important;
+    padding: 2px 0 4px 0 !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .nav-link {
+    white-space: nowrap !important;
+    padding: 7px 12px !important;
+    font-size: 0.65rem !important;
+    flex-shrink: 0 !important;
+    background: #F8F9FA !important;
+    border: 1px solid #E2E2E8 !important;
+    border-radius: 4px !important;
+    font-weight: 700 !important;
+  }
+
+  .nav-link.active {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+    border-color: #111111 !important;
+  }
+
+  .stark-header-telemetry {
+    display: none !important;
+  }
+
+  /* 3. Hero Section (#home) */
+  .home-viewport, .home-viewport-new {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 15px 10px !important;
+    gap: 20px !important;
+  }
+
+  .home-avatar-container {
+    max-width: 180px !important;
+    max-height: 180px !important;
+    margin: 0 auto !important;
+  }
+
+  .home-name-title {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .home-subtitle-role {
+    font-size: 0.72rem !important;
+    text-align: center !important;
+  }
+
+  .home-abstract-bio {
+    font-size: 0.8rem !important;
+    text-align: left !important;
+    padding: 12px !important;
+  }
+
+  .home-cta-row {
+    flex-direction: column !important;
+    width: 100% !important;
     gap: 10px !important;
   }
-  .nav-links {
-    flex-wrap: wrap !important;
+
+  .home-cta-btn {
+    width: 100% !important;
     justify-content: center !important;
+    padding: 12px 16px !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* 4. Skills Tab (#skills) */
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .skill-card-minimal {
+    padding: 16px 14px !important;
+  }
+
+  /* 5. Projects Tab (#projects) */
+  .projects-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .project-split-card {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .project-schematic {
+    border-right: none !important;
+    border-bottom: 1px solid #EBEBEB !important;
+    min-height: 200px !important;
+    padding: 10px !important;
+  }
+
+  .project-specs {
+    padding: 16px 14px !important;
+    gap: 10px !important;
+  }
+
+  .spec-title {
+    font-size: 1.05rem !important;
+  }
+
+  .project-tech-stack {
+    gap: 4px !important;
+  }
+
+  .tech-chip {
+    font-size: 0.58rem !important;
+    padding: 2px 6px !important;
+  }
+
+  .project-action-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
     gap: 8px !important;
   }
-  .nav-link {
-    font-size: 10px !important;
-  }
-  
-  /* 3. Fix the Terminal Box & Content Panels bleeding */
-  .home-viewport, .home-viewport-new, .hud-info-panel, .hud-terminal-console {
+
+  .proj-action-btn {
     width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+    justify-content: center !important;
+    padding: 10px 14px !important;
+    font-size: 0.72rem !important;
   }
-  
+
+  .project-status-badge {
+    margin-left: 0 !important;
+    justify-content: center !important;
+    margin-top: 4px !important;
+  }
+
+  /* 6. Research Tab (#research) */
+  .console-filter-bar {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    justify-content: center !important;
+  }
+
+  .filter-btn {
+    font-size: 0.62rem !important;
+    padding: 6px 10px !important;
+  }
+
+  .log-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 16px 14px !important;
+  }
+
+  .open-data-btn {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 10px !important;
+    font-size: 0.7rem !important;
+  }
+
+  /* 7. Contact Tab (#contact) */
+  .contact-form-card {
+    padding: 18px 14px !important;
+    width: 100% !important;
+  }
+
+  .contact-links-row {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .contact-external-link {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 10px !important;
+  }
+
+  .uplink-btn {
+    width: 100% !important;
+    padding: 12px !important;
+  }
+
+  /* 8. Lightbox & Terminal Modals */
+  .cad-lightbox-panel {
+    width: 95vw !important;
+    max-height: 90vh !important;
+  }
+
+  .cad-lightbox-body img {
+    max-height: 60vh !important;
+  }
+
+  .terminal-modal .modal-frame {
+    width: 95vw !important;
+    max-height: 88vh !important;
+    margin: 10px !important;
+    padding: 15px 12px !important;
+  }
+}
+
+/* --- SMALL PHONES (max-width: 480px) --- */
+@media screen and (max-width: 480px) {
   .home-name-title {
-    font-size: 2.2rem !important;
+    font-size: 1.5rem !important;
   }
-  
-  .home-section, .home-viewport-new {
-    padding: 20px 15px !important;
+  .spec-title {
+    font-size: 0.95rem !important;
+  }
+  .nav-link {
+    font-size: 0.6rem !important;
+    padding: 6px 10px !important;
   }
 }
