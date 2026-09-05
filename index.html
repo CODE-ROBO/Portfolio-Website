@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://unpkg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10.0">
+  <link rel="stylesheet" href="styles.css?v=11.0">
 </head>
 <body>
 
@@ -38,24 +38,29 @@
     </div>
   </header>
 
-  <!-- Viewport Container (SPA Content) -->
-  <main class="viewport-container">
+  <!-- Viewport Container (Cinematic Scroll-Snap Architecture) -->
+  <main class="cinematic-scroll-container" id="main-scroll-container">
     
-    <!-- PAGE 1: HOME PAGE -->
-    <section id="home" class="spa-section active home-section">
-      <div class="home-viewport-new">
-        <!-- Right Column: Structured Info Panel -->
+    <!-- SECTION 1: HERO / HOME -->
+    <section id="home" class="cinematic-section hero-cinematic-section">
+      <div class="cinematic-section-inner">
         <div class="home-info-panel-new">
+          <div class="hud-status-chip font-mono">[ SYSTEM_STATUS // NOMINAL ]</div>
           <h1 class="home-name-title">Harshal Gadekar</h1>
           <div class="home-intro-subtitle font-mono">AUTOMATION & ROBOTICS ENGINEER</div>
           <p class="home-bio-text">
-            I am a mechatronics and robotics engineer specializing in hybrid control systems, deterministic real-time architectures, and high-fidelity aerospace propulsion simulations. With a strong foundation in bridging physical hardware with numerical analysis, I design and construct solid rocket motor ballistics platforms and deploy vision-guided autonomous navigation pipelines. My expertise extends to programmable logic controllers (PLCs), multi-modal sensor fusion network design, and non-linear finite element structural stress modeling. I am highly focused on combining academic research rigor with compliance landscapes, patent search strategies, and operational agile governance to build next-generation autonomous mechatronic systems.
+            I am a mechatronics and robotics engineer specializing in hybrid control systems, deterministic real-time architectures, and high-fidelity aerospace propulsion simulations. With a strong foundation in bridging physical hardware with numerical analysis, I design and construct solid rocket motor ballistics platforms and deploy vision-guided autonomous navigation pipelines. My expertise extends to programmable logic controllers (PLCs), multi-modal sensor fusion network design, and non-linear finite element structural stress modeling.
           </p>
           
+          <div class="hero-cta-buttons font-mono">
+            <a href="#proj-01" class="hero-primary-btn" onclick="scrollToSection('proj-01'); return false;">[ EXPLORE PROJECTS ↓ ]</a>
+            <a href="#research" class="hero-secondary-btn" onclick="scrollToSection('research'); return false;">[ RESEARCH PAPERS ]</a>
+          </div>
+
           <!-- Interactive Terminal Prompt -->
           <div class="hud-terminal-console">
             <div class="terminal-bar">
-              <div class="terminal-title">A.E.G.I.S.</div>
+              <div class="terminal-title">A.E.G.I.S. INTERFACE</div>
             </div>
             <div class="terminal-history" id="terminal-history">
               <div class="term-line system">> CORE INITIALIZED. CONNECTION ONLINE.</div>
@@ -70,378 +75,302 @@
       </div>
     </section>
 
-    <!-- SECTION 3: SKILLS -->
-    <section id="skills" class="spa-section">
-        
-        <div class="skills-grid-container" id="skills-grid-container">
-            <!-- Rendered dynamically by renderSkillsGrid() in app.js -->
+    <!-- SECTION 2: SKILLS -->
+    <section id="skills" class="cinematic-section skills-cinematic-section">
+      <div class="cinematic-section-inner">
+        <div class="section-cinematic-header">
+          <span class="spec-index font-mono">ARSENAL // SPECS_02</span>
+          <h2 class="cinematic-section-title">ENGINEERING & SIMULATION CAPABILITIES</h2>
         </div>
-    </section>
-
-    <!-- SECTION 4: PROJECTS -->
-    <section id="projects" class="spa-section">
-      <div class="projects-viewport">
-        
-        <div class="projects-container">
-          
-          <!-- Project Split-Card 1: Prarambh 1 (Solid Rocket Motor) -->
-          <div class="project-split-card" id="proj-01">
-            <!-- Left side: Blueprints schematic illustration -->
-            <div class="project-schematic">
-              <div class="hud-corner top-left"></div>
-              <div class="hud-corner top-right"></div>
-              <div class="hud-corner bottom-left"></div>
-              <div class="hud-corner bottom-right"></div>
-              <div class="project-image-container">
-                <img src="assets/projects/prarambh_1.jpg" alt="Prarambh 1 Solid Rocket Motor CAD Schematic" class="project-cad-img" loading="lazy" onclick="openImageLightbox('assets/projects/prarambh_1.jpg', 'PRARAMBH 1 // SOLID ROCKET MOTOR CAD SCHEMATIC')">
-                <div class="cad-img-overlay">
-                  <span class="cad-tag font-mono">[ 2D CAD // SCHEMATIC ]</span>
-                  <button class="cad-zoom-btn font-mono" onclick="openImageLightbox('assets/projects/prarambh_1.jpg', 'PRARAMBH 1 // SOLID ROCKET MOTOR CAD SCHEMATIC')">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
-                    <span>EXPAND BLUEPRINT</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Right side: Industrial spec sheet -->
-            <div class="project-specs">
-              <div class="spec-header">
-                <div class="spec-index-row">
-                  <span class="spec-index">PROJ_RECORD_01</span>
-                  <span class="project-cat-badge">AEROSPACE PROPULSION</span>
-                </div>
-                <h3 class="spec-title">PRARAMBH 1 SOLID ROCKET MOTOR</h3>
-              </div>
-              <p class="project-abstract">
-                Optimized a solid rocket motor propellant grain using MATLAB simulations and finite element stress verification. Designed an 8-point star grain geometry to control chamber regression rates and prevent pressure spikes. High-pressure static test firings validated a peak thrust of 12.4 kN, matching mathematical models with under 2.8% deviation.
-              </p>
-              
-              <!-- Tech Stack Badges -->
-              <div class="project-tech-stack">
-                <span class="tech-chip">Fusion 360</span>
-                <span class="tech-chip">ANSYS FEA</span>
-                <span class="tech-chip">MATLAB</span>
-                <span class="tech-chip">OpenMotor</span>
-                <span class="tech-chip">NASA CEA</span>
-              </div>
-
-              <!-- Specification Matrix -->
-              <div class="spec-body">
-                <div class="spec-row"><span class="spec-label">GRAIN_GEOMETRY</span><span class="spec-divider"></span><span class="spec-val accent-gold">8-POINT_STAR_CONFIG</span></div>
-                <div class="spec-row"><span class="spec-label">COMBUSTION_EFF</span><span class="spec-divider"></span><span class="spec-val">η > 98.4% (NEUTRAL_BURN)</span></div>
-                <div class="spec-row"><span class="spec-label">CASING_STRESS</span><span class="spec-divider"></span><span class="spec-val">320 MPa (STRUCTURAL_MARGIN)</span></div>
-                <div class="spec-row"><span class="spec-label">PEAK_THRUST</span><span class="spec-divider"></span><span class="spec-val accent-crimson">12.4 kN (VALIDATED)</span></div>
-                <div class="spec-row"><span class="spec-label">SPECIFIC_IMPULSE</span><span class="spec-divider"></span><span class="spec-val">242.6 SECONDS</span></div>
-                <div class="spec-row"><span class="spec-label">SOLVER_SCHEME</span><span class="spec-divider"></span><span class="spec-val">RUNGE-KUTTA_4 // FEA</span></div>
-              </div>
-
-              <!-- Action Links: GitHub Repo & Google Drive -->
-              <div class="project-action-row">
-                <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono" title="Inspect GitHub Repository">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  <span>GITHUB REPO</span>
-                </a>
-                <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono" title="Open Google Drive CAD Archive">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
-                  <span>GOOGLE DRIVE // CAD</span>
-                </a>
-                <div class="project-status-badge">
-                  <span class="status-pulse-dot"></span>
-                  [STATIC_TEST // PASS]
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Split-Card 2: CNC Foam Cutting Machine -->
-          <div class="project-split-card" id="proj-02">
-            <!-- Left side: Blueprints schematic illustration -->
-            <div class="project-schematic">
-              <div class="hud-corner top-left"></div>
-              <div class="hud-corner top-right"></div>
-              <div class="hud-corner bottom-left"></div>
-              <div class="hud-corner bottom-right"></div>
-              <div class="project-image-container">
-                <img src="assets/projects/cnc_foam_cutter.jpg" alt="4-Axis CNC Foam Cutting Machine CAD Schematic" class="project-cad-img" loading="lazy" onclick="openImageLightbox('assets/projects/cnc_foam_cutter.jpg', '4-AXIS CNC FOAM CUTTER // CAD BLUEPRINT')">
-                <div class="cad-img-overlay">
-                  <span class="cad-tag font-mono">[ 2D CAD // SCHEMATIC ]</span>
-                  <button class="cad-zoom-btn font-mono" onclick="openImageLightbox('assets/projects/cnc_foam_cutter.jpg', '4-AXIS CNC FOAM CUTTER // CAD BLUEPRINT')">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
-                    <span>EXPAND BLUEPRINT</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Right side: Industrial spec sheet -->
-            <div class="project-specs">
-              <div class="spec-header">
-                <div class="spec-index-row">
-                  <span class="spec-index">PROJ_RECORD_02</span>
-                  <span class="project-cat-badge">AUTOMATION & MECHATRONICS</span>
-                </div>
-                <h3 class="spec-title">4-AXIS CNC FOAM CUTTING MACHINE</h3>
-              </div>
-              <p class="project-abstract">
-                Designed and constructed a 4-axis CNC hot-wire foam cutter with dual synchronized gantry towers and a high-tension nichrome wire. The microcontroller-based GRBL firmware coordinates dynamic feed rates with PWM thermal calibration to fabricate high-precision aerospace airfoils and complex tapered sweep geometries.
-              </p>
-              
-              <!-- Tech Stack Badges -->
-              <div class="project-tech-stack">
-                <span class="tech-chip">GRBL CNC</span>
-                <span class="tech-chip">Arduino C++</span>
-                <span class="tech-chip">Fusion 360 CAM</span>
-                <span class="tech-chip">Lead Screw Motion</span>
-                <span class="tech-chip">PWM Thermals</span>
-              </div>
-
-              <!-- Specification Matrix -->
-              <div class="spec-body">
-                <div class="spec-row"><span class="spec-label">CUTTING_ELEMENT</span><span class="spec-divider"></span><span class="spec-val">0.4mm TAUT NICHROME WIRE</span></div>
-                <div class="spec-row"><span class="spec-label">DRIVE_MECHANISM</span><span class="spec-divider"></span><span class="spec-val accent-gold">LEAD SCREW / MGN12H RAILS</span></div>
-                <div class="spec-row"><span class="spec-label">TRAVEL_LIMITS</span><span class="spec-divider"></span><span class="spec-val">1500 x 1000 x 500 mm</span></div>
-                <div class="spec-row"><span class="spec-label">STEPPER_DRIVE</span><span class="spec-divider"></span><span class="spec-val">NEMA 17 & NEMA 23 MOTORS</span></div>
-                <div class="spec-row"><span class="spec-label">POSITION_ACCURACY</span><span class="spec-divider"></span><span class="spec-val accent-crimson">±0.1 mm VALIDATION</span></div>
-                <div class="spec-row"><span class="spec-label">FIRMWARE_GRBL</span><span class="spec-divider"></span><span class="spec-val">v1.1 DUAL-AXIS SYNCHRONIZED</span></div>
-              </div>
-
-              <!-- Action Links: GitHub Repo & Google Drive -->
-              <div class="project-action-row">
-                <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono" title="Inspect GitHub Repository">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  <span>GITHUB REPO</span>
-                </a>
-                <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono" title="Open Google Drive CAD Archive">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
-                  <span>GOOGLE DRIVE // CAD</span>
-                </a>
-                <div class="project-status-badge">
-                  <span class="status-pulse-dot"></span>
-                  [AXIS_CALIBRATED // PASS]
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Split-Card 3: BMW V6 Engine (Ansys/Matlab) -->
-          <div class="project-split-card" id="proj-03">
-            <!-- Left side: Blueprints schematic illustration -->
-            <div class="project-schematic">
-              <div class="hud-corner top-left"></div>
-              <div class="hud-corner top-right"></div>
-              <div class="hud-corner bottom-left"></div>
-              <div class="hud-corner bottom-right"></div>
-              <div class="project-image-container">
-                <img src="assets/projects/bmw_v6_engine.jpg" alt="BMW V6 Engine Block FEA Thermal Analysis" class="project-cad-img" loading="lazy" onclick="openImageLightbox('assets/projects/bmw_v6_engine.jpg', 'BMW V6 ENGINE BLOCK // FEA THERMAL GRADIENT BLUEPRINT')">
-                <div class="cad-img-overlay">
-                  <span class="cad-tag font-mono">[ 2D CAD // SCHEMATIC ]</span>
-                  <button class="cad-zoom-btn font-mono" onclick="openImageLightbox('assets/projects/bmw_v6_engine.jpg', 'BMW V6 ENGINE BLOCK // FEA THERMAL GRADIENT BLUEPRINT')">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
-                    <span>EXPAND BLUEPRINT</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Right side: Industrial spec sheet -->
-            <div class="project-specs">
-              <div class="spec-header">
-                <div class="spec-index-row">
-                  <span class="spec-index">PROJ_RECORD_03</span>
-                  <span class="project-cat-badge">THERMAL & FLUID DYNAMICS</span>
-                </div>
-                <h3 class="spec-title">BMW V6 ENGINE BLOCK</h3>
-              </div>
-              <p class="project-abstract">
-                Conducted finite element thermal gradient analysis and fluid dynamics simulations of a V6 engine block to model combustion efficiency under dynamic thermal cycles. Resolved transient heat flux concentrations at cylinder boundaries during rapid velocity variations. Validated simulation accuracy against physical dyno metrics, yielding less than 4.1% deviation under peak power.
-              </p>
-              
-              <!-- Tech Stack Badges -->
-              <div class="project-tech-stack">
-                <span class="tech-chip">ANSYS Fluent</span>
-                <span class="tech-chip">Transient Thermal</span>
-                <span class="tech-chip">SolidWorks CAD</span>
-                <span class="tech-chip">MATLAB</span>
-                <span class="tech-chip">CFD Meshing</span>
-              </div>
-
-              <!-- Specification Matrix -->
-              <div class="spec-body">
-                <div class="spec-row"><span class="spec-label">MESH_ELEMENTS</span><span class="spec-divider"></span><span class="spec-val">4.8M (HEXAHEDRAL_NODES)</span></div>
-                <div class="spec-row"><span class="spec-label">TURBULENCE_MODEL</span><span class="spec-divider"></span><span class="spec-val accent-gold">SST k-ω (SHEAR_STRESS_TRANS)</span></div>
-                <div class="spec-row"><span class="spec-label">SOLVER_TYPE</span><span class="spec-divider"></span><span class="spec-val">ANSYS FLUENT TRANSIENT THERMAL</span></div>
-                <div class="spec-row"><span class="spec-label">DYNO_DEVIATION</span><span class="spec-divider"></span><span class="spec-val accent-crimson">4.1% (VALIDATED_ACCURACY)</span></div>
-                <div class="spec-row"><span class="spec-label">COMBUSTION_EFF</span><span class="spec-divider"></span><span class="spec-val">38.6% THERMAL-TO-MECHANICAL</span></div>
-                <div class="spec-row"><span class="spec-label">TRANSIENT_HEAT_FLUX</span><span class="spec-divider"></span><span class="spec-val">1.85 MW/m² (PEAK_CYL)</span></div>
-              </div>
-
-              <!-- Action Links: GitHub Repo & Google Drive -->
-              <div class="project-action-row">
-                <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono" title="Inspect GitHub Repository">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  <span>GITHUB REPO</span>
-                </a>
-                <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono" title="Open Google Drive CAD Archive">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
-                  <span>GOOGLE DRIVE // CAD</span>
-                </a>
-                <div class="project-status-badge">
-                  <span class="status-pulse-dot"></span>
-                  [SIMULATION_STABLE // PASS]
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Split-Card 4: Line Following Robot (Machine Vision) -->
-          <div class="project-split-card" id="proj-04">
-            <!-- Left side: Blueprints schematic illustration -->
-            <div class="project-schematic">
-              <div class="hud-corner top-left"></div>
-              <div class="hud-corner top-right"></div>
-              <div class="hud-corner bottom-left"></div>
-              <div class="hud-corner bottom-right"></div>
-              <div class="project-image-container">
-                <img src="assets/projects/autonomous_agv.jpg" alt="Autonomous Mobile Robot AGV Blueprint" class="project-cad-img" loading="lazy" onclick="openImageLightbox('assets/projects/autonomous_agv.jpg', '4WD AUTONOMOUS MOBILE ROBOT (AGV) // CAD SCHEMATIC')">
-                <div class="cad-img-overlay">
-                  <span class="cad-tag font-mono">[ 2D CAD // SCHEMATIC ]</span>
-                  <button class="cad-zoom-btn font-mono" onclick="openImageLightbox('assets/projects/autonomous_agv.jpg', '4WD AUTONOMOUS MOBILE ROBOT (AGV) // CAD SCHEMATIC')">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
-                    <span>EXPAND BLUEPRINT</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Right side: Industrial spec sheet -->
-            <div class="project-specs">
-              <div class="spec-header">
-                <div class="spec-index-row">
-                  <span class="spec-index">PROJ_RECORD_04</span>
-                  <span class="project-cat-badge">ROBOTICS & EMBEDDED AI</span>
-                </div>
-                <h3 class="spec-title">4WD AUTONOMOUS MOBILE ROBOT (AGV)</h3>
-              </div>
-              <p class="project-abstract">
-                Engineered an autonomous mobile robot vehicle driven by an edge vision camera sensor pipeline running real-time Hough Transform line tracking and obstacle avoidance. Minimized image processing latency to stabilize PID navigation control at high speeds, demonstrating dynamic path-planning accuracy under 12mm across 200 Hz control loops.
-              </p>
-              
-              <!-- Tech Stack Badges -->
-              <div class="project-tech-stack">
-                <span class="tech-chip">Python</span>
-                <span class="tech-chip">OpenCV</span>
-                <span class="tech-chip">C++ RTOS</span>
-                <span class="tech-chip">Hough Transform</span>
-                <span class="tech-chip">PID Control</span>
-                <span class="tech-chip">ARM Cortex-M7</span>
-              </div>
-
-              <!-- Specification Matrix -->
-              <div class="spec-body">
-                <div class="spec-row"><span class="spec-label">IMAGE_LATENCY</span><span class="spec-divider"></span><span class="spec-val">4.8 MILLISECONDS</span></div>
-                <div class="spec-row"><span class="spec-label">PID_FREQUENCY</span><span class="spec-divider"></span><span class="spec-val accent-gold">200 Hz (CONTROL_LOOP)</span></div>
-                <div class="spec-row"><span class="spec-label">NAV_ACCURACY</span><span class="spec-divider"></span><span class="spec-val">±12 mm MAX_DEVIATION</span></div>
-                <div class="spec-row"><span class="spec-label">PROCESSOR_CORE</span><span class="spec-divider"></span><span class="spec-val accent-crimson">ARM CORTEX-M7 (400 MHz)</span></div>
-                <div class="spec-row"><span class="spec-label">CHASSIS_ALLOY</span><span class="spec-divider"></span><span class="spec-val">ALUMINUM 6061-T6 (12mm)</span></div>
-                <div class="spec-row"><span class="spec-label">DRIVE_MOTORS</span><span class="spec-divider"></span><span class="spec-val">4x BLDC (200W EACH)</span></div>
-              </div>
-
-              <!-- Action Links: GitHub Repo & Google Drive -->
-              <div class="project-action-row">
-                <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono" title="Inspect GitHub Repository">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  <span>GITHUB REPO</span>
-                </a>
-                <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono" title="Open Google Drive CAD Archive">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
-                  <span>GOOGLE DRIVE // CAD</span>
-                </a>
-                <div class="project-status-badge">
-                  <span class="status-pulse-dot"></span>
-                  [NAVIGATION_LOCKED // PASS]
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Split-Card 5: Heavy Duty Quadcopter -->
-          <div class="project-split-card" id="proj-05">
-            <!-- Left side: Blueprints schematic illustration -->
-            <div class="project-schematic">
-              <div class="hud-corner top-left"></div>
-              <div class="hud-corner top-right"></div>
-              <div class="hud-corner bottom-left"></div>
-              <div class="hud-corner bottom-right"></div>
-              <div class="project-image-container">
-                <img src="assets/projects/industrial_quadcopter.jpg" alt="Industrial Heavy Duty Quadcopter Drone CAD Blueprint" class="project-cad-img" loading="lazy" onclick="openImageLightbox('assets/projects/industrial_quadcopter.jpg', 'INDUSTRIAL QUADCOPTER HD-800 // CAD SCHEMATIC')">
-                <div class="cad-img-overlay">
-                  <span class="cad-tag font-mono">[ 2D CAD // SCHEMATIC ]</span>
-                  <button class="cad-zoom-btn font-mono" onclick="openImageLightbox('assets/projects/industrial_quadcopter.jpg', 'INDUSTRIAL QUADCOPTER HD-800 // CAD SCHEMATIC')">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
-                    <span>EXPAND BLUEPRINT</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Right side: Industrial spec sheet -->
-            <div class="project-specs">
-              <div class="spec-header">
-                <div class="spec-index-row">
-                  <span class="spec-index">PROJ_RECORD_05</span>
-                  <span class="project-cat-badge">UAV AEROSPACE & COMPOSITES</span>
-                </div>
-                <h3 class="spec-title">INDUSTRIAL HEAVY-DUTY QUADCOPTER</h3>
-              </div>
-              <p class="project-abstract">
-                Designed and analyzed a carbon-fiber heavy-lift quadcopter platform using ANSYS structural and CFD downwash simulations to optimize thrust efficiency and structural arm stiffness. Validated composite frame fatigue thresholds under dynamic payload tests, achieving a 2.4 safety factor under a 12 kg operational payload.
-              </p>
-              
-              <!-- Tech Stack Badges -->
-              <div class="project-tech-stack">
-                <span class="tech-chip">ANSYS Structural</span>
-                <span class="tech-chip">CFD Aerodynamics</span>
-                <span class="tech-chip">Carbon Fiber (CFRP)</span>
-                <span class="tech-chip">BLDC Thrust Rig</span>
-                <span class="tech-chip">PX4 Autopilot</span>
-              </div>
-
-              <!-- Specification Matrix -->
-              <div class="spec-body">
-                <div class="spec-row"><span class="spec-label">FEA_ELEMENTS</span><span class="spec-divider"></span><span class="spec-val">1.2M (SHELL_DISCRETIZATION)</span></div>
-                <div class="spec-row"><span class="spec-label">THRUST-TO-WEIGHT</span><span class="spec-divider"></span><span class="spec-val accent-gold">2.4 SYMMETRICAL MARGIN</span></div>
-                <div class="spec-row"><span class="spec-label">MAXIMUM_PAYLOAD</span><span class="spec-divider"></span><span class="spec-val">12.0 KILOGRAMS</span></div>
-                <div class="spec-row"><span class="spec-label">BOOM_DIAMETER</span><span class="spec-divider"></span><span class="spec-val accent-crimson">25mm CARBON-FIBER</span></div>
-                <div class="spec-row"><span class="spec-label">PROPELLER_SPEC</span><span class="spec-divider"></span><span class="spec-val">16x5.4 HIGH-PITCH CARBON</span></div>
-                <div class="spec-row"><span class="spec-label">STRUCTURAL_LOAD</span><span class="spec-divider"></span><span class="spec-val">450 N PEAK DYNAMIC</span></div>
-              </div>
-
-              <!-- Action Links: GitHub Repo & Google Drive -->
-              <div class="project-action-row">
-                <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono" title="Inspect GitHub Repository">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  <span>GITHUB REPO</span>
-                </a>
-                <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono" title="Open Google Drive CAD Archive">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
-                  <span>GOOGLE DRIVE // CAD</span>
-                </a>
-                <div class="project-status-badge">
-                  <span class="status-pulse-dot"></span>
-                  [STRUCTURAL_VALID // PASS]
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div class="skills-grid-container" id="skills-grid-container">
+          <!-- Rendered dynamically by renderSkillsGrid() in app.js -->
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: RESEARCH -->
-    <section id="research" class="spa-section">
-      <div class="research-viewport">
+    <!-- SECTION 3: PROJECT 1 - PRARAMBH 1 SOLID ROCKET MOTOR -->
+    <section id="proj-01" class="cinematic-section project-cinematic-section" data-section="projects">
+      <div class="project-cinematic-backdrop">
+        <img src="assets/projects/prarambh_1.jpg" alt="Prarambh 1 Solid Rocket Motor CAD Schematic" class="project-bg-img">
+        <div class="project-bg-overlay"></div>
+      </div>
+      <div class="project-cinematic-card">
+        <div class="spec-header">
+          <div class="spec-index-row">
+            <span class="spec-index">PROJ_RECORD_01</span>
+            <span class="project-cat-badge">AEROSPACE PROPULSION</span>
+          </div>
+          <h3 class="spec-title">PRARAMBH 1 SOLID ROCKET MOTOR</h3>
+        </div>
+        <p class="project-abstract">
+          Optimized a solid rocket motor propellant grain using MATLAB simulations and finite element stress verification. Designed an 8-point star grain geometry to control chamber regression rates and prevent pressure spikes. High-pressure static test firings validated a peak thrust of 12.4 kN, matching mathematical models with under 2.8% deviation.
+        </p>
+        
+        <div class="project-tech-stack">
+          <span class="tech-chip">Fusion 360</span>
+          <span class="tech-chip">ANSYS FEA</span>
+          <span class="tech-chip">MATLAB</span>
+          <span class="tech-chip">OpenMotor</span>
+          <span class="tech-chip">NASA CEA</span>
+        </div>
+
+        <div class="spec-body">
+          <div class="spec-row"><span class="spec-label">GRAIN_GEOMETRY</span><span class="spec-divider"></span><span class="spec-val accent-gold">8-POINT_STAR_CONFIG</span></div>
+          <div class="spec-row"><span class="spec-label">COMBUSTION_EFF</span><span class="spec-divider"></span><span class="spec-val">η > 98.4% (NEUTRAL_BURN)</span></div>
+          <div class="spec-row"><span class="spec-label">CASING_STRESS</span><span class="spec-divider"></span><span class="spec-val">320 MPa (STRUCTURAL_MARGIN)</span></div>
+          <div class="spec-row"><span class="spec-label">PEAK_THRUST</span><span class="spec-divider"></span><span class="spec-val accent-crimson">12.4 kN (VALIDATED)</span></div>
+          <div class="spec-row"><span class="spec-label">SPECIFIC_IMPULSE</span><span class="spec-divider"></span><span class="spec-val">242.6 SECONDS</span></div>
+        </div>
+
+        <div class="project-action-row">
+          <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/prarambh_1.jpg', 'PRARAMBH 1 // SOLID ROCKET MOTOR CAD SCHEMATIC')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>EXPAND BLUEPRINT</span>
+          </button>
+          <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GITHUB REPO</span>
+          </a>
+          <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
+            <span>GOOGLE DRIVE // CAD</span>
+          </a>
+          <div class="project-status-badge">
+            <span class="status-pulse-dot"></span>
+            [STATIC_TEST // PASS]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PROJECT 2 - CNC FOAM CUTTING MACHINE -->
+    <section id="proj-02" class="cinematic-section project-cinematic-section" data-section="projects">
+      <div class="project-cinematic-backdrop">
+        <img src="assets/projects/cnc_foam_cutter.jpg" alt="4-Axis CNC Foam Cutting Machine CAD Schematic" class="project-bg-img">
+        <div class="project-bg-overlay"></div>
+      </div>
+      <div class="project-cinematic-card">
+        <div class="spec-header">
+          <div class="spec-index-row">
+            <span class="spec-index">PROJ_RECORD_02</span>
+            <span class="project-cat-badge">AUTOMATION & MECHATRONICS</span>
+          </div>
+          <h3 class="spec-title">4-AXIS CNC FOAM CUTTING MACHINE</h3>
+        </div>
+        <p class="project-abstract">
+          Designed and constructed a 4-axis CNC hot-wire foam cutter with dual synchronized gantry towers and a high-tension nichrome wire. The microcontroller-based GRBL firmware coordinates dynamic feed rates with PWM thermal calibration to fabricate high-precision aerospace airfoils and complex tapered sweep geometries.
+        </p>
+        
+        <div class="project-tech-stack">
+          <span class="tech-chip">GRBL CNC</span>
+          <span class="tech-chip">Arduino C++</span>
+          <span class="tech-chip">Fusion 360 CAM</span>
+          <span class="tech-chip">Lead Screw Motion</span>
+          <span class="tech-chip">PWM Thermals</span>
+        </div>
+
+        <div class="spec-body">
+          <div class="spec-row"><span class="spec-label">CUTTING_ELEMENT</span><span class="spec-divider"></span><span class="spec-val">0.4mm TAUT NICHROME WIRE</span></div>
+          <div class="spec-row"><span class="spec-label">DRIVE_MECHANISM</span><span class="spec-divider"></span><span class="spec-val accent-gold">LEAD SCREW / MGN12H RAILS</span></div>
+          <div class="spec-row"><span class="spec-label">TRAVEL_LIMITS</span><span class="spec-divider"></span><span class="spec-val">1500 x 1000 x 500 mm</span></div>
+          <div class="spec-row"><span class="spec-label">STEPPER_DRIVE</span><span class="spec-divider"></span><span class="spec-val">NEMA 17 & NEMA 23 MOTORS</span></div>
+          <div class="spec-row"><span class="spec-label">POSITION_ACCURACY</span><span class="spec-divider"></span><span class="spec-val accent-crimson">±0.1 mm VALIDATION</span></div>
+        </div>
+
+        <div class="project-action-row">
+          <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/cnc_foam_cutter.jpg', '4-AXIS CNC FOAM CUTTER // CAD BLUEPRINT')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>EXPAND BLUEPRINT</span>
+          </button>
+          <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GITHUB REPO</span>
+          </a>
+          <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
+            <span>GOOGLE DRIVE // CAD</span>
+          </a>
+          <div class="project-status-badge">
+            <span class="status-pulse-dot"></span>
+            [AXIS_CALIBRATED // PASS]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PROJECT 3 - BMW V6 ENGINE BLOCK -->
+    <section id="proj-03" class="cinematic-section project-cinematic-section" data-section="projects">
+      <div class="project-cinematic-backdrop">
+        <img src="assets/projects/bmw_v6_engine.jpg" alt="BMW V6 Engine Block FEA Thermal Analysis" class="project-bg-img">
+        <div class="project-bg-overlay"></div>
+      </div>
+      <div class="project-cinematic-card">
+        <div class="spec-header">
+          <div class="spec-index-row">
+            <span class="spec-index">PROJ_RECORD_03</span>
+            <span class="project-cat-badge">THERMAL & FLUID DYNAMICS</span>
+          </div>
+          <h3 class="spec-title">BMW V6 ENGINE BLOCK</h3>
+        </div>
+        <p class="project-abstract">
+          Conducted finite element thermal gradient analysis and fluid dynamics simulations of a V6 engine block to model combustion efficiency under dynamic thermal cycles. Resolved transient heat flux concentrations at cylinder boundaries during rapid velocity variations. Validated simulation accuracy against physical dyno metrics, yielding less than 4.1% deviation under peak power.
+        </p>
+        
+        <div class="project-tech-stack">
+          <span class="tech-chip">ANSYS Fluent</span>
+          <span class="tech-chip">Transient Thermal</span>
+          <span class="tech-chip">SolidWorks CAD</span>
+          <span class="tech-chip">MATLAB</span>
+          <span class="tech-chip">CFD Meshing</span>
+        </div>
+
+        <div class="spec-body">
+          <div class="spec-row"><span class="spec-label">MESH_ELEMENTS</span><span class="spec-divider"></span><span class="spec-val">4.8M (HEXAHEDRAL_NODES)</span></div>
+          <div class="spec-row"><span class="spec-label">TURBULENCE_MODEL</span><span class="spec-divider"></span><span class="spec-val accent-gold">SST k-ω (SHEAR_STRESS_TRANS)</span></div>
+          <div class="spec-row"><span class="spec-label">SOLVER_TYPE</span><span class="spec-divider"></span><span class="spec-val">ANSYS FLUENT TRANSIENT THERMAL</span></div>
+          <div class="spec-row"><span class="spec-label">DYNO_DEVIATION</span><span class="spec-divider"></span><span class="spec-val accent-crimson">4.1% (VALIDATED_ACCURACY)</span></div>
+          <div class="spec-row"><span class="spec-label">COMBUSTION_EFF</span><span class="spec-divider"></span><span class="spec-val">38.6% THERMAL-TO-MECHANICAL</span></div>
+        </div>
+
+        <div class="project-action-row">
+          <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/bmw_v6_engine.jpg', 'BMW V6 ENGINE BLOCK // FEA THERMAL GRADIENT BLUEPRINT')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>EXPAND BLUEPRINT</span>
+          </button>
+          <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GITHUB REPO</span>
+          </a>
+          <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
+            <span>GOOGLE DRIVE // CAD</span>
+          </a>
+          <div class="project-status-badge">
+            <span class="status-pulse-dot"></span>
+            [SIMULATION_STABLE // PASS]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PROJECT 4 - AUTONOMOUS AGV -->
+    <section id="proj-04" class="cinematic-section project-cinematic-section" data-section="projects">
+      <div class="project-cinematic-backdrop">
+        <img src="assets/projects/autonomous_agv.jpg" alt="Autonomous Mobile Robot AGV Blueprint" class="project-bg-img">
+        <div class="project-bg-overlay"></div>
+      </div>
+      <div class="project-cinematic-card">
+        <div class="spec-header">
+          <div class="spec-index-row">
+            <span class="spec-index">PROJ_RECORD_04</span>
+            <span class="project-cat-badge">ROBOTICS & EMBEDDED AI</span>
+          </div>
+          <h3 class="spec-title">4WD AUTONOMOUS MOBILE ROBOT (AGV)</h3>
+        </div>
+        <p class="project-abstract">
+          Engineered an autonomous mobile robot vehicle driven by an edge vision camera sensor pipeline running real-time Hough Transform line tracking and obstacle avoidance. Minimized image processing latency to stabilize PID navigation control at high speeds, demonstrating dynamic path-planning accuracy under 12mm across 200 Hz control loops.
+        </p>
+        
+        <div class="project-tech-stack">
+          <span class="tech-chip">Python</span>
+          <span class="tech-chip">OpenCV</span>
+          <span class="tech-chip">C++ RTOS</span>
+          <span class="tech-chip">Hough Transform</span>
+          <span class="tech-chip">PID Control</span>
+          <span class="tech-chip">ARM Cortex-M7</span>
+        </div>
+
+        <div class="spec-body">
+          <div class="spec-row"><span class="spec-label">IMAGE_LATENCY</span><span class="spec-divider"></span><span class="spec-val">4.8 MILLISECONDS</span></div>
+          <div class="spec-row"><span class="spec-label">PID_FREQUENCY</span><span class="spec-divider"></span><span class="spec-val accent-gold">200 Hz (CONTROL_LOOP)</span></div>
+          <div class="spec-row"><span class="spec-label">NAV_ACCURACY</span><span class="spec-divider"></span><span class="spec-val">±12 mm MAX_DEVIATION</span></div>
+          <div class="spec-row"><span class="spec-label">PROCESSOR_CORE</span><span class="spec-divider"></span><span class="spec-val accent-crimson">ARM CORTEX-M7 (400 MHz)</span></div>
+          <div class="spec-row"><span class="spec-label">CHASSIS_ALLOY</span><span class="spec-divider"></span><span class="spec-val">ALUMINUM 6061-T6 (12mm)</span></div>
+        </div>
+
+        <div class="project-action-row">
+          <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/autonomous_agv.jpg', '4WD AUTONOMOUS MOBILE ROBOT (AGV) // CAD SCHEMATIC')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>EXPAND BLUEPRINT</span>
+          </button>
+          <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GITHUB REPO</span>
+          </a>
+          <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
+            <span>GOOGLE DRIVE // CAD</span>
+          </a>
+          <div class="project-status-badge">
+            <span class="status-pulse-dot"></span>
+            [NAVIGATION_LOCKED // PASS]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PROJECT 5 - HEAVY DUTY QUADCOPTER -->
+    <section id="proj-05" class="cinematic-section project-cinematic-section" data-section="projects">
+      <div class="project-cinematic-backdrop">
+        <img src="assets/projects/industrial_quadcopter.jpg" alt="Industrial Heavy Duty Quadcopter Drone CAD Blueprint" class="project-bg-img">
+        <div class="project-bg-overlay"></div>
+      </div>
+      <div class="project-cinematic-card">
+        <div class="spec-header">
+          <div class="spec-index-row">
+            <span class="spec-index">PROJ_RECORD_05</span>
+            <span class="project-cat-badge">UAV AEROSPACE & COMPOSITES</span>
+          </div>
+          <h3 class="spec-title">INDUSTRIAL HEAVY-DUTY QUADCOPTER</h3>
+        </div>
+        <p class="project-abstract">
+          Designed and analyzed a carbon-fiber heavy-lift quadcopter platform using ANSYS structural and CFD downwash simulations to optimize thrust efficiency and structural arm stiffness. Validated composite frame fatigue thresholds under dynamic payload tests, achieving a 2.4 safety factor under a 12 kg operational payload.
+        </p>
+        
+        <div class="project-tech-stack">
+          <span class="tech-chip">ANSYS Structural</span>
+          <span class="tech-chip">CFD Aerodynamics</span>
+          <span class="tech-chip">Carbon Fiber (CFRP)</span>
+          <span class="tech-chip">BLDC Thrust Rig</span>
+          <span class="tech-chip">PX4 Autopilot</span>
+        </div>
+
+        <div class="spec-body">
+          <div class="spec-row"><span class="spec-label">FEA_ELEMENTS</span><span class="spec-divider"></span><span class="spec-val">1.2M (SHELL_DISCRETIZATION)</span></div>
+          <div class="spec-row"><span class="spec-label">THRUST-TO-WEIGHT</span><span class="spec-divider"></span><span class="spec-val accent-gold">2.4 SYMMETRICAL MARGIN</span></div>
+          <div class="spec-row"><span class="spec-label">MAXIMUM_PAYLOAD</span><span class="spec-divider"></span><span class="spec-val">12.0 KILOGRAMS</span></div>
+          <div class="spec-row"><span class="spec-label">BOOM_DIAMETER</span><span class="spec-divider"></span><span class="spec-val accent-crimson">25mm CARBON-FIBER</span></div>
+          <div class="spec-row"><span class="spec-label">PROPELLER_SPEC</span><span class="spec-divider"></span><span class="spec-val">16x5.4 HIGH-PITCH CARBON</span></div>
+        </div>
+
+        <div class="project-action-row">
+          <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/industrial_quadcopter.jpg', 'INDUSTRIAL QUADCOPTER HD-800 // CAD SCHEMATIC')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            <span>EXPAND BLUEPRINT</span>
+          </button>
+          <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="proj-action-btn github-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GITHUB REPO</span>
+          </a>
+          <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="proj-action-btn drive-btn font-mono">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5M9.73 15L13.15 21H22.85L19.43 15M14.29 3.5L7.71 15h6.86l6.57-11.5"/></svg>
+            <span>GOOGLE DRIVE // CAD</span>
+          </a>
+          <div class="project-status-badge">
+            <span class="status-pulse-dot"></span>
+            [STRUCTURAL_VALID // PASS]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: RESEARCH -->
+    <section id="research" class="cinematic-section research-cinematic-section">
+      <div class="cinematic-section-inner">
+        <div class="section-cinematic-header">
+          <span class="spec-index font-mono">PUBLICATIONS // DOIs_03</span>
+          <h2 class="cinematic-section-title">ACADEMIC & TECHNICAL RESEARCH LOGS</h2>
+        </div>
         <div class="console-filter-bar">
             <span class="filter-btn active" data-filter="all">ALL_RECORDS //</span>
             <span class="filter-btn" data-filter="review">UNDER_REVIEW //</span>
@@ -486,10 +415,6 @@
             </div>
         </div>
 
-        <div class="live-diagnostics-panel">
-            <span class="matrix-prefix">CORE_TELEMETRY //</span> <span id="telemetry-stream">AWAITING_NODE_SELECTION // INTERFACE_ACTIVE_OK</span>
-        </div>
-
         <div id="terminal-viewport-modal" class="terminal-modal">
             <div class="modal-frame">
                 <div class="modal-header">
@@ -502,11 +427,13 @@
       </div>
     </section>
 
-
-
-    <!-- SECTION 7: CONTACT -->
-    <section id="contact" class="spa-section">
-      <div class="contact-viewport">
+    <!-- SECTION 9: CONTACT -->
+    <section id="contact" class="cinematic-section contact-cinematic-section">
+      <div class="cinematic-section-inner">
+        <div class="section-cinematic-header" style="text-align: center;">
+          <span class="spec-index font-mono">UPLINK // CONTACT_04</span>
+          <h2 class="cinematic-section-title">TRANSMIT DIRECT INQUIRY</h2>
+        </div>
         
         <div class="minimal-contact-container">
           <div class="form-corner tl"></div>
@@ -514,8 +441,6 @@
           <div class="form-corner bl"></div>
           <div class="form-corner br"></div>
 
-          <h2 class="contact-title font-mono">LET US CONNECT</h2>
-          
           <form class="minimal-transmission-form" id="uplink-form" novalidate>
             <div class="input-block">
               <input class="input-field" type="text" id="sender-name" required placeholder="YOUR NAME" autocomplete="off" />
@@ -533,13 +458,13 @@
             </div>
 
             <div class="input-block" style="position: relative;">
-              <textarea class="input-field text-area-field" id="trans-body" required placeholder="YOUR MESSAGE" rows="6" autocomplete="off"></textarea>
+              <textarea class="input-field text-area-field" id="trans-body" required placeholder="YOUR MESSAGE" rows="4" autocomplete="off"></textarea>
               <div class="validation-message" id="trans-body-error"></div>
               <div class="word-counter-label" id="trans-body-counter">[ WORDS: 00 / 100 ]</div>
             </div>
 
             <button class="uplink-btn" type="submit">
-              [ SEND ]
+              [ SEND TRANSMISSION ]
             </button>
           </form>
         </div>
@@ -589,7 +514,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=10.0" defer></script>
+  <script src="app.js?v=11.0" defer></script>
 </body>
 </html>
 

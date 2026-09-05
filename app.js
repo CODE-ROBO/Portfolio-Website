@@ -56,110 +56,65 @@ function handleTabSwitch(tabId) {
  * 1. SPA Navigation & Section Crossfade
  * Smooth opacity fading keeping background and framework persistent
  */
+window.scrollToSection = function(sectionId) {
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 function initSPARouting() {
   const routerElements = document.querySelectorAll('.nav-link, .nav-link-logo, .circular-link-btn');
-  const sections = document.querySelectorAll('.spa-section');
-
-  const updateScrollLock = (sectionId) => {
-    if (sectionId && sectionId.toLowerCase() === 'contact') {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  };
-
-  const updateModelViewerLifecycle = (sectionId) => {
-    const modelViewers = document.querySelectorAll('.project-model-viewer');
-    if (sectionId && sectionId.toLowerCase() === 'projects') {
-      // Dynamically load Google model-viewer library on Projects tab activation
-      loadModelViewerScript();
-
-      modelViewers.forEach(modelViewer => {
-        const savedSrc = modelViewer.getAttribute('data-src');
-        if (savedSrc && modelViewer.getAttribute('src') !== savedSrc) {
-          modelViewer.setAttribute('src', savedSrc);
-        }
-      });
-    } else {
-      modelViewers.forEach(modelViewer => {
-        const currentSrc = modelViewer.getAttribute('src');
-        if (currentSrc && currentSrc !== '') {
-          modelViewer.setAttribute('data-src', currentSrc);
-          modelViewer.setAttribute('src', '');
-          
-          // Reset activation button text and enabled states inside the poster
-          const btn = modelViewer.querySelector('.activate-3d-btn');
-          if (btn) {
-            btn.textContent = '[ INITIALIZE 3D VIRTUALIZATION ]';
-            btn.disabled = false;
-            btn.style.borderColor = '';
-            btn.style.color = '';
-          }
-          const schematic = modelViewer.closest('.project-schematic');
-          if (schematic) {
-            schematic.classList.remove('scanning');
-          }
-        }
-      });
-    }
-  };
 
   routerElements.forEach(element => {
     element.addEventListener('click', (e) => {
-      // If it's a download link (Resume), let the browser handle it!
-      if (element.hasAttribute('download')) {
-        return;
-      }
+      if (element.hasAttribute('download')) return;
       
       e.preventDefault();
       
-      const targetSectionId = element.getAttribute('data-section');
-      const targetSection = document.getElementById(targetSectionId);
-
-      if (!targetSection) return;
-
-      // Update navbar links active classes
-      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-      const activeNav = document.querySelector(`.nav-link[data-section="${targetSectionId}"]`);
-      if (activeNav) {
-        activeNav.classList.add('active');
+      let targetSectionId = element.getAttribute('data-section');
+      if (targetSectionId === 'projects') {
+        targetSectionId = 'proj-01';
       }
-
-      // Update section opacity visibilities
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      targetSection.classList.add('active');
-
-      // Update scroll lock dynamically
-      updateScrollLock(targetSectionId);
-
-      // Update model-viewer lifecycle states
-      updateModelViewerLifecycle(targetSectionId);
-
-      // Update URL hash smoothly
+      
+      window.scrollToSection(targetSectionId);
       history.pushState(null, null, `#${targetSectionId}`);
-
-      // Handle tab-switch custom initializations
-      handleTabSwitch(targetSectionId);
     });
   });
 
-  // Handle deep-linking initial page loads
+  // IntersectionObserver for dynamic active navbar updating on scroll
+  const sections = document.querySelectorAll('.cinematic-section');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const container = document.getElementById('main-scroll-container');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        let sectionId = entry.target.getAttribute('id');
+        let category = entry.target.getAttribute('data-section') || sectionId;
+        if (sectionId.startsWith('proj-')) category = 'projects';
+
+        navLinks.forEach(link => {
+          if (link.getAttribute('data-section') === category) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, {
+    root: container || null,
+    threshold: 0.35
+  });
+
+  sections.forEach(section => observer.observe(section));
+
   const currentHash = window.location.hash.substring(1);
   if (currentHash) {
-    const matchedLink = document.querySelector(`.nav-link[data-section="${currentHash}"]`);
-    if (matchedLink) {
-      matchedLink.click();
-    }
-  } else {
-    // Initial scroll lock check for default active tab
-    const activeLink = document.querySelector('.nav-link.active');
-    if (activeLink) {
-      const activeSection = activeLink.getAttribute('data-section');
-      updateScrollLock(activeSection);
-      updateModelViewerLifecycle(activeSection);
-    }
+    setTimeout(() => {
+      window.scrollToSection(currentHash);
+    }, 100);
   }
 }
 
