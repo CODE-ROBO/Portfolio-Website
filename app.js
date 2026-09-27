@@ -57,9 +57,13 @@ function handleTabSwitch(tabId) {
  * Smooth opacity fading keeping background and framework persistent
  */
 window.scrollToSection = function(sectionId) {
+  if (sectionId === 'projects') sectionId = 'proj-01';
   const target = document.getElementById(sectionId);
   if (target) {
     target.scrollIntoView({ behavior: 'smooth' });
+    try {
+      history.pushState(null, null, `#${sectionId}`);
+    } catch (e) {}
   }
 };
 
@@ -78,13 +82,13 @@ function initSPARouting() {
       }
       
       window.scrollToSection(targetSectionId);
-      history.pushState(null, null, `#${targetSectionId}`);
     });
   });
 
-  // IntersectionObserver for dynamic active navbar updating on scroll
+  // IntersectionObserver for dynamic active navbar and side-nav updating on scroll
   const sections = document.querySelectorAll('.cinematic-section');
   const navLinks = document.querySelectorAll('.nav-link');
+  const sideNavItems = document.querySelectorAll('.side-nav-item');
 
   const container = document.getElementById('main-scroll-container');
   const observer = new IntersectionObserver((entries) => {
@@ -94,11 +98,21 @@ function initSPARouting() {
         let category = entry.target.getAttribute('data-section') || sectionId;
         if (sectionId.startsWith('proj-')) category = 'projects';
 
+        // Update top navbar
         navLinks.forEach(link => {
           if (link.getAttribute('data-section') === category) {
             link.classList.add('active');
           } else {
             link.classList.remove('active');
+          }
+        });
+
+        // Update SpaceX-style side dot nav
+        sideNavItems.forEach(item => {
+          if (item.getAttribute('data-target') === sectionId) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
           }
         });
       }
@@ -114,7 +128,7 @@ function initSPARouting() {
   if (currentHash) {
     setTimeout(() => {
       window.scrollToSection(currentHash);
-    }, 100);
+    }, 150);
   }
 }
 

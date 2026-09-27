@@ -3043,6 +3043,151 @@ html, body {
   letter-spacing: 0.08em;
 }
 
+.logo-subtag {
+  font-size: 0.52rem;
+  color: var(--color-accent-gold);
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  margin-top: -2px;
+}
+
+/* SpaceX-Style Side Dot Navigation Tracker */
+.cinematic-side-nav {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  pointer-events: auto;
+}
+
+.side-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.side-nav-item:hover, .side-nav-item.active {
+  opacity: 1;
+}
+
+.side-nav-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #111111;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 3px 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-left: 3px solid var(--color-accent-crimson);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateX(12px);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.side-nav-item:hover .side-nav-label, .side-nav-item.active .side-nav-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.side-nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #A0A0A5;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.side-nav-item.active .side-nav-dot {
+  background: var(--color-accent-crimson);
+  box-shadow: 0 0 0 2px var(--color-accent-gold), 0 0 12px rgba(197, 160, 89, 0.7);
+  transform: scale(1.4);
+}
+
+/* SpaceX Scroll Indicator */
+.cinematic-scroll-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  width: fit-content;
+}
+
+.cinematic-scroll-indicator:hover {
+  opacity: 1;
+  transform: translateY(3px);
+}
+
+.scroll-mouse-icon {
+  width: 18px;
+  height: 28px;
+  border: 2px solid #111111;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.scroll-wheel {
+  width: 3px;
+  height: 6px;
+  background: var(--color-accent-crimson);
+  border-radius: 2px;
+  animation: scroll-wheel-anim 1.6s infinite ease-in-out;
+}
+
+@keyframes scroll-wheel-anim {
+  0% { transform: translateY(0); opacity: 1; }
+  60% { transform: translateY(8px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.scroll-indicator-text {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #111111;
+}
+
+.hero-tertiary-btn {
+  background: transparent;
+  color: #555555;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 12px 20px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-tertiary-btn:hover {
+  background: #F2F4F7;
+  color: #111111;
+  border-color: #111111;
+}
+
 .section-cinematic-header {
   margin-bottom: 20px;
 }
@@ -3110,6 +3255,31 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.project-cinematic-card .hud-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--color-accent-gold);
+  pointer-events: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-cinematic-card:hover .hud-corner {
+  border-color: var(--color-accent-crimson);
+}
+.project-cinematic-card:hover .hud-corner.top-left {
+  transform: translate(-3px, -3px);
+}
+.project-cinematic-card:hover .hud-corner.top-right {
+  transform: translate(3px, -3px);
+}
+.project-cinematic-card:hover .hud-corner.bottom-left {
+  transform: translate(-3px, 3px);
+}
+.project-cinematic-card:hover .hud-corner.bottom-right {
+  transform: translate(3px, 3px);
 }
 
 .project-cinematic-card .spec-title {

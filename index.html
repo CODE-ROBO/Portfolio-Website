@@ -3,24 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A.E.G.I.S. // Engineering Portfolio Dashboard</title>
+  <meta name="description" content="Harshal Gadekar — Mechatronics, Robotics & Aerospace Propulsion Engineer. Solid rocket motor ballistics, CNC automation, autonomous vehicle navigation, and non-linear FEA modeling.">
+  <meta name="keywords" content="Harshal Gadekar, Robotics Engineer, Aerospace Propulsion, Mechatronics, Solid Rocket Motor, Prarambh 1, ANSYS FEA, Fusion 360, Computer Vision">
+  <meta name="author" content="Harshal Gadekar">
+  
+  <!-- Open Graph / Meta for Social & Google -->
+  <meta property="og:title" content="Harshal Gadekar // Automation, Robotics & Aerospace Engineer">
+  <meta property="og:description" content="Engineering portfolio featuring aerospace propulsion simulations, solid rocket motor ballistics, CNC automation, and autonomous machine vision.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/projects/prarambh_1.jpg">
+
+  <title>Harshal Gadekar // Automation, Robotics & Aerospace Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://unpkg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11.0">
+  <link rel="stylesheet" href="styles.css?v=12.0">
 </head>
 <body>
-
-  <!-- Background Hex Canvas -->
-  <canvas id="hex-canvas"></canvas>
 
   <!-- Fixed Top Navigation Bar -->
   <header class="global-header">
     <div class="nav-container">
       <a href="#home" class="logo-brand-container nav-link-logo" data-section="home" style="text-decoration: none;">
         <div class="logo-brand">Harshal Gadekar</div>
+        <div class="logo-subtag font-mono">// ROBOTICS & AEROSPACE</div>
       </a>
       <div class="header-right-hud">
         <nav class="nav-links">
@@ -28,7 +36,7 @@
           <span class="nav-link-sep">|</span>
           <a href="#skills" class="nav-link" data-section="skills">Skills</a>
           <span class="nav-link-sep">|</span>
-          <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+          <a href="#proj-01" class="nav-link" data-section="projects">Projects</a>
           <span class="nav-link-sep">|</span>
           <a href="#research" class="nav-link" data-section="research">Research</a>
           <span class="nav-link-sep">|</span>
@@ -38,6 +46,46 @@
     </div>
   </header>
 
+  <!-- SpaceX-Style Side Dot Navigation Tracker -->
+  <nav class="cinematic-side-nav" id="cinematic-side-nav" aria-label="Section Navigation">
+    <div class="side-nav-item active" data-target="home" onclick="scrollToSection('home')">
+      <span class="side-nav-label font-mono">01 // HOME</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="skills" onclick="scrollToSection('skills')">
+      <span class="side-nav-label font-mono">02 // SKILLS</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="proj-01" onclick="scrollToSection('proj-01')">
+      <span class="side-nav-label font-mono">03 // PRARAMBH 1</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="proj-02" onclick="scrollToSection('proj-02')">
+      <span class="side-nav-label font-mono">04 // CNC FOAM</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="proj-03" onclick="scrollToSection('proj-03')">
+      <span class="side-nav-label font-mono">05 // BMW V6</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="proj-04" onclick="scrollToSection('proj-04')">
+      <span class="side-nav-label font-mono">06 // AGV ROBOT</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="proj-05" onclick="scrollToSection('proj-05')">
+      <span class="side-nav-label font-mono">07 // HD-800 DRONE</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="research" onclick="scrollToSection('research')">
+      <span class="side-nav-label font-mono">08 // RESEARCH</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="contact" onclick="scrollToSection('contact')">
+      <span class="side-nav-label font-mono">09 // CONTACT</span>
+      <span class="side-nav-dot"></span>
+    </div>
+  </nav>
+
   <!-- Viewport Container (Cinematic Scroll-Snap Architecture) -->
   <main class="cinematic-scroll-container" id="main-scroll-container">
     
@@ -45,16 +93,26 @@
     <section id="home" class="cinematic-section hero-cinematic-section">
       <div class="cinematic-section-inner">
         <div class="home-info-panel-new">
-          <div class="hud-status-chip font-mono">[ SYSTEM_STATUS // NOMINAL ]</div>
+          <div class="hud-status-chip font-mono">
+            <span class="stark-pulse-dot" style="display:inline-block; vertical-align:middle; margin-right:6px;"></span>
+            [ STATUS // FLIGHT-READY & OPEN TO ROLES ]
+          </div>
           <h1 class="home-name-title">Harshal Gadekar</h1>
-          <div class="home-intro-subtitle font-mono">AUTOMATION & ROBOTICS ENGINEER</div>
+          <div class="home-intro-subtitle font-mono">AUTOMATION, ROBOTICS & AEROSPACE PROPULSION ENGINEER</div>
           <p class="home-bio-text">
             I am a mechatronics and robotics engineer specializing in hybrid control systems, deterministic real-time architectures, and high-fidelity aerospace propulsion simulations. With a strong foundation in bridging physical hardware with numerical analysis, I design and construct solid rocket motor ballistics platforms and deploy vision-guided autonomous navigation pipelines. My expertise extends to programmable logic controllers (PLCs), multi-modal sensor fusion network design, and non-linear finite element structural stress modeling.
           </p>
           
           <div class="hero-cta-buttons font-mono">
-            <a href="#proj-01" class="hero-primary-btn" onclick="scrollToSection('proj-01'); return false;">[ EXPLORE PROJECTS ↓ ]</a>
-            <a href="#research" class="hero-secondary-btn" onclick="scrollToSection('research'); return false;">[ RESEARCH PAPERS ]</a>
+            <a href="#proj-01" class="hero-primary-btn" onclick="scrollToSection('proj-01'); return false;">
+              <span>[ EXPLORE PROJECTS ↓ ]</span>
+            </a>
+            <a href="#research" class="hero-secondary-btn" onclick="scrollToSection('research'); return false;">
+              <span>[ RESEARCH PAPERS & DOIs ]</span>
+            </a>
+            <a href="#contact" class="hero-tertiary-btn" onclick="scrollToSection('contact'); return false;">
+              <span>[ CONTACT TRANSMISSION ]</span>
+            </a>
           </div>
 
           <!-- Interactive Terminal Prompt -->
@@ -71,6 +129,15 @@
               <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" placeholder="HELP">
             </div>
           </div>
+
+          <!-- SpaceX Scroll Indicator -->
+          <div class="cinematic-scroll-indicator font-mono" onclick="scrollToSection('skills')">
+            <div class="scroll-mouse-icon">
+              <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-indicator-text">SCROLL TO EXPLORE ↓</span>
+          </div>
+
         </div>
       </div>
     </section>
@@ -95,6 +162,10 @@
         <div class="project-bg-overlay"></div>
       </div>
       <div class="project-cinematic-card">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_01</span>
@@ -150,6 +221,10 @@
         <div class="project-bg-overlay"></div>
       </div>
       <div class="project-cinematic-card">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_02</span>
@@ -205,6 +280,10 @@
         <div class="project-bg-overlay"></div>
       </div>
       <div class="project-cinematic-card">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_03</span>
@@ -260,6 +339,10 @@
         <div class="project-bg-overlay"></div>
       </div>
       <div class="project-cinematic-card">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_04</span>
@@ -316,6 +399,10 @@
         <div class="project-bg-overlay"></div>
       </div>
       <div class="project-cinematic-card">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_05</span>
@@ -514,7 +601,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=11.0" defer></script>
+  <script src="app.js?v=12.0" defer></script>
 </body>
 </html>
 
