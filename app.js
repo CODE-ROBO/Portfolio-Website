@@ -137,7 +137,7 @@ function initSPARouting() {
  * Minimalist blueprint coordinate grid, subtle crosshair markers (+), and delicate data constellation nodes.
  */
 function initEngineeringCanvas() {
-  const canvas = document.getElementById('hex-canvas');
+  const canvas = document.getElementById('engineering-canvas') || document.getElementById('hex-canvas');
   if (!canvas) return;
 
   const ctx = canvas.getContext('2d');
@@ -706,7 +706,7 @@ const abstractDatabase = {
     <div class="modal-info-section">
         <div class="modal-info-subtitle">PUBLICATION & ZENODO ARCHIVE //</div>
         <div class="modal-info-text">
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21740853" target="_blank" style="color: #00d2ff; text-decoration: underline;">10.5281/zenodo.21740853</a><br>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21740853" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21740853</a><br>
             <strong>DOCUMENT TYPE:</strong> Technical Report // Open Access Hybrid Sorting Mechatronics & Material Recovery<br>
             <a href="https://zenodo.org/records/21740853" target="_blank" class="zenodo-link-btn font-mono" style="margin-top: 10px; display: inline-flex;">[ OPEN FULL ZENODO REPORT & PDF â†— ]</a>
         </div>
@@ -749,7 +749,7 @@ const abstractDatabase = {
     <div class="modal-info-section">
         <div class="modal-info-subtitle">PUBLICATION & ZENODO ARCHIVE //</div>
         <div class="modal-info-text">
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21173319" target="_blank" style="color: #00d2ff; text-decoration: underline;">10.5281/zenodo.21173319</a><br>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21173319" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21173319</a><br>
             <strong>DOCUMENT TYPE:</strong> Technical Report // Open Access Aerospace Propulsion & Solid Motor Stress Analysis<br>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
                 <a href="https://zenodo.org/records/21173319" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT & PDF â†— ]</a>
@@ -795,7 +795,7 @@ const abstractDatabase = {
     <div class="modal-info-section">
         <div class="modal-info-subtitle">PUBLICATION & ZENODO ARCHIVE //</div>
         <div class="modal-info-text">
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904756" target="_blank" style="color: #00d2ff; text-decoration: underline;">10.5281/zenodo.21904756</a><br>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904756" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21904756</a><br>
             <strong>DOCUMENT TYPE:</strong> Technical Report // Open Access Machine Vision Robotics & Autonomous Path Planning<br>
             <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
                 <a href="https://zenodo.org/records/21904756" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT & PDF ↗ ]</a>

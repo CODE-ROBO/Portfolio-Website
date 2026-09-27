@@ -19,9 +19,12 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://unpkg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=12.0">
+  <link rel="stylesheet" href="styles.css?v=13.0">
 </head>
 <body>
+
+  <!-- Precision Engineering CAD Matrix Background Canvas -->
+  <canvas id="engineering-canvas"></canvas>
 
   <!-- Fixed Top Navigation Bar -->
   <header class="global-header">
@@ -31,6 +34,11 @@
         <div class="logo-subtag font-mono">// ROBOTICS & AEROSPACE</div>
       </a>
       <div class="header-right-hud">
+        <div class="header-telemetry-hud font-mono">
+          <span class="stark-pulse-dot"></span>
+          <span class="hud-telemetry-label">UTC+5:30 //</span>
+          <span class="hud-telemetry-clock" id="system-time">--:--:-- IST</span>
+        </div>
         <nav class="nav-links">
           <a href="#home" class="nav-link active" data-section="home">Home</a>
           <span class="nav-link-sep">|</span>
@@ -176,6 +184,13 @@
         <p class="project-abstract">
           Optimized a solid rocket motor propellant grain using MATLAB simulations and finite element stress verification. Designed an 8-point star grain geometry to control chamber regression rates and prevent pressure spikes. High-pressure static test firings validated a peak thrust of 12.4 kN, matching mathematical models with under 2.8% deviation.
         </p>
+
+        <!-- Executive KPI Metrics Callout -->
+        <div class="project-kpi-ribbon font-mono">
+          <div class="kpi-pill"><span class="kpi-val accent-crimson">12.4 kN</span><span class="kpi-tag">PEAK_THRUST</span></div>
+          <div class="kpi-pill"><span class="kpi-val accent-gold">98.4%</span><span class="kpi-tag">EFFICIENCY</span></div>
+          <div class="kpi-pill"><span class="kpi-val">242.6 s</span><span class="kpi-tag">ISP_VAL</span></div>
+        </div>
         
         <div class="project-tech-stack">
           <span class="tech-chip">Fusion 360</span>
@@ -235,6 +250,13 @@
         <p class="project-abstract">
           Designed and constructed a 4-axis CNC hot-wire foam cutter with dual synchronized gantry towers and a high-tension nichrome wire. The microcontroller-based GRBL firmware coordinates dynamic feed rates with PWM thermal calibration to fabricate high-precision aerospace airfoils and complex tapered sweep geometries.
         </p>
+
+        <!-- Executive KPI Metrics Callout -->
+        <div class="project-kpi-ribbon font-mono">
+          <div class="kpi-pill"><span class="kpi-val accent-crimson">±0.1 mm</span><span class="kpi-tag">PRECISION</span></div>
+          <div class="kpi-pill"><span class="kpi-val accent-gold">1500 mm</span><span class="kpi-tag">X_TRAVEL</span></div>
+          <div class="kpi-pill"><span class="kpi-val">4-AXIS</span><span class="kpi-tag">SYNC_GANTRY</span></div>
+        </div>
         
         <div class="project-tech-stack">
           <span class="tech-chip">GRBL CNC</span>
@@ -294,6 +316,13 @@
         <p class="project-abstract">
           Conducted finite element thermal gradient analysis and fluid dynamics simulations of a V6 engine block to model combustion efficiency under dynamic thermal cycles. Resolved transient heat flux concentrations at cylinder boundaries during rapid velocity variations. Validated simulation accuracy against physical dyno metrics, yielding less than 4.1% deviation under peak power.
         </p>
+
+        <!-- Executive KPI Metrics Callout -->
+        <div class="project-kpi-ribbon font-mono">
+          <div class="kpi-pill"><span class="kpi-val accent-crimson">4.8M</span><span class="kpi-tag">HEX_NODES</span></div>
+          <div class="kpi-pill"><span class="kpi-val accent-gold">1.85 MW/m²</span><span class="kpi-tag">HEAT_FLUX</span></div>
+          <div class="kpi-pill"><span class="kpi-val">4.1%</span><span class="kpi-tag">DYNO_CORR</span></div>
+        </div>
         
         <div class="project-tech-stack">
           <span class="tech-chip">ANSYS Fluent</span>
@@ -353,6 +382,13 @@
         <p class="project-abstract">
           Engineered an autonomous mobile robot vehicle driven by an edge vision camera sensor pipeline running real-time Hough Transform line tracking and obstacle avoidance. Minimized image processing latency to stabilize PID navigation control at high speeds, demonstrating dynamic path-planning accuracy under 12mm across 200 Hz control loops.
         </p>
+
+        <!-- Executive KPI Metrics Callout -->
+        <div class="project-kpi-ribbon font-mono">
+          <div class="kpi-pill"><span class="kpi-val accent-crimson">4.8 ms</span><span class="kpi-tag">LATENCY</span></div>
+          <div class="kpi-pill"><span class="kpi-val accent-gold">200 Hz</span><span class="kpi-tag">PID_LOOP</span></div>
+          <div class="kpi-pill"><span class="kpi-val">±12 mm</span><span class="kpi-tag">PATH_DEV</span></div>
+        </div>
         
         <div class="project-tech-stack">
           <span class="tech-chip">Python</span>
@@ -413,6 +449,13 @@
         <p class="project-abstract">
           Designed and analyzed a carbon-fiber heavy-lift quadcopter platform using ANSYS structural and CFD downwash simulations to optimize thrust efficiency and structural arm stiffness. Validated composite frame fatigue thresholds under dynamic payload tests, achieving a 2.4 safety factor under a 12 kg operational payload.
         </p>
+
+        <!-- Executive KPI Metrics Callout -->
+        <div class="project-kpi-ribbon font-mono">
+          <div class="kpi-pill"><span class="kpi-val accent-crimson">12.0 kg</span><span class="kpi-tag">MAX_PAYLOAD</span></div>
+          <div class="kpi-pill"><span class="kpi-val accent-gold">2.4</span><span class="kpi-tag">SAFETY_FACTOR</span></div>
+          <div class="kpi-pill"><span class="kpi-val">25 mm</span><span class="kpi-tag">CFRP_BOOM</span></div>
+        </div>
         
         <div class="project-tech-stack">
           <span class="tech-chip">ANSYS Structural</span>
@@ -601,7 +644,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=12.0" defer></script>
+  <script src="app.js?v=13.0" defer></script>
 </body>
 </html>
 

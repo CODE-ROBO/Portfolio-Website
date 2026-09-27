@@ -115,7 +115,7 @@ input, textarea, select, button, .input-field {
 }
 
 /* High-Performance Canvas Overlay */
-#hex-canvas {
+#hex-canvas, #engineering-canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -654,7 +654,7 @@ input, textarea, select, button, .input-field {
   padding: 10px 0;
 }
 
-#skills {
+#skills:not(.cinematic-section) {
   padding: 30px 40px;
   display: flex;
   align-items: center;
@@ -1966,6 +1966,7 @@ input, textarea, select, button, .input-field {
   min-height: 520px;
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
   position: relative;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   display: flex;
@@ -3304,6 +3305,96 @@ html, body {
   border-color: var(--color-accent-crimson);
 }
 
+/* Project Executive KPI Ribbon */
+.project-kpi-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 8px 14px;
+  background: rgba(0, 0, 0, 0.025);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-left: 2px solid var(--color-accent-gold);
+  border-radius: 2px;
+  margin: 2px 0;
+}
+
+.kpi-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-right: 14px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.kpi-pill:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.kpi-val {
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #111111;
+  line-height: 1.1;
+}
+
+.kpi-val.accent-crimson {
+  color: var(--color-accent-crimson);
+}
+
+.kpi-val.accent-gold {
+  color: var(--color-accent-gold);
+}
+
+.kpi-tag {
+  font-size: 0.56rem;
+  color: #777777;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+/* Header Live Telemetry HUD */
+.header-telemetry-hud {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-left: 3px solid var(--color-accent-crimson);
+  padding: 4px 10px;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
+}
+
+.hud-telemetry-label {
+  color: var(--color-accent-crimson);
+  font-weight: 700;
+}
+
+.hud-telemetry-clock {
+  color: #111111;
+  font-weight: 700;
+}
+
+/* Research Section Viewport Adaptations */
+.research-cinematic-section .cinematic-section-inner {
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+}
+
+.research-cinematic-section .research-logs-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
 /* Media Query Responsiveness for Mobile & Laptop */
 @media screen and (max-width: 1024px) {
   .project-cinematic-card {
@@ -3317,6 +3408,12 @@ html, body {
 }
 
 @media screen and (max-width: 768px) {
+  .cinematic-side-nav {
+    display: none !important;
+  }
+  .header-telemetry-hud {
+    display: none !important;
+  }
   .cinematic-section {
     padding-top: 130px !important;
     padding-bottom: 30px !important;
@@ -3329,6 +3426,22 @@ html, body {
   .project-cinematic-card {
     margin: 20px 12px;
     padding: 18px;
+  }
+  .research-cinematic-section .cinematic-section-inner {
+    height: auto !important;
+  }
+  .research-cinematic-section .research-logs-container {
+    overflow-y: visible !important;
+  }
+  .project-kpi-ribbon {
+    gap: 8px;
+    padding: 6px 10px;
+  }
+  .kpi-pill {
+    padding-right: 8px;
+  }
+  .kpi-val {
+    font-size: 0.82rem;
   }
 }
 
