@@ -5,40 +5,15 @@
 
 let testInterval = null;
 
-// Pre-populate SpeechSynthesis voice cache early to ensure reliable female voice selection
-if (typeof window !== 'undefined' && window.speechSynthesis) {
-  window.speechSynthesis.getVoices();
-  if (window.speechSynthesis.onvoiceschanged !== undefined) {
-    window.speechSynthesis.onvoiceschanged = () => {
-      window.speechSynthesis.getVoices();
-    };
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Critical Telemetry Initialization (Render immediately)
-  initThemeSwitcher();
-  initSystemClock();
   initSPARouting();
-  initEngineeringCanvas();
+  initSkillsGrid();
+  initResearchModule();
+  initProjectLightbox();
   initHomeTerminal();
-
-  // 2. Non-Critical Modules (Deferred to keep main thread free for instant loading)
-  const deferSetup = () => {
-    initMetricsFluctuation();
-    initTacticalFeatures();
-    initWordLimitCounters();
-    initResearchModule();
-    initSkillsGrid();
-    initContactValidationModule();
-    initProjectLightbox();
-  };
-
-  if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(() => setTimeout(deferSetup, 30));
-  } else {
-    setTimeout(deferSetup, 30);
-  }
+  initContactValidationModule();
+  initWordLimitCounters();
+  initEngineeringCanvas();
 });
 
 function handleTabSwitch(tabId) {
@@ -50,17 +25,15 @@ function handleTabSwitch(tabId) {
     }
 }
 
-
-
 /**
  * 1. SPA Navigation & Section Crossfade
- * Smooth opacity fading keeping background and framework persistent
+ * Smooth native scrolling keeping layout responsive and instantaneous
  */
 window.scrollToSection = function(sectionId) {
   if (sectionId === 'projects') sectionId = 'proj-01';
   const target = document.getElementById(sectionId);
   if (target) {
-    target.scrollIntoView({ behavior: 'smooth' });
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     try {
       history.pushState(null, null, `#${sectionId}`);
     } catch (e) {}
@@ -90,7 +63,6 @@ function initSPARouting() {
   const navLinks = document.querySelectorAll('.nav-link');
   const sideNavItems = document.querySelectorAll('.side-nav-item');
 
-  const container = document.getElementById('main-scroll-container');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -118,8 +90,8 @@ function initSPARouting() {
       }
     });
   }, {
-    root: container || null,
-    threshold: 0.35
+    root: null,
+    threshold: 0.25
   });
 
   sections.forEach(section => observer.observe(section));
@@ -128,63 +100,24 @@ function initSPARouting() {
   if (currentHash) {
     setTimeout(() => {
       window.scrollToSection(currentHash);
-    }, 150);
+    }, 50);
   }
 }
 
 /**
- * 2. High-Performance Engineering CAD Matrix & Ambient Data Constellation
- * Minimalist blueprint coordinate grid, subtle crosshair markers (+), and delicate data constellation nodes.
+ * 2. Zero-Overhead Static Engineering CAD Blueprint Grid
+ * Renders once on load and resize (0% CPU/GPU usage during scroll).
  */
 function initEngineeringCanvas() {
   const canvas = document.getElementById('engineering-canvas') || document.getElementById('hex-canvas');
   if (!canvas) return;
 
-  const ctx = canvas.getContext('2d');
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
+  const ctx = canvas.getContext('2d', { alpha: false });
+  const gridSize = 60;
 
-  let mouse = { x: -1000, y: -1000, active: false };
-
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-    mouse.active = true;
-  });
-
-  window.addEventListener('mouseleave', () => {
-    mouse.active = false;
-  });
-
-  // Precision Engineering CAD Data Nodes
-  const nodeCount = Math.min(30, Math.max(16, Math.floor((width * height) / 45000)));
-  const nodes = [];
-  const colors = ['#C5A059', '#D60505', '#222222'];
-
-  for (let i = 0; i < nodeCount; i++) {
-    nodes.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.35,
-      vy: (Math.random() - 0.5) * 0.35,
-      radius: 1.2 + Math.random() * 1.5,
-      color: colors[i % colors.length],
-      baseAlpha: 0.15 + Math.random() * 0.2,
-      pulseSpeed: 0.02 + Math.random() * 0.02,
-      pulsePhase: Math.random() * Math.PI * 2
-    });
-  }
-
-  const gridSize = 60; // 60px engineering grid intervals
-  let tick = 0;
-
-  function render() {
-    tick++;
+  function drawStaticGrid() {
+    const width = canvas.width = window.innerWidth;
+    const height = canvas.height = window.innerHeight;
 
     // 1. Crisp White Base
     ctx.fillStyle = '#FFFFFF';
@@ -218,78 +151,15 @@ function initEngineeringCanvas() {
       }
     }
     ctx.stroke();
-
-    // 4. Update and Connect Ambient Telemetry Nodes
-    for (let i = 0; i < nodes.length; i++) {
-      const n1 = nodes[i];
-      n1.x += n1.vx;
-      n1.y += n1.vy;
-
-      if (n1.x < 0) n1.x = width;
-      if (n1.x > width) n1.x = 0;
-      if (n1.y < 0) n1.y = height;
-      if (n1.y > height) n1.y = 0;
-
-      // Mouse gentle interaction
-      if (mouse.active) {
-        const dx = mouse.x - n1.x;
-        const dy = mouse.y - n1.y;
-        const dist = Math.hypot(dx, dy);
-        if (dist < 140 && dist > 0) {
-          const force = (140 - dist) / 140;
-          n1.x -= (dx / dist) * force * 1.5;
-          n1.y -= (dy / dist) * force * 1.5;
-        }
-      }
-
-      // Proximity constellation lines between nearby nodes
-      for (let j = i + 1; j < nodes.length; j++) {
-        const n2 = nodes[j];
-        const dx = n1.x - n2.x;
-        const dy = n1.y - n2.y;
-        const dist = Math.hypot(dx, dy);
-
-        if (dist < 120) {
-          const lineAlpha = (1 - dist / 120) * 0.12;
-          ctx.strokeStyle = `rgba(197, 160, 89, ${lineAlpha})`;
-          ctx.lineWidth = 0.6;
-          ctx.beginPath();
-          ctx.moveTo(n1.x, n1.y);
-          ctx.lineTo(n2.x, n2.y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    // 5. Draw the Nodes
-    for (let i = 0; i < nodes.length; i++) {
-      const n = nodes[i];
-      const alphaPulse = n.baseAlpha + Math.sin(tick * n.pulseSpeed + n.pulsePhase) * 0.08;
-
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-      ctx.fillStyle = n.color;
-      ctx.globalAlpha = Math.max(0.08, alphaPulse);
-      ctx.fill();
-    }
-    ctx.globalAlpha = 1.0;
-
-    // 6. Subtle cursor beacon when active
-    if (mouse.active) {
-      const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 140);
-      gradient.addColorStop(0, 'rgba(197, 160, 89, 0.035)');
-      gradient.addColorStop(0.5, 'rgba(214, 5, 5, 0.012)');
-      gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-      ctx.fillStyle = gradient;
-      ctx.beginPath();
-      ctx.arc(mouse.x, mouse.y, 140, 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    requestAnimationFrame(render);
   }
 
-  requestAnimationFrame(render);
+  drawStaticGrid();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(drawStaticGrid, 150);
+  }, { passive: true });
 }
 
 
