@@ -537,11 +537,229 @@ const telemetryDatabase = {
 
 const abstractDatabase = {
     log01: `<div class="structured-modal-content">
+    <div class="modal-info-title">Design, Simulation, and Empirical Validation of the Prarambh 1 Solid Rocket Motor</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-text">
+            <strong>DOCUMENT ID:</strong> TDRSR-PROP-TR-2026-001<br>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21173319" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21173319</a><br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Aerospace Propulsion Technical Report<br>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
+                <a href="https://zenodo.org/records/21173319" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT &amp; PDF ↗ ]</a>
+                <button class="bibtex-btn font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21173319', 'Design, Simulation, and Empirical Validation of the Prarambh 1 Solid Rocket Motor')">[ COPY BIBTEX CITATION 📋 ]</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">ABSTRACT &amp; TECHNICAL ARCHITECTURE //</div>
+        <div class="modal-info-text">
+            Solid rocket propulsion systems require rigorous coupling of propellant thermochemistry, internal ballistics digital twins, and structural containment verification to achieve predictable flight performance. This technical report (Document ID: TDRSR-PROP-TR-2026-001) details the complete engineering lifecycle—from analytical design and numerical simulation to static test stand empirical validation—of the <strong>Prarambh 1</strong> solid rocket motor. The propulsion unit utilizes a Potassium Nitrate–Sorbitol (KNSB) propellant grain engineered to maintain stable chamber pressure and prevent structural casing over-pressurization.
+        </div>
+        <div class="modal-info-text">
+            To capture high-resolution burn dynamics during live hot-fire testing, a bespoke <strong>80 Hz mechatronic Data Acquisition (DAQ) system</strong> was architected and calibrated for real-time thrust-time profiling. Static test stand empirical validation confirmed a total impulse of <strong>206.8 N·s</strong>, closely tracking the numerical internal ballistics digital twin predictions while verifying the structural factor of safety of the motor casing and nozzle assembly under peak thermal and mechanical loads.
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">KEYWORDS //</div>
+        <div class="modal-info-text">
+            Prarambh 1, Solid Rocket Motor, KNSB Propellant Thermochemistry, Internal Ballistics Digital Twin, 80 Hz Mechatronic DAQ, Static Test Stand Validation, 206.8 N·s Total Impulse, ANSYS Structural FEA
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">REFERENCES //</div>
+        <ul class="modal-info-references">
+            <li>Sutton, G. P., and Biblarz, O. "Rocket Propulsion Elements," 9th Edition, Wiley, 2016.</li>
+            <li>NASA SP-8073. "Solid Rocket Motor Metal Cases," NASA Space Vehicle Design Criteria, 1970.</li>
+            <li>Boyer, E., et al. "Characterization and Static Testing of Potassium Nitrate-Sugar Solid Propellants," <em>Journal of Propulsion and Power</em>, Vol. 37, No. 2, pp. 245-256, 2021.</li>
+        </ul>
+    </div>
+</div>`,
+
+    log02: `<div class="structured-modal-content">
+    <div class="modal-info-title">Development of a Scalable Hybrid Sorting System: A Deterministic Mechatronic Architecture for High-Fidelity Material Recovery</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-text">
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21740853" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21740853</a><br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Industrial Mechatronics Technical Report<br>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
+                <a href="https://zenodo.org/records/21740853" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT &amp; PDF ↗ ]</a>
+                <button class="bibtex-btn font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21740853', 'Development of a Scalable Hybrid Sorting System: A Deterministic Mechatronic Architecture for High-Fidelity Material Recovery')">[ COPY BIBTEX CITATION 📋 ]</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">ABSTRACT &amp; TECHNICAL ARCHITECTURE //</div>
+        <div class="modal-info-text">
+            Decentralized material recovery facilities require deterministic, noise-immune automation architectures capable of high-fidelity sorting without the capital overhead of fragile hyperspectral vision clusters. This report details the engineering and empirical evaluation of a scalable hybrid sorting cell governed by a <strong>Siemens S7-1200 Programmable Logic Controller (PLC)</strong> integrated with a multi-modal sensor array.
+        </div>
+        <div class="modal-info-text">
+            To bridge 5V/3.3V microcontroller edge-sensing tiers with 24V industrial PLC inputs in high-noise plant environments, the system implements bespoke <strong>optocoupled electromagnetic interference (EMI) firewalls</strong> for complete galvanic isolation. The control core executes deterministic <strong>combinational Boolean logic matrices</strong> with sub-millisecond scan-cycle determinism, coordinating high-speed diversion actuators to achieve an empirically verified <strong>90.0% sorting accuracy</strong> across heterogeneous material streams.
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">KEYWORDS //</div>
+        <div class="modal-info-text">
+            Industrial Material Recovery, Siemens S7-1200 PLC, Optocoupled EMI Firewalls, Combinational Boolean Logic Matrices, Deterministic Mechatronics, Sensor Fusion, Galvanic Isolation
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">REFERENCES //</div>
+        <ul class="modal-info-references">
+            <li>Siemens AG. "S7-1200 Programmable Controller System Manual," A5E02486680-AH, 2022.</li>
+            <li>Bolton, W. "Mechatronics: Electronic Control Systems in Mechanical and Electrical Engineering," 7th Edition, Pearson, 2018.</li>
+            <li>Gundupalli, S. P., et al. "A review on automatic waste sorting technologies," <em>Waste Management</em>, Vol. 60, pp. 33-44, 2017.</li>
+        </ul>
+    </div>
+</div>`,
+
+    log03: `<div class="structured-modal-content">
+    <div class="modal-info-title">Design, Integration, and Performance Evaluation of a Vision-Guided Line Follower Robot</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-text">
+            <strong>DOCUMENT ID:</strong> MVS-REPORT-003<br>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904756" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21904756</a><br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Machine Vision &amp; Mobile Robotics Report<br>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
+                <a href="https://zenodo.org/records/21904756" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT &amp; PDF ↗ ]</a>
+                <button class="bibtex-btn font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904756', 'Design, Integration, and Performance Evaluation of a Vision-Guided Line Follower Robot')">[ COPY BIBTEX CITATION 📋 ]</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">ABSTRACT &amp; TECHNICAL ARCHITECTURE //</div>
+        <div class="modal-info-text">
+            Traditional infrared (IR) reflectance sensor arrays suffer from severe spatial quantization, zero look-ahead horizon, and high sensitivity to ambient illumination shifts during high-curvature trajectory tracking. This technical report presents the design, hardware-software integration, and closed-loop performance evaluation of a <strong>Vision-Guided Line Follower Robot</strong> built around an <strong>ESP32</strong> wireless edge node and an <strong>OpenCV</strong> visual perception pipeline.
+        </div>
+        <div class="modal-info-text">
+            The perception engine transforms raw RGB camera frames via <strong>HSV color-space conversion</strong> and morphological filtering to isolate path geometry under variable lighting. By computing <strong>dynamic look-ahead vector mapping</strong> and centroid heading errors ahead of the chassis center of mass, the controller modulates differential PWM duty cycles across an <strong>L298N dual H-bridge motor driver</strong>, anticipating sharp curvature transitions and eliminating the oscillatory hunting behavior typical of discrete IR arrays.
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">KEYWORDS //</div>
+        <div class="modal-info-text">
+            Vision-Guided Navigation, ESP32, OpenCV, HSV Color-Space Conversion, Dynamic Look-Ahead Vector Mapping, L298N Motor Driver Kinematics, Autonomous Mobile Robotics
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">REFERENCES //</div>
+        <ul class="modal-info-references">
+            <li>Corke, P. "Robotics, Vision and Control: Fundamental Algorithms in MATLAB," 3rd Edition, Springer, 2023.</li>
+            <li>Siegwart, R., Nourbakhsh, I. R., and Scaramuzza, D. "Introduction to Autonomous Mobile Robots," 2nd Edition, MIT Press, 2011.</li>
+        </ul>
+    </div>
+</div>`,
+
+    log04: `<div class="structured-modal-content">
+    <div class="modal-info-title">AI-Powered Patient Registration and Triage Kiosk for Low-Resource Healthcare</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-text">
+            <strong>DOMAIN:</strong> Healthcare Cyber-Physical Systems &amp; Edge-AI Biomedical Triage<br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Technical Report<br>
+            <strong>RELATED IP FILING:</strong> Design Patent Application No. 507688-001 (IP India)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">ABSTRACT &amp; TECHNICAL ARCHITECTURE //</div>
+        <div class="modal-info-text">
+            Primary healthcare centers in rural and low-resource regions face severe clinical bottlenecks during patient intake and emergency acuity stratification due to staff shortages and intermittent internet connectivity. This technical report documents a decentralized <strong>5-tier edge-AI patient registration and clinical triage architecture</strong> integrated into an ergonomic, self-service diagnostic kiosk.
+        </div>
+        <div class="modal-info-text">
+            The cyber-physical platform combines <strong>localized multilingual voice parsing</strong> for zero-literacy symptom intake with a synchronized <strong>non-contact and multi-parameter biomedical sensor array</strong> measuring core body temperature ($T_{body}$), photoplethysmography ($PPG$ heart rate and $SpO_2$), and non-invasive blood pressure ($NIBP$). Engineered for <strong>deterministic offline execution during network blackouts</strong>, the edge inference engine stratifies patients across a 5-level clinical acuity scale locally, storing encrypted electronic health records for asynchronous synchronization once connectivity is restored.
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">KEYWORDS //</div>
+        <div class="modal-info-text">
+            Healthcare Cyber-Physical Systems, 5-Tier Edge-AI Triage, Localized Voice Parsing, Biomedical Sensor Array, Photoplethysmography (PPG), Non-Invasive Blood Pressure (NIBP), Deterministic Offline Execution
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">REFERENCES //</div>
+        <ul class="modal-info-references">
+            <li>World Health Organization (WHO). "Emergency Triage Assessment and Treatment (ETAT) Guidelines," WHO Press.</li>
+            <li>Kopetz, H. "Real-Time Systems: Design Principles for Distributed Embedded Applications," 2nd Edition, Springer, 2011.</li>
+        </ul>
+    </div>
+</div>`,
+
+    log05: `<div class="structured-modal-content">
+    <div class="modal-info-title">Design, Kinematic Modeling, and Feasibility Evaluation of an Autonomous Modular Seedling Planting Robot for High-Value Agriculture (AgroBot)</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-text">
+            <strong>PROGRAM AFFILIATION:</strong> Developed under Purdue University EPICS (Engineering Projects in Community Service) Mentorship<br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Agricultural Robotics Technical Report<br>
+            <strong>RELATED IP FILING:</strong> Design Patent Application No. 517599-001 (IP India)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">ABSTRACT &amp; TECHNICAL ARCHITECTURE //</div>
+        <div class="modal-info-text">
+            Precision seedling transplantation in high-value horticulture demands repeatable spatial placement and gentle root-plug handling over deformable, high-slip agricultural soils. Developed under <strong>Purdue University EPICS mentorship</strong>, this technical report presents the mechanical design, kinematic modeling, and feasibility evaluation of <strong>AgroBot</strong>—an autonomous modular seedling planting robot.
+        </div>
+        <div class="modal-info-text">
+            The study formulates <strong>differential drive terramechanics</strong> to account for wheel sinkage and longitudinal slip on unprepared soil beds, coupled with an <strong>Error-State Extended Kalman Filter (Error-State EKF)</strong> fusing wheel odometry and inertial telemetry for drift-corrected row localization. To prevent stem shear and root trauma during continuous motion, the planting payload features a <strong>synchronized zero-relative-velocity vertical dibbler linkage</strong> that matches horizontal ground speed at the instant of soil penetration and seedling release.
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">KEYWORDS //</div>
+        <div class="modal-info-text">
+            Agricultural Field Robotics, AgroBot, Purdue EPICS, Differential Drive Terramechanics, Error-State EKF Localization, Zero-Relative-Velocity Vertical Dibbler Linkage, Precision Agriculture
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">REFERENCES //</div>
+        <ul class="modal-info-references">
+            <li>Bekker, M. G. "Introduction to Terrain-Vehicle Systems," University of Michigan Press, 1969.</li>
+            <li>Sola, J. "Quaternion kinematics for the error-state Kalman filter," <em>arXiv preprint arXiv:1711.02508</em>, 2017.</li>
+            <li>Bechar, A., and Vigneault, C. "Agricultural robots for field operations: Concepts and components," <em>Biosystems Engineering</em>, Vol. 149, pp. 94-111, 2016.</li>
+        </ul>
+    </div>
+</div>`,
+
+    log06: `<div class="structured-modal-content">
+    <div class="modal-info-title">Optical Illumination Adaptation and Real-Time Kinetic Orientation in Industrial Robotic Sorting: A Systematic Review and Algorithmic Taxonomy</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-text">
+            <strong>DOCUMENT TYPE:</strong> Systematic Review &amp; Algorithmic Taxonomy<br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Computer Vision &amp; Industrial Robotics Review
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">ABSTRACT &amp; TECHNICAL ARCHITECTURE //</div>
+        <div class="modal-info-text">
+            High-speed pick-and-place robotic sorting lines operating on specular, metallic, and translucent workpieces frequently suffer from perception dropouts caused by ambient illumination shifts and surface glare, alongside grasp failures arising from latency between pose estimation and moving-conveyor interception. This systematic review synthesizes and benchmarks modern optical adaptation and real-time kinetic orientation pipelines across industrial robotic sorting architectures.
+        </div>
+        <div class="modal-info-text">
+            The taxonomy rigorously evaluates optical hardware and photometric normalization strategies—specifically benchmarking <strong>cross-polarization glare suppression</strong> against active structured-light domes—followed by low-latency geometric pose extraction via <strong>Principal Component Analysis (PCA) eigenvector orientation estimation</strong>. Finally, the review analyzes deterministic industrial communication bridges, establishing design guidelines for <strong>OPC UA and ROS 2 middleware interoperability</strong> to synchronize high-frame-rate vision nodes with real-time PLC and 6-DOF manipulator controllers.
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">KEYWORDS //</div>
+        <div class="modal-info-text">
+            Industrial Robotic Sorting, Cross-Polarization Glare Suppression, PCA Eigenvector Orientation Estimation, Optical Illumination Adaptation, OPC UA, ROS 2 Middleware Interoperability, Systematic Review
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">REFERENCES //</div>
+        <ul class="modal-info-references">
+            <li>Horn, B. K. P. "Robot Vision," MIT Press, 1986.</li>
+            <li>Macenski, S., et al. "Robot Operating System 2: Design, architecture, and uses in the wild," <em>Science Robotics</em>, Vol. 7, No. 66, 2022.</li>
+            <li>Mahnke, W., Leitner, S. H., and Damm, M. "OPC Unified Architecture," Springer, 2009.</li>
+        </ul>
+    </div>
+</div>`,
+
+    log07: `<div class="structured-modal-content">
     <div class="modal-info-title">Design of Explainable AI Alerts for Cognitive Overload in Cobot Task Handover Panels</div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">ABSTRACT //</div>
         <div class="modal-info-text">
-            Human-robot collaboration (HRC) in modern industrial assembly lines requires rapid, high-integrity decision-making during physical part handover sequences. However, traditional human-machine interfaces (HMIs) frequently induce acute cognitive overload in human operators by streaming raw, uninterpreted sensor logs, complex coordinate vectors, and cryptic numerical error codes. This cognitive friction increases task completion latency, elevates error rates, and degrades operator trust in automated partners. This research addresses these deficiencies by engineering an Explainable AI (XAI) alert framework integrated with real-time cognitive workload estimation. By monitoring operator physiological cues and reaction latencies, the system determines the onset of cognitive fatigue and dynamically adapts HMI alerts. The core architecture completely deprecates opaque numerical system fault codes, replacing them with context-aware, color-coded semantic explanation alerts that highlight the root cause, system confidence, and actionable recovery procedures in real-time. Experimental evaluations conducted on a simulated mechatronic handover panel demonstrated a 34% reduction in operator decision latency and a 28% increase in system usability scores compared to traditional static readouts. This research establishes a path for implementing resilient, human-centric automation frameworks that preserve operator trust in high-velocity collaborative manufacturing environments.
+            Human-robot collaboration (HRC) in modern industrial assembly lines requires rapid, high-integrity decision-making during physical part handover sequences. However, traditional human-machine interfaces (HMIs) frequently induce acute cognitive overload in human operators by streaming raw, uninterpreted sensor logs, complex coordinate vectors, and cryptic numerical error codes. This cognitive friction increases task completion latency, elevates error rates, and degrades operator trust in automated partners. This research addresses these deficiencies by engineering an Explainable AI (XAI) alert framework integrated with real-time cognitive workload estimation. By monitoring operator physiological cues and reaction latencies, the system determines the onset of cognitive fatigue and dynamically adapts HMI alerts. The core architecture completely deprecates opaque numerical system fault codes, replacing them with context-aware, color-coded semantic explanation alerts that highlight the root cause, system confidence, and actionable recovery procedures in real-time. Experimental evaluations conducted on a simulated mechatronic handover panel demonstrated a 34% reduction in operator decision latency and a 28% increase in system usability scores compared to traditional static readouts.
         </div>
     </div>
     <div class="modal-info-section">
@@ -551,189 +769,11 @@ const abstractDatabase = {
         </div>
     </div>
     <div class="modal-info-section">
-        <div class="modal-info-subtitle">INTRODUCTION //</div>
-        <div class="modal-info-text">
-            The rapid escalation of automated systems in modern manufacturing has transformed the role of human operators from manual laborers to system supervisors, necessitating close, physical interaction with collaborative robots (cobots). In high-speed assembly and part handover operations, the synchronization of human speed and mechanical force demands absolute perceptual clarity. However, conventional HMI architectures fail to adapt to human psychological boundaries, often flooding operators with continuous, raw sensor streams. When anomalies occur, these systems output binary error logs that require cognitive translation, leading to micro-delays that compromise safety and process efficiency. This research introduces a dynamic cognitive monitoring loop that scales HMI information density based on the operator's real-time cognitive state, ensuring that critical data is highlighted when load is high. By leveraging non-intrusive sensor telemetry, the platform dynamically captures operator eye-tracking and response times to evaluate cognitive load.
-        </div>
-        <div class="modal-info-text">
-            To resolve these interfaces, we propose an Explainable AI (XAI) alert layer that translates complex neural network diagnostic vectors into structured, semantic explanations. Rather than displaying an opaque code, the HMI shows a real-time confidence readout, a natural language root-cause description, and a targeted recovery pathway. This interface utilizes a three-tier visual hierarchy (Red: Urgent Halt, Yellow: Corrective Adjustment, Green: Nominal Flow) calibrated to human reaction triggers. We implemented this framework on a physical task handover panel and analyzed operator feedback through NASA-TLX indices. The results verify that explaining system intent and failure modes significantly alleviates mental stress, mitigates decision paralysis, and establishes a predictable, resilient human-cobot partnership. Furthermore, this research outlines how structural semantic explainability bridges the trust gap between human supervisors and autonomous robots, enabling long-term deployment of hybrid workforces.
-        </div>
-    </div>
-    <div class="modal-info-section">
         <div class="modal-info-subtitle">REFERENCES //</div>
         <ul class="modal-info-references">
-            <li>Miller, T. "Explanation in artificial intelligence: Insights from the social sciences," *Artificial Intelligence*, Vol. 267, pp. 1-38, 2019.</li>
-            <li>Adadi, A., and Berrada, M. "Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)," *IEEE Access*, Vol. 6, pp. 52138-52160, 2018.</li>
-            <li>Lipton, Z. C. "The Mythos of Model Interpretability: In machine learning, the concept of interpretability is both important and poorly defined," *Queue*, Vol. 16, No. 3, pp. 31-57, 2018.</li>
-            <li>Glikson, E., and Woolley, A. W. "Human trust in artificial intelligence: Review of empirical research," *Academy of Management Annals*, Vol. 14, No. 2, pp. 627-660, 2020.</li>
+            <li>Miller, T. "Explanation in artificial intelligence: Insights from the social sciences," <em>Artificial Intelligence</em>, Vol. 267, pp. 1-38, 2019.</li>
+            <li>Adadi, A., and Berrada, M. "Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)," <em>IEEE Access</em>, Vol. 6, pp. 52138-52160, 2018.</li>
             <li>NASA-TLX: Task Load Index, Human Performance Group, NASA Ames Research Center, 1986.</li>
-        </ul>
-    </div>
-</div>`,
-
-    log02: `<div class="structured-modal-content">
-    <div class="modal-info-title">Development of a Scalable Hybrid Sorting System: A Mechatronic Architecture for Material Recovery</div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION & ZENODO ARCHIVE //</div>
-        <div class="modal-info-text">
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21740853" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21740853</a><br>
-            <strong>DOCUMENT TYPE:</strong> Technical Report // Open Access Hybrid Sorting Mechatronics & Material Recovery<br>
-            <a href="https://zenodo.org/records/21740853" target="_blank" class="zenodo-link-btn font-mono" style="margin-top: 10px; display: inline-flex;">[ OPEN FULL ZENODO REPORT & PDF â†— ]</a>
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">ABSTRACT //</div>
-        <div class="modal-info-text">
-            Decentralized material recovery facilities frequently struggle with the high capital cost of automated waste sorting technologies. Traditional conveyor belt sorting configurations rely on expensive multispectral camera networks and computationally intensive deep learning pipelines that exhibit high latency and low reliability in dust-heavy, vibrating plant environments. This paper presents the design and deployment of a resilient, low-cost mechatronic waste sorting system operating under a total budget of $700. The architecture combines an edge sensing layerâ€”utilizing an Arduino microcontroller polling multi-modal sensors at 1 kHzâ€”with a Siemens S7-1200 programmable logic controller (PLC) that coordinates precise mechanical sorting gates. The sensors capture physical weight, metallic content, and infrared signature data in real-time, fusing these parameters at the edge to categorize items into plastic, metallic, or organic streams. Our hybrid sorting system processes up to 60 objects per minute, achieving a classification accuracy of 92.5%. This study demonstrates that combining low-power edge sensing with robust industrial control hardware offers a scalable, high-performance solution for small-scale recycling centers, bypassing the need for expensive computer vision clusters and enabling localized sustainable waste management.
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">KEYWORDS //</div>
-        <div class="modal-info-text">
-            Waste Sorting, Industrial PLC, Mechatronics, Edge Computing, Sensor Fusion, Material Recovery, Siemens S7-1200
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">INTRODUCTION //</div>
-        <div class="modal-info-text">
-            Solid waste sorting in decentralized recycling plants poses a significant logistics challenge due to the extreme heterogeneity of municipal refuse and the financial constraints of municipal recovery facilities. Historically, high-accuracy sorting has been dominated by optical sorters equipped with hyperspectral cameras and near-infrared spectrometers. While highly effective, these systems cost hundreds of thousands of dollars and require pristine operating conditions to prevent lens contamination and computer failures. In contrast, small-scale sorting lines in developing regions continue to rely on manual separation, exposing workers to biohazards and yielding low throughput. This research addresses this gap by developing a mechatronic system that provides automated sorting capabilities at a fraction of the cost, utilizing a robust physical design that withstands harsh industrial environments.
-        </div>
-        <div class="modal-info-text">
-            The core mechatronic architecture separates the sensing and actuation layers into dedicated processing nodes to ensure high reliability. An edge-based sensor array collects real-time weight, inductive metal presence, and capacitive signatures, transferring this multi-modal telemetry to a Siemens S7-1200 PLC via a high-speed communication link. The PLC executes a deterministic sorting state machine, triggering high-speed pneumatic ejectors to divert waste categories into designated bins. By utilizing discrete sensor fusion instead of high-throughput computer vision, the computational load is minimized, allowing the system to run on lightweight, low-cost microcontrollers with sub-millisecond execution times. This layout guarantees that the processing pipeline remains unaffected by particulate matter, ambient lighting changes, or mechanical vibrations. Experimental trials validated that the system achieves high structural durability and sorting precision over extended cycles, presenting a viable path for the localization of automated material recycling technologies globally. The mechatronic design can be replicated using off-the-shelf components, promoting decentralized environmental sustainability.
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">REFERENCES //</div>
-        <ul class="modal-info-references">
-            <li>Siemens AG. "S7-1200 Programmable Controller System Manual," A5E02486680-AH, 2022.</li>
-            <li>Fraden, J. "Handbook of Modern Sensors: Physics, Designs, and Applications," 5th Edition, Springer, 2016.</li>
-            <li>Gundupalli, S. P., et al. "A review on automatic waste sorting technologies," *Waste Management*, Vol. 60, pp. 33-44, 2017.</li>
-            <li>Bolton, W. "Mechatronics: Electronic Control Systems in Mechanical and Electrical Engineering," 7th Edition, Pearson, 2018.</li>
-            <li>Garcia-Garza, M. A., et al. "Sensor fusion and PLC integration in modern automation lines," *Journal of Industrial Technology*, Vol. 38, pp. 112-124, 2023.</li>
-        </ul>
-    </div>
-</div>`,
-
-    log03: `<div class="structured-modal-content">
-    <div class="modal-info-title">Design Optimization of Propellant Grain Geometry and Structural Casing Stress Analysis for the Prarambh 1 Solid Propulsion System</div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION & ZENODO ARCHIVE //</div>
-        <div class="modal-info-text">
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21173319" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21173319</a><br>
-            <strong>DOCUMENT TYPE:</strong> Technical Report // Open Access Aerospace Propulsion & Solid Motor Stress Analysis<br>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
-                <a href="https://zenodo.org/records/21173319" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT & PDF â†— ]</a>
-                <button class="bibtex-btn font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21173319', 'Design Optimization of Propellant Grain Geometry and Structural Casing Stress Analysis for Prarambh 1')">[ COPY BIBTEX CITATION ðŸ“‹ ]</button>
-            </div>
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">ABSTRACT //</div>
-        <div class="modal-info-text">
-            Solid rocket propulsion systems require precise balancing of internal ballistic parameters and structural casing integrity to ensure stable, high-performance flight profiles. This research details the design engineering, numerical internal ballistics verification, and structural finite element analysis (FEA) for the Prarambh 1 solid rocket motor. The design optimizes the star-grain fuel geometry of a potassium nitrate-sorbitol (KNSB) propellant to achieve a neutral burn profile, preventing extreme chamber pressure spikes that could cause structural casing failure. Using a custom ballistics regression simulator, we optimized the surface-area-to-volume ratio of the propellant grains to maintain a steady chamber pressure of 3.2 MPa throughout the burn cycle. Structural casing stress analysis was performed under peak thrust conditions using ANSYS, examining deformation, safety margins, and thermal expansion boundaries for both aluminum 6061-T6 and composite casing alternatives. The simulation results verified a minimum structural factor of safety of 2.1 under maximum operating pressure. This work establishes a verified, low-cost engineering framework for collegiate rocketry programs, demonstrating how integrating grain geometry optimization and structural finite element analysis can reliably prevent catastrophic motor failures.
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">KEYWORDS //</div>
-        <div class="modal-info-text">
-            Solid Rocket Propulsion, Grain Geometry, Finite Element Analysis, ANSYS, KNSB Propellant, Internal Ballistics, Casing Stress
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">INTRODUCTION //</div>
-        <div class="modal-info-text">
-            Collegiate high-power rocketry has experienced a shift toward custom-developed solid propulsion motors, allowing research teams to achieve high altitudes with tailored thrust curves. However, the design of solid rocket motors presents severe engineering challenges due to the coupled nature of internal ballistics and structural mechanics. A solid propellant's combustion rate depends on the burning surface area, which changes continuously as the grain regresses. Uncontrolled grain regression can cause a rapid increase in chamber pressure, exceeding the ultimate tensile strength of the motor casing and leading to catastrophic structural failure. Consequently, developing reliable solid rocket systems requires careful simulation of the burning physics alongside robust stress analysis of the containment structures under extreme thermal and mechanical loads.
-        </div>
-        <div class="modal-info-text">
-            This research addresses this challenge by integrating solid grain geometry modeling with finite element structural analysis using the Prarambh 1 solid motor platform. We modeled a star-grain propellant configuration using KNSB, analyzing the regression rate and burn surface progression to optimize the thrust-time curve. The resulting pressure-time profile was used as a dynamic boundary condition in ANSYS to simulate the mechanical stress and deformation on the motor casing wall. We evaluated stress distributions, plastic deformations, and localized stress concentrations near the nozzle and bulkhead threads under peak thrust loads. The analysis also accounted for the transient thermal gradients generated by combustion temperatures reaching 1600 K. By optimizing the wall thickness and thread geometries of the aluminum 6061-T6 casing, the design secures a high safety margin while minimizing structural weight. This integrated simulation loop ensures that the structural casing can safely contain the high chamber pressures, providing a reliable design method that bridges the gap between theoretical ballistics and physical static test validation.
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">REFERENCES //</div>
-        <ul class="modal-info-references">
-            <li>Sutton, G. P., and Biblarz, O. "Rocket Propulsion Elements," 9th Edition, Wiley, 2016.</li>
-            <li>Greatrix, D. R. "Powered Flight: The Engineering of Aerospace Propulsion," Springer, 2012.</li>
-            <li>NASA SP-8073. "Solid Rocket Motor Metal Cases," NASA Space Vehicle Design Criteria, 1970.</li>
-            <li>Boyer, E., et al. "Characterization and Static Testing of Potassium Nitrate-Sugar Solid Propellants," *Journal of Propulsion and Power*, Vol. 37, No. 2, pp. 245-256, 2021.</li>
-            <li>Davenas, A. "Technology of Solid Rocket Propellants," Nouvelle Edition, AIAA, 2020.</li>
-        </ul>
-    </div>
-</div>`,
-
-    log04: `<div class="structured-modal-content">
-    <div class="modal-info-title">Machine Vision Navigation Systems and Path Planning Optimization Loops for a 4WD Autonomous Vehicle Chassis</div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION & ZENODO ARCHIVE //</div>
-        <div class="modal-info-text">
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904756" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21904756</a><br>
-            <strong>DOCUMENT TYPE:</strong> Technical Report // Open Access Machine Vision Robotics & Autonomous Path Planning<br>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
-                <a href="https://zenodo.org/records/21904756" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT & PDF ↗ ]</a>
-                <button class="bibtex-btn font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904756', 'Machine Vision Navigation Systems and Path Planning Optimization Loops for a 4WD Autonomous Vehicle Chassis')">[ COPY BIBTEX CITATION 📋 ]</button>
-            </div>
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">ABSTRACT //</div>
-        <div class="modal-info-text">
-            Autonomous ground vehicle navigation in obstacle-dense environments requires low-latency path planning and perception layers that can operate reliably on edge hardware. This paper presents the development and validation of an edge-computing vision navigation system deployed on a four-wheel-drive (4WD) autonomous robot chassis. The vehicle utilizes a centralized camera to capture road boundaries and obstacle fields, processing the visual data on-device to extract navigation vectors without relying on cloud computation or external networks. We implemented a hybrid path planning loop that combines a local obstacle avoidance algorithm with a global trajectory optimization controller, running at a closed-loop frequency of 50 Hz. This integration allows the robot to recalculate optimal paths in real-time, correcting steering deviations using an active PID controller. Testing showed that the robot maintained a path tracking precision of 94.5% at speeds up to 1.5 m/s, successfully navigating dense obstacle paths. This study highlights the viability of deploying lightweight machine vision navigation pipelines on small-scale autonomous platforms, showing how local sensor processing and closed-loop control optimization can achieve reliable autonomy on low-power edge hardware.
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">KEYWORDS //</div>
-        <div class="modal-info-text">
-            Autonomous Vehicles, Machine Vision, Path Planning, PID Control, Trajectory Optimization, Edge Computing, 4WD Robotics
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">INTRODUCTION //</div>
-        <div class="modal-info-text">
-            Autonomous ground robots are increasingly being deployed in agriculture, logistics, and surveillance, where they must navigate complex, unpredictable environments. To achieve safe navigation, these platforms must continuously perceive their surroundings, localize themselves, and compute collision-free trajectories. Most modern autonomous vehicles rely on heavy sensor arrays, such as multi-channel LiDARs and GPS-RTK systems, coupled with high-power computing clusters. However, these systems are cost-prohibitive, power-hungry, and heavy, making them unsuitable for small-scale robotic platforms. There is a critical need to develop lightweight, vision-based navigation frameworks that can run on low-power edge microcontrollers while maintaining high control accuracy and real-time responsiveness in dynamically changing fields.
-        </div>
-        <div class="modal-info-text">
-            This research addresses this requirement by engineering a self-contained, vision-guided navigation system on a 4WD autonomous chassis. The robot uses a single forward-facing camera to capture visual inputs, applying edge-detection algorithms to identify drivable paths and calculate lateral deviation from the path centerline. This tracking error is fed into a high-frequency PID controller that adjusts the differential speed of the four wheels. Simultaneously, a local path planner evaluates the trajectory to avoid obstacles, dynamically updating the waypoint queue. By optimization of the image-processing algorithms and control loops to run on an embedded processor, we achieved a stable loop frequency of 50 Hz. The skid-steer kinematics of the 4WD chassis were fully modeled to handle wheel slippage and traction loss on uneven terrain. Experimental results verify that this local perception-control loop enables the robot to track complex paths and avoid obstacles with minimal latency. It demonstrates that robust autonomy can be achieved on cost-effective, low-power hardware without relying on external cloud clusters or high-bandwidth communication links, paving the way for scalable deployment of local warehouse robots.
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">REFERENCES //</div>
-        <ul class="modal-info-references">
-            <li>Thrun, S., Burgard, W., and Fox, D. "Probabilistic Robotics," MIT Press, 2005.</li>
-            <li>Corke, P. "Robotics, Vision and Control: Fundamental Algorithms in MATLAB," 3rd Edition, Springer, 2023.</li>
-            <li>Siegwart, R., Nourbakhsh, I. R., and Scaramuzza, D. "Introduction to Autonomous Mobile Robots," 2nd Edition, MIT Press, 2011.</li>
-            <li>Dudek, G., and Jenkin, M. "Computational Principles of Mobile Robotics," 2nd Edition, Cambridge University Press, 2010.</li>
-            <li>Borenstein, J., and Koren, Y. "The vector field histogram-fast obstacle avoidance for mobile robots," *IEEE Transactions on Robotics and Automation*, Vol. 7, No. 3, pp. 278-288, 1991.</li>
-        </ul>
-    </div>
-</div>`,
-
-    log05: `<div class="structured-modal-content">
-    <div class="modal-info-title">Aerodynamic Performance, Thrust Profiling, and Frame Structural Analysis of a Heavy Duty Quadcopter Drone Platform</div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">ABSTRACT //</div>
-        <div class="modal-info-text">
-            Heavy-lift quadcopter drones require rigorous structural and aerodynamic optimization to maintain stable flight characteristics and prevent composite frame fatigue during dynamic payload operations. This paper presents a comprehensive study on the aerodynamic performance, thrust profiling, and structural integrity of a heavy-duty quadcopter drone platform. We analyzed the rotor thrust output and airflow aerodynamics using computational fluid dynamics (CFD) to characterize the rotor wash and downwash interactions under varying payload weights. The dynamic thrust profiles obtained from physical static motor testing were used as boundary conditions for a structural finite element analysis (FEA) in ANSYS. The structural simulation evaluated stress distributions, shear stresses, and potential fatigue zones on the carbon-fiber composite frame arms under peak takeoff thrust. The FEA results identified critical stress concentrations near the motor mounts, prompting a structural design modification that distributed loads more evenly and improved frame stiffness by 15%. This research establishes a verified design and simulation pipeline for industrial quadcopter platforms, showing how combining computational fluid dynamics and finite element structural analysis can optimize drone flight stability, maximize load capacity, and extend the fatigue life of composite multirotor frames.
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">KEYWORDS //</div>
-        <div class="modal-info-text">
-            Quadcopter Drone, Computational Fluid Dynamics, Finite Element Analysis, Carbon Fiber, Thrust Profiling, Structural Stress, UAV Aerodynamics
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">INTRODUCTION //</div>
-        <div class="modal-info-text">
-            The deployment of heavy-lift multirotor unmanned aerial vehicles (UAVs) in logistics, agriculture, and search-and-rescue operations has highlighted the need for structural optimization and detailed aerodynamic profiling. Unlike small recreational drones, industrial quadcopters carry significant payloads that subject the drone frame to high mechanical stresses and continuous vibrations. The interaction between the high-velocity rotor airflow and the frame arms generates complex aerodynamic downforces, which reduce overall propulsion efficiency and introduce dynamic oscillations. Understanding these coupled aerodynamic and structural loads is essential to preventing structural frame fatigue, optimizing battery life, and ensuring flight stability under turbulent environmental conditions.
-        </div>
-    </div>
-    <div class="modal-info-section">
-        <div class="modal-info-subtitle">REFERENCES //</div>
-        <ul class="modal-info-references">
-            <li>Pounds, P., Mahony, R., and Corke, P. "Modelling and Control of a Large Quadrotor Robot," *Control Engineering Practice*, Vol. 18, No. 9, pp. 1091-1099, 2010.</li>
-            <li>Hoffman, G., et al. "Dynamic Modelling and Aerodynamic Control of a Large Quadrotor Robot," *Journal of Guidance, Control, and Dynamics*, Vol. 34, No. 6, pp. 1675-1686, 2011.</li>
-            <li>Gessow, A., and Myers, G. C. "Aerodynamics of the Helicopter," College Book Store, 1985.</li>
-            <li>Dynamic Systems Dep. "CFD Aerodynamic Drag and Rotor Downwash Simulations of Multi-Rotor UAVs," *Journal of Aerospace Engineering*, Vol. 45, pp. 78-90, 2024.</li>
-            <li>Composite Materials Research Group. "FEA Fatigue Analysis of Carbon-Fiber Reinforced Polymer UAV Frames," *Journal of Composite Structures*, Vol. 112, pp. 201-215, 2025.</li>
         </ul>
     </div>
 </div>`,
@@ -1120,7 +1160,7 @@ function initHomeTerminal() {
     about: 'HG_CORE: Harshal Gadekar // AUTOMATION & ROBOTICS ENGINEER. EXPERT IN FLUID DYNAMICS, INTERNAL BALLISTICS, REAL-TIME EMBEDDED CONTROLS, AND COGNITIVE HMI EXPERIMENTS.',
     skills: 'HG_CAPABILITIES: [NODE_01: DESIGN (FUSION 360, SOLIDWORKS)] [NODE_02: AEROSPACE (OPENMOTOR, NASA CEA)] [NODE_03: SIMULATION (ANSYS, MATLAB)] [NODE_04: CODING (PYTHON, C++)] [NODE_05: LEADERSHIP (SCRUM, NEGOTIATION)] [NODE_06: COMPLIANCE (PATENT, LATEX)]',
     projects: 'HG_ARCHIVE: PRARAMBH_1 (Solid Rocket Motor), CNC_FOAM_CUTTER (GRBL), BMW_V6_ENGINE, AUTONOMOUS_AGV (Hough CV), HEAVY_DUTY_QUADCOPTER',
-    research: 'HG_RESEARCH: EXPLAINABLE AI COBOT HANDOVER, HYBRID SORTING MECHATRONICS, PRARAMBH_1 PROPULSION BALLISTICS, 4WD VISION AGV',
+    research: 'HG_RESEARCH: [1] PRARAMBH_1 SOLID ROCKET MOTOR (TDRSR-PROP-TR-2026-001) // [2] SIEMENS S7-1200 HYBRID SORTING SYSTEM // [3] ESP32+OPENCV VISION LINE FOLLOWER // [4] AI HEALTHCARE TRIAGE KIOSK // [5] AGROBOT SEEDLING ROBOT (PURDUE EPICS) // [6] OPTICAL ILLUMINATION & KINETIC ORIENTATION REVIEW // [7] XAI COBOT HANDOVER',
     patents: 'HG_PATENTS: [1] AUTONOMOUS PRECISION SEEDLING PLANTING ROBOT (App No. 517599-001) // [2] AUTOMATED HEALTH DIAGNOSTIC KIOSK (App No. 507688-001) // [3] HIGH-TECH ROVER ADAPTIVE SUSPENSION',
     certifications: 'HG_CREDENTIALS: SIEMENS (Simcenter STAR-CCM+), GOOGLE (Project Management), UNIV OF VIRGINIA (Design Thinking), KODACY (Rocket Propulsion), UDEMY (Python Programmer)',
     contact: 'HG_UPLINK: EMAIL [ harshalgadekar72@gmail.com ] // LINKEDIN [ harshal-gadekar ] // GITHUB [ CODE-ROBO ]',
