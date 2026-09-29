@@ -667,7 +667,7 @@ const abstractDatabase = {
             Primary healthcare centers in rural and low-resource regions face severe clinical bottlenecks during patient intake and emergency acuity stratification due to staff shortages and intermittent internet connectivity. This technical report documents a decentralized <strong>5-tier edge-AI patient registration and clinical triage architecture</strong> integrated into an ergonomic, self-service diagnostic kiosk.
         </div>
         <div class="modal-info-text">
-            The cyber-physical platform combines <strong>localized multilingual voice parsing</strong> for zero-literacy symptom intake with a synchronized <strong>non-contact and multi-parameter biomedical sensor array</strong> measuring core body temperature ($T_{body}$), photoplethysmography ($PPG$ heart rate and $SpO_2$), and non-invasive blood pressure ($NIBP$). Engineered for <strong>deterministic offline execution during network blackouts</strong>, the edge inference engine stratifies patients across a 5-level clinical acuity scale locally, storing encrypted electronic health records for asynchronous synchronization once connectivity is restored.
+            The cyber-physical platform combines <strong>localized multilingual voice parsing</strong> for zero-literacy symptom intake with a synchronized <strong>non-contact and multi-parameter biomedical sensor array</strong> measuring core body temperature (<em>T</em><sub>body</sub>), photoplethysmography (PPG heart rate and SpO<sub>2</sub>), and non-invasive blood pressure (NIBP). Engineered for <strong>deterministic offline execution during network blackouts</strong>, the edge inference engine stratifies patients across a 5-level clinical acuity scale locally, storing encrypted electronic health records for asynchronous synchronization once connectivity is restored.
         </div>
     </div>
     <div class="modal-info-section">
@@ -757,15 +757,24 @@ const abstractDatabase = {
     log07: `<div class="structured-modal-content">
     <div class="modal-info-title">Design of Explainable AI Alerts for Cognitive Overload in Cobot Task Handover Panels</div>
     <div class="modal-info-section">
-        <div class="modal-info-subtitle">ABSTRACT //</div>
+        <div class="modal-info-subtitle">CONFERENCE SUBMISSION METADATA //</div>
         <div class="modal-info-text">
-            Human-robot collaboration (HRC) in modern industrial assembly lines requires rapid, high-integrity decision-making during physical part handover sequences. However, traditional human-machine interfaces (HMIs) frequently induce acute cognitive overload in human operators by streaming raw, uninterpreted sensor logs, complex coordinate vectors, and cryptic numerical error codes. This cognitive friction increases task completion latency, elevates error rates, and degrades operator trust in automated partners. This research addresses these deficiencies by engineering an Explainable AI (XAI) alert framework integrated with real-time cognitive workload estimation. By monitoring operator physiological cues and reaction latencies, the system determines the onset of cognitive fatigue and dynamically adapts HMI alerts. The core architecture completely deprecates opaque numerical system fault codes, replacing them with context-aware, color-coded semantic explanation alerts that highlight the root cause, system confidence, and actionable recovery procedures in real-time. Experimental evaluations conducted on a simulated mechatronic handover panel demonstrated a 34% reduction in operator decision latency and a 28% increase in system usability scores compared to traditional static readouts.
+            <strong>CONFERENCE:</strong> International Conference on Research into Design (ICoRD '27)<br>
+            <strong>PAPER ID:</strong> 374<br>
+            <strong>AUTHORS:</strong> Harshal Gadekar, Prem Choudhari, Jay Gandhi (Rajarshi Shahu College of Engineering, Pune)<br>
+            <strong>STATUS:</strong> Submitted / Under Peer Review
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">ABSTRACT &amp; TECHNICAL ARCHITECTURE //</div>
+        <div class="modal-info-text">
+            Human-robot collaboration (HRC) in modern industrial assembly lines requires rapid, high-integrity decision-making during physical part handover sequences. However, traditional human-machine interfaces (HMIs) frequently induce acute cognitive overload in human operators by streaming raw, uninterpreted sensor logs, complex coordinate vectors, and cryptic hexadecimal error codes. This research addresses these deficiencies by engineering an Explainable AI (XAI) alert framework integrated with real-time cognitive workload estimation using MediaPipe Eye Aspect Ratio (EAR) and 3D head-pose telemetry. By monitoring operator physiological cues and reaction latencies in a Software-in-the-Loop (SITL) ROS 2 environment, the system determines the onset of cognitive fatigue and dynamically adapts HMI alerts into context-aware, color-coded semantic explanation alerts, demonstrating a 34% reduction in operator decision latency and a 28% improvement in NASA-TLX usability scores.
         </div>
     </div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">KEYWORDS //</div>
         <div class="modal-info-text">
-            Explainable Artificial Intelligence, Human-Robot Collaboration, Cognitive Overload, Human-Machine Interfaces, Industrial Automation, Decision Latency, Adaptive Telemetry
+            Human-Robot Collaboration, Explainable AI, Cognitive Workload, NASA-TLX, Software-in-the-Loop (SITL), ROS 2, MediaPipe EAR
         </div>
     </div>
     <div class="modal-info-section">
@@ -774,6 +783,48 @@ const abstractDatabase = {
             <li>Miller, T. "Explanation in artificial intelligence: Insights from the social sciences," <em>Artificial Intelligence</em>, Vol. 267, pp. 1-38, 2019.</li>
             <li>Adadi, A., and Berrada, M. "Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)," <em>IEEE Access</em>, Vol. 6, pp. 52138-52160, 2018.</li>
             <li>NASA-TLX: Task Load Index, Human Performance Group, NASA Ames Research Center, 1986.</li>
+        </ul>
+    </div>
+</div>`,
+
+    log08: `<div class="structured-modal-content">
+    <div class="modal-info-title">Coupled Thermo-Structural and Pre-Stressed Modal Dynamics of a Solid Rocket Motor Convergent-Divergent Nozzle</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CONFERENCE SUBMISSION METADATA //</div>
+        <div class="modal-info-text">
+            <strong>CONFERENCE:</strong> International Conference on Thermal, Manufacturing &amp; Design (iTMD 2026) — Dr B R Ambedkar National Institute of Technology (NIT) Jalandhar<br>
+            <strong>PAPER ID:</strong> 419 (Microsoft CMT Submission)<br>
+            <strong>AUTHOR:</strong> Harshal Gadekar (Rajarshi Shahu College of Engineering, Pune)<br>
+            <strong>SUBJECT AREAS:</strong> Aerospace Structures &amp; Propulsion // Simulation, FEM &amp; Multiphysics Analysis<br>
+            <strong>STATUS:</strong> Submitted / Under Peer Review
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">ABSTRACT &amp; MULTIPHYSICS FORMULATION //</div>
+        <div class="modal-info-text">
+            Solid rocket motor (SRM) convergent-divergent (de Laval) nozzles experience extreme transient thermal shock and multi-axial aerodynamic pressure traction within milliseconds of propellant ignition, creating severe thermomechanical stress gradients and potential aeroacoustic-structural resonance. This study formulates a one-way coupled thermo-structural and pre-stressed modal finite element pipeline in ANSYS for an aerospace-grade aluminum alloy C-D nozzle (30° convergent half-angle, <em>R<sub>c</sub></em> = 12 mm sonic throat contour, 15° expansion bell) discretized with quadratic tetrahedral (Tet10) and 5-layer boundary-layer prism wedge (Wedge15) elements.
+        </div>
+        <div class="modal-info-text">
+            Under transient convective combustion loading (<em>h<sub>in</sub></em> = 2500 W/m²K, <em>T<sub>gas</sub></em> = 1200°C) over a 5.0 s motor burn and <em>P</em> = 5.0 MPa internal chamber pressure traction, transient thermal analysis identifies a peak throat wall temperature of <strong><em>T<sub>max</sub></em> = 1103.3°C</strong> and maximum heat flux of <strong><em>q''<sub>max</sub></em> = 2.355 W/mm²</strong>. Importing the 3D nodal thermal field into the static structural solver yields an unconstrained divergent exit radial flare of <strong><em>δ<sub>max</sub></em> = 0.2007 mm</strong>, maximum tensile principal stress of <strong><em>σ<sub>1</sub></em> = 367.47 MPa</strong>, and localized equivalent von-Mises stress risers (<strong><em>σ<sub>v</sub></em> = 1021.5 MPa</strong>) at the external casing retention groove fillet, establishing the necessity of geometric thermal relief and ablative insulating sleeves in metallic nozzle carriers.
+        </div>
+        <div class="modal-info-text">
+            To evaluate dynamic stability against combustion chugging (100–1500 Hz) and acoustic cavity oscillations, a Block Lanczos eigenvalue extraction was executed on the stress-stiffened system ([<strong>K</strong>] + [<strong>S</strong>(<em>σ<sub>th,p</sub></em>)] − <em>ω<sub>i</sub></em>²[<strong>M</strong>]){<em>ϕ<sub>i</sub></em>} = <strong>0</strong>. The first six pre-stressed operational natural frequencies (<strong><em>f<sub>1</sub></em> = 7985.1 Hz</strong> fundamental lateral bending, <em>f<sub>2</sub></em> = 7988.0 Hz, <em>f<sub>3,4</sub></em> = 10661.0 Hz circumferential <em>n</em> = 2 ring ovalization, <em>f<sub>5</sub></em> = 14671.0 Hz coupled axial-bending, and <em>f<sub>6</sub></em> = 25670.0 Hz <em>n</em> = 3 harmonic shell distortion) confirm that operational natural frequencies exceed 7.9 kHz, safely decoupling the nozzle from low-frequency acoustic combustion instabilities. A 3-tier grid independence study (17,254 to 72,174 elements / 115,326 nodes) verified asymptotic convergence with <strong>&lt;0.01% temperature deviation (0.009%)</strong> and <strong>0.016% fundamental frequency variation</strong>.
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">KEYWORDS //</div>
+        <div class="modal-info-text">
+            Solid Rocket Motor, Convergent-Divergent Nozzle, Coupled Thermo-Structural Analysis, Pre-Stressed Modal Dynamics, Finite Element Analysis (ANSYS), Block Lanczos Eigenvalue Extraction, Grid Independence, Equivalent von-Mises Stress
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">REFERENCES //</div>
+        <ul class="modal-info-references">
+            <li>Sutton, G. P., and Biblarz, O. "Rocket Propulsion Elements," 9th Edition, John Wiley &amp; Sons, 2016.</li>
+            <li>Rao, D. K., and Kumar, P. "Thermomechanical analysis of submerged nozzles in solid rocket motors," <em>Journal of Propulsion and Power</em>, Vol. 32, No. 4, pp. 912-921, 2016.</li>
+            <li>Culick, F. E. C. "Combustion instabilities in solid rocket motors: A review," <em>AIAA Paper 2006-4512</em>, 2006.</li>
+            <li>Bathe, K. J. "Finite Element Procedures," 2nd Edition, Prentice Hall, 2006.</li>
+            <li>Bartz, D. R. "A simple equation for rapid estimation of rocket nozzle convective heat transfer coefficients," <em>Jet Propulsion</em>, Vol. 27, No. 1, pp. 49-51, 1957.</li>
         </ul>
     </div>
 </div>`,
@@ -1160,7 +1211,7 @@ function initHomeTerminal() {
     about: 'HG_CORE: Harshal Gadekar // AUTOMATION & ROBOTICS ENGINEER. EXPERT IN FLUID DYNAMICS, INTERNAL BALLISTICS, REAL-TIME EMBEDDED CONTROLS, AND COGNITIVE HMI EXPERIMENTS.',
     skills: 'HG_CAPABILITIES: [NODE_01: DESIGN (FUSION 360, SOLIDWORKS)] [NODE_02: AEROSPACE (OPENMOTOR, NASA CEA)] [NODE_03: SIMULATION (ANSYS, MATLAB)] [NODE_04: CODING (PYTHON, C++)] [NODE_05: LEADERSHIP (SCRUM, NEGOTIATION)] [NODE_06: COMPLIANCE (PATENT, LATEX)]',
     projects: 'HG_ARCHIVE: PRARAMBH_1 (Solid Rocket Motor), CNC_FOAM_CUTTER (GRBL), BMW_V6_ENGINE, AUTONOMOUS_AGV (Hough CV), HEAVY_DUTY_QUADCOPTER',
-    research: 'HG_RESEARCH: [1] PRARAMBH_1 SOLID ROCKET MOTOR (TDRSR-PROP-TR-2026-001) // [2] SIEMENS S7-1200 HYBRID SORTING SYSTEM // [3] ESP32+OPENCV VISION LINE FOLLOWER // [4] AI HEALTHCARE TRIAGE KIOSK // [5] AGROBOT SEEDLING ROBOT (PURDUE EPICS) // [6] OPTICAL ILLUMINATION & KINETIC ORIENTATION REVIEW // [7] XAI COBOT HANDOVER',
+    research: 'HG_RESEARCH: [1] PRARAMBH_1 SOLID ROCKET MOTOR (TDRSR-PROP-TR-2026-001) // [2] SIEMENS S7-1200 HYBRID SORTING SYSTEM // [3] ESP32+OPENCV VISION LINE FOLLOWER // [4] AI HEALTHCARE TRIAGE KIOSK // [5] AGROBOT SEEDLING ROBOT (PURDUE EPICS) // [6] OPTICAL ILLUMINATION & KINETIC ORIENTATION REVIEW // [7] XAI COBOT HANDOVER (ICoRD \'27, ID 374) // [8] SRM C-D NOZZLE THERMO-STRUCTURAL & MODAL DYNAMICS (iTMD 2026 — NIT JALANDHAR, ID 419)',
     patents: 'HG_PATENTS: [1] AUTONOMOUS PRECISION SEEDLING PLANTING ROBOT (App No. 517599-001) // [2] AUTOMATED HEALTH DIAGNOSTIC KIOSK (App No. 507688-001) // [3] HIGH-TECH ROVER ADAPTIVE SUSPENSION',
     certifications: 'HG_CREDENTIALS: SIEMENS (Simcenter STAR-CCM+), GOOGLE (Project Management), UNIV OF VIRGINIA (Design Thinking), KODACY (Rocket Propulsion), UDEMY (Python Programmer)',
     contact: 'HG_UPLINK: EMAIL [ harshalgadekar72@gmail.com ] // LINKEDIN [ harshal-gadekar ] // GITHUB [ CODE-ROBO ]',
