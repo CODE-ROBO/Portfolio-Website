@@ -736,6 +736,152 @@ const abstractDatabase = {
             <li>Composite Materials Research Group. "FEA Fatigue Analysis of Carbon-Fiber Reinforced Polymer UAV Frames," *Journal of Composite Structures*, Vol. 112, pp. 201-215, 2025.</li>
         </ul>
     </div>
+</div>`,
+
+    pat01: `<div class="structured-modal-content">
+    <div class="modal-info-title">Autonomous Precision Seedling Planting Robot</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">INTELLECTUAL PROPERTY INDIA // DESIGN FILING METADATA</div>
+        <div class="modal-info-text">
+            <strong>APPLICATION NO:</strong> 517599-001<br>
+            <strong>C.B.R. NO:</strong> 221677 // <strong>FILING DATE:</strong> 13 September 2026<br>
+            <strong>AUTHORITY:</strong> Controller General of Patents, Designs &amp; Trade Marks (Intellectual Property India)<br>
+            <strong>APPLICANT:</strong> Harshal Hemant Gadekar<br>
+            <strong>STATUS:</strong> Form 1 Filed / Under Examination
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">TECHNICAL OVERVIEW //</div>
+        <div class="modal-info-text">
+            Registered industrial and mechanical design for an Autonomous Precision Seedling Planting Robot engineered for automated agricultural deployment. The design integrates a ruggedized multi-terrain mobile chassis with a synchronized mechatronic seedling indexing and soil-implantation mechanism, optimizing structural weight distribution, mechanical reliability, and field durability across uneven agricultural terrain.
+        </div>
+    </div>
+</div>`,
+
+    pat02: `<div class="structured-modal-content">
+    <div class="modal-info-title">Automated Health Diagnostic Kiosk</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">INTELLECTUAL PROPERTY INDIA // DESIGN FILING METADATA</div>
+        <div class="modal-info-text">
+            <strong>APPLICATION NO:</strong> 507688-001<br>
+            <strong>C.B.R. NO:</strong> 215057 // <strong>FILING DATE:</strong> 30 June 2026<br>
+            <strong>AUTHORITY:</strong> Controller General of Patents, Designs &amp; Trade Marks (Intellectual Property India)<br>
+            <strong>APPLICANT:</strong> Harshal Hemant Gadekar<br>
+            <strong>STATUS:</strong> FER Reply Submitted / Under Examination
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">TECHNICAL OVERVIEW //</div>
+        <div class="modal-info-text">
+            Registered industrial design for a self-contained Automated Health Diagnostic Kiosk featuring an ergonomic human-machine interface enclosure, integrated multi-sensor biometric acquisition bays, and modular internal hardware compartmentalization for rapid point-of-care clinical screening and telemedicine diagnostics.
+        </div>
+    </div>
+</div>`,
+
+    pat03: `<div class="structured-modal-content">
+    <div class="modal-info-title">High-Tech Rover Adaptive Suspension Mechanism</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">DESIGN PATENT INITIATIVE // MECHANICAL &amp; AEROSPACE SYSTEMS</div>
+        <div class="modal-info-text">
+            <strong>TIMELINE:</strong> January 2026 – Present<br>
+            <strong>DOMAIN:</strong> Extreme-Terrain Planetary &amp; Field Rover Mobility<br>
+            <strong>STATUS:</strong> Design Lifecycle &amp; Structural Modelling Completed
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">TECHNICAL OVERVIEW //</div>
+        <div class="modal-info-text">
+            Led the end-to-end design lifecycle and 3D CAD kinematic modelling of an adaptive rover suspension architecture engineered to optimize unsprung mass, mechanical reliability, and structural durability in extreme off-road and planetary environments. Directed mechanism articulation development to maximize ground contact stability and hardware longevity over high-gradient obstacles.
+        </div>
+    </div>
+</div>`,
+
+    cert01: `<div class="structured-modal-content">
+    <div class="modal-info-title">Fundamentals of Simcenter STAR-CCM+</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Siemens Digital Industries Software<br>
+            <strong>PROGRAM:</strong> Siemens Enterprise Learning Membership<br>
+            <strong>COMPLETION DATE:</strong> 25 September 2026<br>
+            <strong>DOMAIN:</strong> Computational Fluid Dynamics (CFD), Finite Volume Meshing &amp; Multiphysics Simulation
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            End-to-end CFD simulation workflow in Simcenter STAR-CCM+, including 3D CAD geometry preparation, automated polyhedral and prism-layer meshing, turbulence modelling, conjugate heat transfer analysis, and post-processing of aerodynamic and propulsion flow fields.
+        </div>
+    </div>
+</div>`,
+
+    cert02: `<div class="structured-modal-content">
+    <div class="modal-info-title">Foundations of Project Management</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Google<br>
+            <strong>CREDENTIAL TYPE:</strong> Professional Certificate Module<br>
+            <strong>DOMAIN:</strong> Engineering Project Lifecycle, Agile/Scrum Execution &amp; Risk Management
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Cross-functional engineering team leadership, project lifecycle planning, resource allocation, stakeholder communication, and structured risk mitigation across hardware and software development sprints.
+        </div>
+    </div>
+</div>`,
+
+    cert03: `<div class="structured-modal-content">
+    <div class="modal-info-title">Design Thinking for Innovation</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> University of Virginia<br>
+            <strong>DOMAIN:</strong> Systems Design, Rapid Prototyping &amp; Engineering Innovation
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Structured human-centric engineering design methodology, translating complex operational bottlenecks into scalable technical architectures, iterative prototyping, and functional validation.
+        </div>
+    </div>
+</div>`,
+
+    cert04: `<div class="structured-modal-content">
+    <div class="modal-info-title">Rocket Propulsion and Spacecraft Dynamics</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Kodacy<br>
+            <strong>DOMAIN:</strong> Aerospace Propulsion, Nozzle Thermodynamics &amp; Orbital Mechanics
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Solid and liquid rocket motor internal ballistics, specific impulse optimization, de Laval nozzle expansion dynamics, thrust-to-weight profiling, and spacecraft trajectory mechanics.
+        </div>
+    </div>
+</div>`,
+
+    cert05: `<div class="structured-modal-content">
+    <div class="modal-info-title">Certified Entry-Level Python Programmer</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Udemy<br>
+            <strong>DOMAIN:</strong> Python Programming, Algorithmic Automation &amp; Data Processing
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Python software architecture, data structures, numerical scripting, sensor telemetry parsing, and computer vision automation pipelines.
+        </div>
+    </div>
 </div>`
 };
 
@@ -747,8 +893,8 @@ const defaultReadouts = {
 };
 
 function initResearchModule() {
-    const cards = document.querySelectorAll(".log-card");
-    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll("#research .log-card");
+    const filterButtons = document.querySelectorAll("#research .filter-btn");
 
     filterButtons.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -970,15 +1116,17 @@ function initHomeTerminal() {
   if (!terminalInput || !terminalHistory) return;
 
   const commands = {
-    help: 'SYS_COMS: AVAILABLE_MODULES [ HELP, ABOUT, SKILLS, PROJECTS, RESEARCH, CONTACT, STARK, ARC, FRIDAY, THEME, STATUS, CLEAR ]',
+    help: 'SYS_COMS: AVAILABLE_MODULES [ HELP, ABOUT, SKILLS, PROJECTS, RESEARCH, PATENTS, CERTIFICATIONS, CONTACT, CLEAR ]',
     about: 'HG_CORE: Harshal Gadekar // AUTOMATION & ROBOTICS ENGINEER. EXPERT IN FLUID DYNAMICS, INTERNAL BALLISTICS, REAL-TIME EMBEDDED CONTROLS, AND COGNITIVE HMI EXPERIMENTS.',
     skills: 'HG_CAPABILITIES: [NODE_01: DESIGN (FUSION 360, SOLIDWORKS)] [NODE_02: AEROSPACE (OPENMOTOR, NASA CEA)] [NODE_03: SIMULATION (ANSYS, MATLAB)] [NODE_04: CODING (PYTHON, C++)] [NODE_05: LEADERSHIP (SCRUM, NEGOTIATION)] [NODE_06: COMPLIANCE (PATENT, LATEX)]',
     projects: 'HG_ARCHIVE: PRARAMBH_1 (Solid Rocket Motor), CNC_FOAM_CUTTER (GRBL), BMW_V6_ENGINE, AUTONOMOUS_AGV (Hough CV), HEAVY_DUTY_QUADCOPTER',
     research: 'HG_RESEARCH: EXPLAINABLE AI COBOT HANDOVER, HYBRID SORTING MECHATRONICS, PRARAMBH_1 PROPULSION BALLISTICS, 4WD VISION AGV',
+    patents: 'HG_PATENTS: [1] AUTONOMOUS PRECISION SEEDLING PLANTING ROBOT (App No. 517599-001) // [2] AUTOMATED HEALTH DIAGNOSTIC KIOSK (App No. 507688-001) // [3] HIGH-TECH ROVER ADAPTIVE SUSPENSION',
+    certifications: 'HG_CREDENTIALS: SIEMENS (Simcenter STAR-CCM+), GOOGLE (Project Management), UNIV OF VIRGINIA (Design Thinking), KODACY (Rocket Propulsion), UDEMY (Python Programmer)',
     contact: 'HG_UPLINK: EMAIL [ harshalgadekar72@gmail.com ] // LINKEDIN [ harshal-gadekar ] // GITHUB [ CODE-ROBO ]',
     stark: 'STARK_HUD: MARK LXXXV SYSTEM OPERATIONAL. ARC REACTOR OUTPUT AT 99.8% NOMINAL CAPACITY. F.R.I.D.A.Y ONLINE.',
-    arc: 'ARC_REACTOR: PALLADIUM / VIBRANIUM HYBRID CORE ONLINE // OUTPUT: 3.5GW // TEMPERATURE: 24.8Â°C // INTEGRITY: 100%',
-    friday: 'F.R.I.D.A.Y: AI ASSISTANT READY. CLICK FLOATING ARC REACTOR CORE AT BOTTOM RIGHT TO LAUNCH VOICE HUD.',
+    arc: 'ARC_REACTOR: PALLADIUM / VIBRANIUM HYBRID CORE ONLINE // OUTPUT: 3.5GW // TEMPERATURE: 24.8°C // INTEGRITY: 100%',
+    friday: 'F.R.I.D.A.Y: AI ASSISTANT READY.',
     ironman: 'STARK_INDUSTRIES: "I AM IRON MAN." ADVANCED MECHATRONIC SYSTEMS & REAL-TIME EMBEDDED AVIONICS ACTIVE.',
     mark85: 'MARK_LXXXV: NANOTECH ARMOR MATRIX STANDBY // FLIGHT THRUSTERS NOMINAL // AVIONICS HUD SYNCHRONIZED.'
   };

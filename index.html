@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://unpkg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=15.0">
+  <link rel="stylesheet" href="styles.css?v=16.0">
 </head>
 <body>
 
@@ -41,6 +41,10 @@
           <a href="#proj-01" class="nav-link" data-section="projects">Projects</a>
           <span class="nav-link-sep">|</span>
           <a href="#research" class="nav-link" data-section="research">Research</a>
+          <span class="nav-link-sep">|</span>
+          <a href="#patents" class="nav-link" data-section="patents">Patents</a>
+          <span class="nav-link-sep">|</span>
+          <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
           <span class="nav-link-sep">|</span>
           <a href="#contact" class="nav-link" data-section="contact">Contact</a>
         </nav>
@@ -82,8 +86,16 @@
       <span class="side-nav-label font-mono">08 // RESEARCH</span>
       <span class="side-nav-dot"></span>
     </div>
+    <div class="side-nav-item" data-target="patents" onclick="scrollToSection('patents')">
+      <span class="side-nav-label font-mono">09 // PATENTS</span>
+      <span class="side-nav-dot"></span>
+    </div>
+    <div class="side-nav-item" data-target="certifications" onclick="scrollToSection('certifications')">
+      <span class="side-nav-label font-mono">10 // CERTIFICATIONS</span>
+      <span class="side-nav-dot"></span>
+    </div>
     <div class="side-nav-item" data-target="contact" onclick="scrollToSection('contact')">
-      <span class="side-nav-label font-mono">09 // CONTACT</span>
+      <span class="side-nav-label font-mono">11 // CONTACT</span>
       <span class="side-nav-dot"></span>
     </div>
   </nav>
@@ -534,24 +546,94 @@
                 <button class="open-data-btn" onclick="openTerminalViewport('log05')">OPEN DATA</button>
             </div>
         </div>
+      </div>
+    </section>
 
-        <div id="terminal-viewport-modal" class="terminal-modal">
-            <div class="modal-frame">
-                <div class="modal-header">
-                    <span id="modal-node-id">CORE_NODE_READOUT // SEC_REF_REP_LOG</span>
-                    <span class="modal-close" onclick="closeTerminalViewport()">&times;</span>
-                </div>
-                <div class="modal-body" id="modal-dynamic-content"></div>
+    <!-- SECTION 9: PATENTS -->
+    <section id="patents" class="cinematic-section research-cinematic-section">
+      <div class="cinematic-section-inner">
+        <div class="section-cinematic-header">
+          <span class="spec-index font-mono">INTELLECTUAL PROPERTY // PATENTS_04</span>
+          <h2 class="cinematic-section-title">REGISTERED DESIGN PATENTS &amp; IP FILINGS</h2>
+        </div>
+
+        <div class="research-logs-container">
+            <div class="log-card" data-index="01">
+                <div class="log-meta">Design Patent // SEP 2026</div>
+                <div class="log-title">Autonomous Precision Seedling Planting Robot</div>
+                <div class="log-tags">APP NO: <span class="accent-gold" style="font-weight:700;">517599-001</span> // C.B.R. NO: 221677 // AUTHORITY: IP INDIA // STATUS: <span class="status-review">FILED / UNDER EXAMINATION</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('pat01')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-index="02">
+                <div class="log-meta">Design Patent // JUN 2026</div>
+                <div class="log-title">Automated Health Diagnostic Kiosk</div>
+                <div class="log-tags">APP NO: <span class="accent-gold" style="font-weight:700;">507688-001</span> // C.B.R. NO: 215057 // AUTHORITY: IP INDIA // STATUS: <span class="status-complete">FER REPLY SUBMITTED</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('pat02')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-index="03">
+                <div class="log-meta">Design Patent // JAN 2026</div>
+                <div class="log-title">High-Tech Rover Adaptive Suspension Mechanism</div>
+                <div class="log-tags">DOMAIN: PLANETARY ROVER MOBILITY // AUTHORITY: IP INDIA // STATUS: <span class="status-complete">DESIGN LIFECYCLE COMPLETED</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('pat03')">OPEN DATA</button>
             </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 9: CONTACT -->
+    <!-- SECTION 10: CERTIFICATIONS -->
+    <section id="certifications" class="cinematic-section research-cinematic-section">
+      <div class="cinematic-section-inner">
+        <div class="section-cinematic-header">
+          <span class="spec-index font-mono">CREDENTIALS // CERTIFICATIONS_05</span>
+          <h2 class="cinematic-section-title">TECHNICAL CERTIFICATIONS &amp; ACCREDITATIONS</h2>
+        </div>
+
+        <div class="research-logs-container">
+            <div class="log-card" data-index="01">
+                <div class="log-meta">SIEMENS // SEP 2026</div>
+                <div class="log-title">Fundamentals of Simcenter STAR-CCM+</div>
+                <div class="log-tags">PROGRAM: ENTERPRISE LEARNING MEMBERSHIP // DOMAIN: CFD &amp; MULTIPHYSICS // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert01')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-index="02">
+                <div class="log-meta">GOOGLE // PROFESSIONAL CERTIFICATE</div>
+                <div class="log-title">Foundations of Project Management</div>
+                <div class="log-tags">DOMAIN: ENGINEERING PROJECT LIFECYCLE, AGILE EXECUTION &amp; RISK MANAGEMENT // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert02')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-index="03">
+                <div class="log-meta">UNIVERSITY OF VIRGINIA // COURSERA</div>
+                <div class="log-title">Design Thinking for Innovation</div>
+                <div class="log-tags">DOMAIN: SYSTEMS ARCHITECTURE, RAPID PROTOTYPING &amp; PRODUCT INNOVATION // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert03')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-index="04">
+                <div class="log-meta">KODACY // AEROSPACE SPECIALIZATION</div>
+                <div class="log-title">Rocket Propulsion and Spacecraft Dynamics</div>
+                <div class="log-tags">DOMAIN: SOLID &amp; LIQUID ROCKET PROPULSION, ORBITAL MECHANICS &amp; BALLISTICS // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert04')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-index="05">
+                <div class="log-meta">UDEMY // SOFTWARE &amp; AUTOMATION</div>
+                <div class="log-title">Certified Entry-Level Python Programmer</div>
+                <div class="log-tags">DOMAIN: PYTHON SCRIPTING, ALGORITHMIC AUTOMATION &amp; DATA PIPELINES // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert05')">OPEN DATA</button>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: CONTACT -->
     <section id="contact" class="cinematic-section contact-cinematic-section">
       <div class="cinematic-section-inner">
         <div class="section-cinematic-header" style="text-align: center;">
-          <span class="spec-index font-mono">UPLINK // CONTACT_04</span>
+          <span class="spec-index font-mono">UPLINK // CONTACT_06</span>
           <h2 class="cinematic-section-title">TRANSMIT DIRECT INQUIRY</h2>
         </div>
         
@@ -617,6 +699,17 @@
 
   </main>
 
+  <!-- Global Technical Readout Modal (Research, Patents, Certifications) -->
+  <div id="terminal-viewport-modal" class="terminal-modal" onclick="closeTerminalViewport()">
+    <div class="modal-frame" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <span id="modal-node-id">CORE_NODE_READOUT // SEC_REF_REP_LOG</span>
+        <span class="modal-close" onclick="closeTerminalViewport()">&times;</span>
+      </div>
+      <div class="modal-body" id="modal-dynamic-content"></div>
+    </div>
+  </div>
+
   <!-- High-Resolution CAD Blueprint Image Lightbox Modal -->
   <div id="cad-lightbox-modal" class="cad-lightbox-overlay" onclick="closeImageLightbox(event)">
     <div class="cad-lightbox-panel" onclick="event.stopPropagation()">
@@ -634,7 +727,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=15.0" defer></script>
+  <script src="app.js?v=16.0" defer></script>
 </body>
 </html>
 
