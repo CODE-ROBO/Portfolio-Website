@@ -16,11 +16,10 @@
   <title>Harshal Gadekar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=18.0">
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="styles.css?v=19.0">
 </head>
 <body>
 
@@ -645,40 +644,236 @@
           <h2 class="cinematic-section-title">TECHNICAL CERTIFICATIONS &amp; ACCREDITATIONS</h2>
         </div>
 
-        <div class="research-logs-container">
-            <div class="log-card" data-index="01">
-                <div class="log-meta">SIEMENS // SEP 2026</div>
-                <div class="log-title">Fundamentals of Simcenter STAR-CCM+</div>
-                <div class="log-tags">PROGRAM: ENTERPRISE LEARNING MEMBERSHIP // DOMAIN: CFD &amp; MULTIPHYSICS // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+        <div class="console-filter-bar" id="cert-filter-bar">
+            <span class="filter-btn active" data-filter="all">ALL_ACCREDITATIONS (31) //</span>
+            <span class="filter-btn" data-filter="aerospace">AEROSPACE &amp; PROPULSION (4) //</span>
+            <span class="filter-btn" data-filter="cad">CAD, CAM &amp; SIMULATION (5) //</span>
+            <span class="filter-btn" data-filter="robotics">PLC, ROBOTICS &amp; AUTOMATION (5) //</span>
+            <span class="filter-btn" data-filter="ai">AI, ML &amp; DATA SCIENCE (9) //</span>
+            <span class="filter-btn" data-filter="strategy">STRATEGY &amp; LEADERSHIP (8) //</span>
+        </div>
+
+        <div class="research-logs-container" id="certifications-logs-container">
+            <!-- AEROSPACE & PROPULSION -->
+            <div class="log-card" data-category="aerospace" data-index="01">
+                <div class="log-meta">ISRO SPACE TUTOR // KODACY &amp; SPACE</div>
+                <div class="log-title">Rocket Propulsion and Spacecraft Dynamics</div>
+                <div class="log-tags">ID: bf067fe3de6cffc4 // DATE: MAY 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
                 <button class="open-data-btn" onclick="openTerminalViewport('cert01')">OPEN DATA</button>
             </div>
 
-            <div class="log-card" data-index="02">
-                <div class="log-meta">GOOGLE // PROFESSIONAL CERTIFICATE</div>
-                <div class="log-title">Foundations of Project Management</div>
-                <div class="log-tags">DOMAIN: ENGINEERING PROJECT LIFECYCLE, AGILE EXECUTION &amp; RISK MANAGEMENT // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+            <div class="log-card" data-category="aerospace" data-index="02">
+                <div class="log-meta">TECHNICAL UNIVERSITY OF MUNICH (TUM) // COURSERA</div>
+                <div class="log-title">Space Exploration</div>
+                <div class="log-tags">INSTRUCTOR: DR. THOMAS REITER (ESA ASTRONAUT) // DATE: JUL 2026 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
                 <button class="open-data-btn" onclick="openTerminalViewport('cert02')">OPEN DATA</button>
             </div>
 
-            <div class="log-card" data-index="03">
-                <div class="log-meta">UNIVERSITY OF VIRGINIA // COURSERA</div>
-                <div class="log-title">Design Thinking for Innovation</div>
-                <div class="log-tags">DOMAIN: SYSTEMS ARCHITECTURE, RAPID PROTOTYPING &amp; PRODUCT INNOVATION // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+            <div class="log-card" data-category="aerospace" data-index="03">
+                <div class="log-meta">iTMD 2026 // NIT JALANDHAR</div>
+                <div class="log-title">Coupled Thermo-Structural &amp; Pre-Stressed Modal Dynamics of SRM Nozzle</div>
+                <div class="log-tags">PAPER ID: 419 // DOMAIN: AERO-PROPULSION FEA &amp; MODAL SHOCK // STATUS: <span class="status-complete">ACCEPTED RESEARCH</span></div>
                 <button class="open-data-btn" onclick="openTerminalViewport('cert03')">OPEN DATA</button>
             </div>
 
-            <div class="log-card" data-index="04">
-                <div class="log-meta">KODACY // AEROSPACE SPECIALIZATION</div>
-                <div class="log-title">Rocket Propulsion and Spacecraft Dynamics</div>
-                <div class="log-tags">DOMAIN: SOLID &amp; LIQUID ROCKET PROPULSION, ORBITAL MECHANICS &amp; BALLISTICS // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+            <div class="log-card" data-category="aerospace" data-index="04">
+                <div class="log-meta">MATHWORKS // TRAINING SERVICES</div>
+                <div class="log-title">Wireless Communications Onramp</div>
+                <div class="log-tags">PLATFORM: MATLAB // DATE: NOV 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
                 <button class="open-data-btn" onclick="openTerminalViewport('cert04')">OPEN DATA</button>
             </div>
 
-            <div class="log-card" data-index="05">
-                <div class="log-meta">UDEMY // SOFTWARE &amp; AUTOMATION</div>
-                <div class="log-title">Certified Entry-Level Python Programmer</div>
-                <div class="log-tags">DOMAIN: PYTHON SCRIPTING, ALGORITHMIC AUTOMATION &amp; DATA PIPELINES // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+            <!-- CAD, CAM & SIMULATION -->
+            <div class="log-card" data-category="cad" data-index="05">
+                <div class="log-meta">SIEMENS DIGITAL INDUSTRIES // ENTERPRISE LEARNING</div>
+                <div class="log-title">Fundamentals of Simcenter STAR-CCM+</div>
+                <div class="log-tags">MEMBERSHIP: ENTERPRISE // DATE: SEP 2026 // DOMAIN: CFD &amp; MULTIPHYSICS // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
                 <button class="open-data-btn" onclick="openTerminalViewport('cert05')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="cad" data-index="06">
+                <div class="log-meta">DASSAULT SYSTÈMES // SOLIDWORKS</div>
+                <div class="log-title">Certified SOLIDWORKS Associate (CSWA) / Foundations</div>
+                <div class="log-tags">SCORE: 130 / 130 (100% PERFECT) // DOMAIN: PART &amp; ASSEMBLY MODELING // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert06')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="cad" data-index="07">
+                <div class="log-meta">SKILLS &amp; JOBS // G2G INNOVATION PUNE</div>
+                <div class="log-title">CATIA V5 Mechanical Design &amp; Advanced Part Modeling</div>
+                <div class="log-tags">SERIAL: E3692P9T // DATE: JAN 2025 // DOMAIN: PARAMETRIC CAD &amp; SURFACING // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert07')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="cad" data-index="08">
+                <div class="log-meta">BENTLEY SYSTEMS // ADVANCING INFRASTRUCTURE</div>
+                <div class="log-title">CAD with MicroStation for Beginners | Fundamental</div>
+                <div class="log-tags">CERT ID: C30176 // CEU: 2.00 // DATE: AUG 2024 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert08')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="cad" data-index="09">
+                <div class="log-meta">JANATICS PNEUMATIC // JASC 2025</div>
+                <div class="log-title">Janatics Automation Skill Challenge E-Learning Certification</div>
+                <div class="log-tags">GRADE: 85.00% // CERT ID: 684436e3-7e50-49d8-a8c0-7ed5ac202876 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert09')">OPEN DATA</button>
+            </div>
+
+            <!-- PLC, ROBOTICS & AUTOMATION -->
+            <div class="log-card" data-category="robotics" data-index="10">
+                <div class="log-meta">OMRON AUTOMATION INDIA // JSPM RSCOE</div>
+                <div class="log-title">5-Day Industrial Automation Workshop: PLCs, Motion Controllers &amp; Servos</div>
+                <div class="log-tags">VENUE: JSPM RSCOE // DATE: JAN 2026 // DOMAIN: INDUSTRIAL AUTOMATION // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert10')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="robotics" data-index="11">
+                <div class="log-meta">CENTRE FOR INDUSTRY 4.0 (C4i4) // MINISTRY OF HEAVY INDUSTRIES</div>
+                <div class="log-title">'Elevates' Machine Learning &amp; Data Analytics using No-Code KNIME</div>
+                <div class="log-tags">CERT NO: C4i4Lab/EP2/2025/079 // DATE: OCT 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert11')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="robotics" data-index="12">
+                <div class="log-meta">IEEE RSCOE // ROBOTICS &amp; AUTOMATION SOCIETY</div>
+                <div class="log-title">Research Symposium 2.0 Participation</div>
+                <div class="log-tags">ORGANIZATION: IEEE RSCOE // DATE: APR 2025 // STATUS: <span class="status-complete">VERIFIED PARTICIPATION</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert12')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="robotics" data-index="13">
+                <div class="log-meta">INTERNSHIP STUDIO // NATIONAL BENCHMARK</div>
+                <div class="log-title">Common Internship Test - Automation &amp; Systems</div>
+                <div class="log-tags">CERT NO: CIT-P-1378595 // DATE: FEB 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert13')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="robotics" data-index="14">
+                <div class="log-meta">MINISTRY OF YOUTH AFFAIRS AND SPORTS // GOVT. OF INDIA</div>
+                <div class="log-title">Mera Yuva Bharat (MY Bharat) National Recognition</div>
+                <div class="log-tags">PORTAL: MYBHARAT.GOV.IN // DOMAIN: STEM &amp; TECH INNOVATION // STATUS: <span class="status-complete">NATIONAL RECOGNITION</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert14')">OPEN DATA</button>
+            </div>
+
+            <!-- AI, MACHINE LEARNING & DATA SCIENCE -->
+            <div class="log-card" data-category="ai" data-index="15">
+                <div class="log-meta">PYTHON INSTITUTE // UDEMY</div>
+                <div class="log-title">Python PCEP-30-01: Certified Entry-Level Python Programmer</div>
+                <div class="log-tags">CERT ID: UC-bb78060a-cbc5-4c59-992b-edc2105b415b // DATE: JUN 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert15')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="ai" data-index="16">
+                <div class="log-meta">MICROSOFT &amp; LINKEDIN LEARNING</div>
+                <div class="log-title">Career Essentials in Generative AI</div>
+                <div class="log-tags">CERT ID: 51a7c86032b8296e4fb9a6c917ab22ac06354b4e15b22cb21a875421fa105ec8 // DATE: JUL 2024 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert16')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="ai" data-index="17">
+                <div class="log-meta">IBM SKILLSBUILD // CREDLY</div>
+                <div class="log-title">Artificial Intelligence Fundamentals</div>
+                <div class="log-tags">CREDLY BADGE: b4dd665a-c8ca-41dc-b17b-e201fc21063d // DATE: JUL 2025 // STATUS: <span class="status-complete">VERIFIED BADGE</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert17')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="ai" data-index="18">
+                <div class="log-meta">AICTE &amp; EDUNET FOUNDATION // IBM SKILLSBUILD</div>
+                <div class="log-title">6-Week Internship on Artificial Intelligence</div>
+                <div class="log-tags">STU ID: STU659e52abbb9631704874667 // DATE: JUN-JUL 2025 // STATUS: <span class="status-complete">VERIFIED INTERNSHIP</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert18')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="ai" data-index="19">
+                <div class="log-meta">IBM SKILLSBUILD // COURSEWARE</div>
+                <div class="log-title">Machine Learning and Deep Learning (MDL-212)</div>
+                <div class="log-tags">PLAN: MDL-212 // DATE: JUL 2025 // DOMAIN: DEEP NEURAL NETWORKS // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert19')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="ai" data-index="20">
+                <div class="log-meta">MONGODB // DEVELOPER ACADEMY</div>
+                <div class="log-title">Introduction to AI and Vector Search</div>
+                <div class="log-tags">CERT ID: MDBuz304rzur4 // DATE: SEP 2024 // DOMAIN: VECTOR EMBEDDINGS &amp; RAG // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert20')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="ai" data-index="21">
+                <div class="log-meta">IBM SKILLSBUILD &amp; EDUNET FOUNDATION</div>
+                <div class="log-title">Edunet - Artificial Intelligence (PLAN-8A48645196FA)</div>
+                <div class="log-tags">RECORD: YOUR LEARNING BUILDER // DATE: JUL 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert21')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="ai" data-index="22">
+                <div class="log-meta">IBM SKILLSBUILD // MOODLE SYSTEM</div>
+                <div class="log-title">Introduction to Artificial Intelligence (MDL-211)</div>
+                <div class="log-tags">PLAN: MDL-211 // DATE: JUN 2025 // DOMAIN: APPLIED AI PRINCIPLES // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert22')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="ai" data-index="23">
+                <div class="log-meta">IBM SKILLSBUILD // ACTIVITY SUITE</div>
+                <div class="log-title">Introduction to Artificial Intelligence | IBM Activity Kit</div>
+                <div class="log-tags">ID: URL-693DE3553654 // DATE: JUN 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert23')">OPEN DATA</button>
+            </div>
+
+            <!-- STRATEGY, MANAGEMENT & PROFESSIONAL LEADERSHIP -->
+            <div class="log-card" data-category="strategy" data-index="24">
+                <div class="log-meta">GOOGLE // COURSERA</div>
+                <div class="log-title">Foundations of Project Management</div>
+                <div class="log-tags">VERIFY: 2HPF13A1Z7FC // DATE: APR 2025 // DOMAIN: AGILE &amp; RISK MANAGEMENT // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert24')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="strategy" data-index="25">
+                <div class="log-meta">UNIVERSITY OF VIRGINIA / DARDEN // COURSERA</div>
+                <div class="log-title">Design Thinking for Innovation</div>
+                <div class="log-tags">VERIFY: BK3Y2R8EA1VN // DATE: MAY 2025 // DOMAIN: RAPID HARDWARE PROTOTYPING // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert25')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="strategy" data-index="26">
+                <div class="log-meta">UNIVERSITY OF MICHIGAN // COURSERA</div>
+                <div class="log-title">Successful Negotiation: Essential Strategies and Skills</div>
+                <div class="log-tags">VERIFY: JH3S8WHVSY70 // DATE: MAR 2025 // DOMAIN: STRATEGIC CONTRACTING // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert26')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="strategy" data-index="27">
+                <div class="log-meta">INVEST INDIA / #STARTUPINDIA // UPGRAD</div>
+                <div class="log-title">#startupindia Learning Program</div>
+                <div class="log-tags">CREDENTIAL ID: 671a2186fda55b088cdabed5 // DATE: OCT 2024 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert27')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="strategy" data-index="28">
+                <div class="log-meta">WADHWANI FOUNDATION // MICROCREDENTIAL</div>
+                <div class="log-title">Professionalism &amp; Workplace Ethics</div>
+                <div class="log-tags">HOURS: 10.25 HRS // DATE: OCT 2024 // DOMAIN: ENGINEERING GOVERNANCE // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert28')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="strategy" data-index="29">
+                <div class="log-meta">WADHWANI FOUNDATION // MICROCREDENTIAL</div>
+                <div class="log-title">Effective Speaking and Listening Skills</div>
+                <div class="log-tags">HOURS: 9.75 HRS // DATE: OCT 2024 // DOMAIN: EXECUTIVE COMMUNICATION // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert29')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="strategy" data-index="30">
+                <div class="log-meta">TCS iON // TATA CONSULTANCY SERVICES</div>
+                <div class="log-title">Career Edge - Young Professional</div>
+                <div class="log-tags">CERT ID: 240640-28433637-1016 // DATE: JUN 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert30')">OPEN DATA</button>
+            </div>
+
+            <div class="log-card" data-category="strategy" data-index="31">
+                <div class="log-meta">IBM SKILLSBUILD &amp; EDUNET FOUNDATION</div>
+                <div class="log-title">Edunet - SkillsBuild Orientation</div>
+                <div class="log-tags">PLAN: PLAN-04138CD348A7 // DATE: JUL 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
+                <button class="open-data-btn" onclick="openTerminalViewport('cert31')">OPEN DATA</button>
             </div>
         </div>
       </div>
@@ -827,7 +1022,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=20.0" defer></script>
+  <script src="app.js?v=21.0" defer></script>
 </body>
 </html>
 

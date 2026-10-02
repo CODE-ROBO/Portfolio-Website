@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSPARouting();
   initSkillsGrid();
   initResearchModule();
+  initCertificationsModule();
   initProjectLightbox();
   initHomeTerminal();
   initContactValidationModule();
@@ -890,89 +891,571 @@ const abstractDatabase = {
 </div>`,
 
     cert01: `<div class="structured-modal-content">
+    <div class="modal-info-title">Rocket Propulsion and Spacecraft Dynamics</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> KODACY (Official Space Tutor of ISRO) &amp; SPACE<br>
+            <strong>DATE OF COMPLETION:</strong> 25 May 2025<br>
+            <strong>CERTIFICATE ID:</strong> bf067fe3de6cffc4<br>
+            <strong>AUTHORIZED BY:</strong> Akash Joseph (CEO, Kodacy)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Solid and liquid rocket motor internal ballistics, specific impulse optimization, de Laval convergent-divergent nozzle expansion dynamics, thrust-to-weight profiling, staging calculations, and spacecraft orbital trajectory mechanics.
+        </div>
+    </div>
+</div>`,
+
+    cert02: `<div class="structured-modal-content">
+    <div class="modal-info-title">Space Exploration</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Technical University of Munich (TUM) &amp; Munich Aerospace via Coursera<br>
+            <strong>INSTRUCTOR:</strong> Dr. Thomas Reiter (Former ESA Astronaut &amp; ESA-Director for Human Spaceflight)<br>
+            <strong>DATE OF COMPLETION:</strong> 30 July 2026<br>
+            <strong>VERIFICATION:</strong> <a href="https://coursera.org/verify/BTBAK2HLMFL1" target="_blank" class="accent-gold">coursera.org/verify/BTBAK2HLMFL1</a>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Space mission architecture, launch vehicle staging, crewed flight life-support envelopes, orbital transfer maneuvers (Hohmann &amp; bi-elliptic), spacecraft structural loads, and interplanetary exploration mission planning.
+        </div>
+    </div>
+</div>`,
+
+    cert03: `<div class="structured-modal-content">
+    <div class="modal-info-title">Coupled Thermo-Structural &amp; Pre-Stressed Modal Dynamics of SRM Nozzle</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>CONFERENCE:</strong> iTMD 2026 — NIT Jalandhar (Aerospace Track)<br>
+            <strong>PAPER ID:</strong> 419<br>
+            <strong>FOCUS:</strong> Aero-Thermal Shock &amp; Structural Dynamics Validation
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Non-linear FEA coupling of transient thermal gradients with internal acoustic pressure waves (0-600 psi), harmonic vibration response analysis, and thermal stress mitigation across ablative nozzle geometries.
+        </div>
+    </div>
+</div>`,
+
+    cert04: `<div class="structured-modal-content">
+    <div class="modal-info-title">Wireless Communications Onramp</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> MathWorks Training Services<br>
+            <strong>DATE OF COMPLETION:</strong> 04 November 2025<br>
+            <strong>PLATFORM:</strong> MATLAB Signal Processing &amp; Communications Toolbox
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            RF signal transmission, carrier modulation schemes (QAM/PSK), path loss propagation modeling, antenna radiation link budgets, and telemetry data demodulation.
+        </div>
+    </div>
+</div>`,
+
+    cert05: `<div class="structured-modal-content">
     <div class="modal-info-title">Fundamentals of Simcenter STAR-CCM+</div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
         <div class="modal-info-text">
             <strong>ISSUING ORGANIZATION:</strong> Siemens Digital Industries Software<br>
             <strong>PROGRAM:</strong> Siemens Enterprise Learning Membership<br>
-            <strong>COMPLETION DATE:</strong> 25 September 2026<br>
-            <strong>DOMAIN:</strong> Computational Fluid Dynamics (CFD), Finite Volume Meshing &amp; Multiphysics Simulation
+            <strong>DATE OF COMPLETION:</strong> 25 September 2026<br>
+            <strong>DOMAIN:</strong> Computational Fluid Dynamics (CFD), Polyhedral Meshing &amp; Multiphysics Simulation
         </div>
     </div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
         <div class="modal-info-text">
-            End-to-end CFD simulation workflow in Simcenter STAR-CCM+, including 3D CAD geometry preparation, automated polyhedral and prism-layer meshing, turbulence modelling, conjugate heat transfer analysis, and post-processing of aerodynamic and propulsion flow fields.
+            End-to-end CFD simulation workflow in Simcenter STAR-CCM+, including 3D CAD geometry preparation, automated polyhedral and prism-layer meshing, turbulence modelling (k-epsilon &amp; SST k-omega), conjugate heat transfer, compressible supersonic flows, and propulsion exhaust validation.
         </div>
     </div>
 </div>`,
 
-    cert02: `<div class="structured-modal-content">
+    cert06: `<div class="structured-modal-content">
+    <div class="modal-info-title">Certified SOLIDWORKS Associate (CSWA) / SolidWorks Foundations</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Dassault Systèmes<br>
+            <strong>EXAM SCORE:</strong> 130 / 130 (100% Perfect Score)<br>
+            <strong>VERIFIED COMPETENCY:</strong> Drafting Competencies, Part Modeling, Assembly Problems
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Precision 3D parametric feature-based solid modeling, complex multi-component assembly mating constraints, standard 2D engineering drafting, geometric dimensioning and tolerancing (GD&amp;T), mass property calculations, and interference collision checking.
+        </div>
+    </div>
+</div>`,
+
+    cert07: `<div class="structured-modal-content">
+    <div class="modal-info-title">CATIA V5 Mechanical Design &amp; Advanced Part Modeling</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Skills &amp; Jobs / G2G Innovation, Pune<br>
+            <strong>DATE OF COMPLETION:</strong> 11 January 2025<br>
+            <strong>SERIAL NUMBER:</strong> E3692P9T<br>
+            <strong>SIGNED BY:</strong> Sushil Bhagat (Director) &amp; Amit B (Proctor)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            CATIA V5 Part Design, Generative Shape Design (surfacing), Assembly Design workbenches, parametric wireframe creation, multi-body Boolean operations, and manufacturing tolerance validation.
+        </div>
+    </div>
+</div>`,
+
+    cert08: `<div class="structured-modal-content">
+    <div class="modal-info-title">CAD with MicroStation for Beginners | Fundamental</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Bentley Systems (Advancing Infrastructure)<br>
+            <strong>DATE OF COMPLETION:</strong> 29 August 2024<br>
+            <strong>CERTIFICATE ID:</strong> C30176 (2.00 CEU)<br>
+            <strong>AUTHORIZED BY:</strong> Amit Trehan (Director, User Learning)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Infrastructure 2D/3D precision CAD modeling, coordinate system alignment, vector geometry manipulation, engineering drafting standards, layer management, and digital twin interoperability.
+        </div>
+    </div>
+</div>`,
+
+    cert09: `<div class="structured-modal-content">
+    <div class="modal-info-title">Janatics Automation Skill Challenge (JASC 2025) Certification</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> JANATICS Pneumatic<br>
+            <strong>DATE OF COMPLETION:</strong> 07 June 2025<br>
+            <strong>EXAM GRADE:</strong> 85.00%<br>
+            <strong>CERTIFICATE ID:</strong> 684436e3-7e50-49d8-a8c0-7ed5ac202876
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Industrial pneumatic circuit design, sizing of pneumatic cylinders and actuators, 5/2 &amp; 5/3 directional control valve configuration, electro-pneumatic interfacing, and automated sequence logic.
+        </div>
+    </div>
+</div>`,
+
+    cert10: `<div class="structured-modal-content">
+    <div class="modal-info-title">5-Day Industrial Automation Workshop: PLCs, Motion Controllers &amp; Servos</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> OMRON Automation India &amp; JSPM's RSCOE, Pune<br>
+            <strong>DATE OF COMPLETION:</strong> 09 January 2026<br>
+            <strong>AWARDED BY:</strong> Mr. Niraj Kumar (Head - Integrated Solutions &amp; Services, OMRON Automation)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Hands-on PLC ladder programming, high-precision motion control profiles, NB/NV Series HMI interface design, closed-loop servo drives with quadrature encoder feedback, and industrial fieldbus communications.
+        </div>
+    </div>
+</div>`,
+
+    cert11: `<div class="structured-modal-content">
+    <div class="modal-info-title">'Elevates' Machine Learning &amp; Data Analytics using No-Code KNIME</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Centre for Industry 4.0 (C4i4) Lab (Ministry of Heavy Industries, Govt. of India)<br>
+            <strong>DATE OF COMPLETION:</strong> 09 October 2025<br>
+            <strong>CERTIFICATE NO:</strong> C4i4Lab/EP2/2025/079<br>
+            <strong>AWARDED BY:</strong> Mr. Pradip Kopardekar (Director, C4i4 Lab)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Industrial IoT data pipelines at iFactory testbeds, predictive equipment maintenance modeling, automated data cleaning in KNIME Analytics Platform, statistical anomaly detection, and Industry 4.0 digital transformation.
+        </div>
+    </div>
+</div>`,
+
+    cert12: `<div class="structured-modal-content">
+    <div class="modal-info-title">Research Symposium 2.0 Participation</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> IEEE RSCOE Student Branch (Robotics &amp; Automation Society, ComSoc, PES)<br>
+            <strong>DATES:</strong> 01 - 03 April 2025<br>
+            <strong>SIGNATORIES:</strong> Dr. Santosh Bhosle (Director, RSCOE) &amp; Prof. Swati Kale
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Active contribution to technical research symposium, presenting and debating findings in autonomous robotics kinematics, embedded edge AI sensors, and collaborative robotic automation.
+        </div>
+    </div>
+</div>`,
+
+    cert13: `<div class="structured-modal-content">
+    <div class="modal-info-title">Common Internship Test - Automation &amp; Systems</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Internship Studio<br>
+            <strong>DATE:</strong> 24 February 2025<br>
+            <strong>CERTIFICATE NO:</strong> CIT-P-1378595
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            National evaluation across control systems engineering, microcontroller logic, sensor interfacing, algorithms, and applied mechatronic system problem-solving.
+        </div>
+    </div>
+</div>`,
+
+    cert14: `<div class="structured-modal-content">
+    <div class="modal-info-title">Mera Yuva Bharat (MY Bharat) National Recognition</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Ministry of Youth Affairs and Sports, Government of India<br>
+            <strong>PLATFORM:</strong> mybharat.gov.in<br>
+            <strong>DOMAIN:</strong> STEM &amp; Technical Nation-Building Initiatives
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            National recognition for leadership in science and engineering development, student research leadership, and technological innovation advancing India's indigenous deep-tech capabilities.
+        </div>
+    </div>
+</div>`,
+
+    cert15: `<div class="structured-modal-content">
+    <div class="modal-info-title">Python PCEP-30-01: Certified Entry-Level Python Programmer</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Python Institute / Udemy<br>
+            <strong>INSTRUCTOR:</strong> Sandeep Kumar<br>
+            <strong>DATE:</strong> 24 June 2025 (8.5 Hours)<br>
+            <strong>CERTIFICATE URL:</strong> <a href="https://ude.my/UC-bb78060a-cbc5-4c59-992b-edc2105b415b" target="_blank" class="accent-gold">ude.my/UC-bb78060a...</a>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Python core data types, conditional branching, iteration loops, functional modularization, exception handling, string and list manipulation, and object-oriented programming foundation.
+        </div>
+    </div>
+</div>`,
+
+    cert16: `<div class="structured-modal-content">
+    <div class="modal-info-title">Career Essentials in Generative AI</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Microsoft &amp; LinkedIn Learning<br>
+            <strong>DATE:</strong> 31 July 2024<br>
+            <strong>CERTIFICATE ID:</strong> 51a7c86032b8296e4fb9a6c917ab22ac06354b4e15b22cb21a875421fa105ec8
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Generative AI foundations, transformer neural architectures, large language model prompt optimization, AI safety, ethical AI governance, and computer ethics principles.
+        </div>
+    </div>
+</div>`,
+
+    cert17: `<div class="structured-modal-content">
+    <div class="modal-info-title">Artificial Intelligence Fundamentals</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> IBM SkillsBuild<br>
+            <strong>ISSUED ON:</strong> 06 July 2025<br>
+            <strong>CREDLY BADGE:</strong> <a href="https://www.credly.com/badges/b4dd665a-c8ca-41dc-b17b-e201fc21063d" target="_blank" class="accent-gold">Verify on Credly</a>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Machine learning core algorithms, natural language processing pipelines, computer vision image classification, neural networks, and responsible cognitive AI systems.
+        </div>
+    </div>
+</div>`,
+
+    cert18: `<div class="structured-modal-content">
+    <div class="modal-info-title">6-Week Internship on Artificial Intelligence</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> AICTE &amp; Edunet Foundation (in collaboration with IBM SkillsBuild)<br>
+            <strong>DATES:</strong> 18 June 2025 to 30 July 2025<br>
+            <strong>STUDENT STU ID:</strong> STU659e52abbb9631704874667<br>
+            <strong>SIGNED BY:</strong> Nagesh Singh (Chairman, Edunet Foundation)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Intensive AI internship tackling end-to-end machine learning project design, synthetic feature engineering, hyperparameter tuning, model performance benchmarking, and edge-deployable inference pipelines.
+        </div>
+    </div>
+</div>`,
+
+    cert19: `<div class="structured-modal-content">
+    <div class="modal-info-title">Machine Learning and Deep Learning (MDL-212)</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> IBM SkillsBuild<br>
+            <strong>DATE:</strong> 02 July 2025<br>
+            <strong>RECORD:</strong> Moodle System of Record (PLAN-MDL-212)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Deep artificial neural network architectures, gradient descent backpropagation, multi-class loss functions, convolutional feature extraction, and overfitting regularization strategies.
+        </div>
+    </div>
+</div>`,
+
+    cert20: `<div class="structured-modal-content">
+    <div class="modal-info-title">Introduction to AI and Vector Search</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> MongoDB Developer Academy<br>
+            <strong>DATE:</strong> 16 September 2024<br>
+            <strong>CREDENTIAL ID:</strong> MDBuz304rzur4<br>
+            <strong>SIGNED BY:</strong> Sahir Azam (Chief Product Officer, MongoDB)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            High-dimensional vector embeddings, vector similarity indexing (Hierarchical Navigable Small World - HNSW), cosine and Euclidean distance metrics, semantic search retrieval, and RAG system integration.
+        </div>
+    </div>
+</div>`,
+
+    cert21: `<div class="structured-modal-content">
+    <div class="modal-info-title">Edunet - Artificial Intelligence (PLAN-8A48645196FA)</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> IBM SkillsBuild &amp; Edunet Foundation<br>
+            <strong>DATE:</strong> 06 July 2025<br>
+            <strong>SYSTEM:</strong> Your Learning Builder Plans
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Applied cognitive intelligence, automated decision support, supervised training datasets, feature scaling, and multi-disciplinary AI system integration.
+        </div>
+    </div>
+</div>`,
+
+    cert22: `<div class="structured-modal-content">
+    <div class="modal-info-title">Introduction to Artificial Intelligence (MDL-211)</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> IBM SkillsBuild<br>
+            <strong>DATE:</strong> 28 June 2025<br>
+            <strong>SYSTEM:</strong> Moodle System of Record
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Foundations of AI intelligence agents, environment perception, search heuristics, probability distributions, and cognitive algorithm pipelines.
+        </div>
+    </div>
+</div>`,
+
+    cert23: `<div class="structured-modal-content">
+    <div class="modal-info-title">Introduction to Artificial Intelligence | IBM Activity Kit</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> IBM SkillsBuild<br>
+            <strong>DATE:</strong> 27 June 2025<br>
+            <strong>CREDENTIAL ID:</strong> URL-693DE3553654
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Hands-on machine learning data classification exercises, AI ethical dilemmas, predictive scoring, and algorithm validation benchmarks.
+        </div>
+    </div>
+</div>`,
+
+    cert24: `<div class="structured-modal-content">
     <div class="modal-info-title">Foundations of Project Management</div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
         <div class="modal-info-text">
-            <strong>ISSUING ORGANIZATION:</strong> Google<br>
-            <strong>CREDENTIAL TYPE:</strong> Professional Certificate Module<br>
-            <strong>DOMAIN:</strong> Engineering Project Lifecycle, Agile/Scrum Execution &amp; Risk Management
+            <strong>ISSUING ORGANIZATION:</strong> Google via Coursera<br>
+            <strong>DATE:</strong> 06 April 2025<br>
+            <strong>VERIFICATION:</strong> <a href="https://coursera.org/verify/2HPF13A1Z7FC" target="_blank" class="accent-gold">coursera.org/verify/2HPF13A1Z7FC</a>
         </div>
     </div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
         <div class="modal-info-text">
-            Cross-functional engineering team leadership, project lifecycle planning, resource allocation, stakeholder communication, and structured risk mitigation across hardware and software development sprints.
+            Engineering project lifecycles, Agile and Waterfall execution frameworks, sprint planning, project charters, risk mitigation registers, and stakeholder communication strategies.
         </div>
     </div>
 </div>`,
 
-    cert03: `<div class="structured-modal-content">
+    cert25: `<div class="structured-modal-content">
     <div class="modal-info-title">Design Thinking for Innovation</div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
         <div class="modal-info-text">
-            <strong>ISSUING ORGANIZATION:</strong> University of Virginia<br>
-            <strong>DOMAIN:</strong> Systems Design, Rapid Prototyping &amp; Engineering Innovation
+            <strong>ISSUING ORGANIZATION:</strong> University of Virginia / Darden School of Business via Coursera<br>
+            <strong>DATE:</strong> 08 May 2025<br>
+            <strong>VERIFICATION:</strong> <a href="https://coursera.org/verify/BK3Y2R8EA1VN" target="_blank" class="accent-gold">coursera.org/verify/BK3Y2R8EA1VN</a>
         </div>
     </div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
         <div class="modal-info-text">
-            Structured human-centric engineering design methodology, translating complex operational bottlenecks into scalable technical architectures, iterative prototyping, and functional validation.
+            Structured human-centric design, opportunity mapping, rapid physical and digital prototyping, hypothesis validation, and translating engineering constraints into innovative solutions.
         </div>
     </div>
 </div>`,
 
-    cert04: `<div class="structured-modal-content">
-    <div class="modal-info-title">Rocket Propulsion and Spacecraft Dynamics</div>
+    cert26: `<div class="structured-modal-content">
+    <div class="modal-info-title">Successful Negotiation: Essential Strategies and Skills</div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
         <div class="modal-info-text">
-            <strong>ISSUING ORGANIZATION:</strong> Kodacy<br>
-            <strong>DOMAIN:</strong> Aerospace Propulsion, Nozzle Thermodynamics &amp; Orbital Mechanics
+            <strong>ISSUING ORGANIZATION:</strong> University of Michigan via Coursera<br>
+            <strong>INSTRUCTOR:</strong> Prof. George Siedel (Williamson Family Professor of Business Administration)<br>
+            <strong>DATE:</strong> 30 March 2025<br>
+            <strong>VERIFICATION:</strong> <a href="https://coursera.org/verify/JH3S8WHVSY70" target="_blank" class="accent-gold">coursera.org/verify/JH3S8WHVSY70</a>
         </div>
     </div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
         <div class="modal-info-text">
-            Solid and liquid rocket motor internal ballistics, specific impulse optimization, de Laval nozzle expansion dynamics, thrust-to-weight profiling, and spacecraft trajectory mechanics.
+            Four-step strategic negotiation framework: Planning, Negotiation Tactics, Contract Drafting, and Performance Evaluation. Value creation matrices, BATNA assessment, and win-win joint optimization.
         </div>
     </div>
 </div>`,
 
-    cert05: `<div class="structured-modal-content">
-    <div class="modal-info-title">Certified Entry-Level Python Programmer</div>
+    cert27: `<div class="structured-modal-content">
+    <div class="modal-info-title">#startupindia Learning Program</div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
         <div class="modal-info-text">
-            <strong>ISSUING ORGANIZATION:</strong> Udemy<br>
-            <strong>DOMAIN:</strong> Python Programming, Algorithmic Automation &amp; Data Processing
+            <strong>ISSUING ORGANIZATION:</strong> Invest India / #startupindia / upGrad<br>
+            <strong>DATE:</strong> 21 October 2024<br>
+            <strong>CREDENTIAL ID:</strong> 671a2186fda55b088cdabed5
         </div>
     </div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
         <div class="modal-info-text">
-            Python software architecture, data structures, numerical scripting, sensor telemetry parsing, and computer vision automation pipelines.
+            Tech entrepreneurship fundamentals, market sizing, financial modeling, patent and intellectual property filing strategies, and legal regulatory compliance for deep-tech spin-offs.
+        </div>
+    </div>
+</div>`,
+
+    cert28: `<div class="structured-modal-content">
+    <div class="modal-info-title">Professionalism &amp; Workplace Ethics</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Wadhwani Foundation<br>
+            <strong>DATE:</strong> 27 October 2024 (10.25 Hours)<br>
+            <strong>AUTHORIZED BY:</strong> Dr. Ajay Kela (CEO, Wadhwani Foundation)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Engineering professional ethics, organizational governance, team accountability, high-integrity decision frameworks, and workplace behavioral standards.
+        </div>
+    </div>
+</div>`,
+
+    cert29: `<div class="structured-modal-content">
+    <div class="modal-info-title">Effective Speaking and Listening Skills</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> Wadhwani Foundation<br>
+            <strong>DATE:</strong> 26 October 2024 (9.75 Hours)<br>
+            <strong>AUTHORIZED BY:</strong> Dr. Ajay Kela (CEO, Wadhwani Foundation)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            High-impact technical briefing, concise verbal articulation of complex engineering concepts, active listening techniques, and cross-functional project alignment.
+        </div>
+    </div>
+</div>`,
+
+    cert30: `<div class="structured-modal-content">
+    <div class="modal-info-title">Career Edge - Young Professional</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> TCS iON (Tata Consultancy Services)<br>
+            <strong>DATE:</strong> 13 June 2025<br>
+            <strong>CERTIFICATE ID:</strong> 240640-28433637-1016<br>
+            <strong>AUTHORIZED BY:</strong> Mehul Mehta (Global Delivery Head, TCS iON)
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Corporate communication, executive interview presentation, business email and reporting etiquette, IT foundations, and artificial intelligence industrial overview.
+        </div>
+    </div>
+</div>`,
+
+    cert31: `<div class="structured-modal-content">
+    <div class="modal-info-title">Edunet - SkillsBuild Orientation</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">CREDENTIAL METADATA //</div>
+        <div class="modal-info-text">
+            <strong>ISSUING ORGANIZATION:</strong> IBM SkillsBuild &amp; Edunet Foundation<br>
+            <strong>DATE:</strong> July 2025<br>
+            <strong>PLAN:</strong> PLAN-04138CD348A7
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">COMPETENCIES VERIFIED //</div>
+        <div class="modal-info-text">
+            Orientation in cloud enterprise platforms, digital professional competencies, emerging Industry 4.0 software toolchains, and collaborative engineering environments.
         </div>
     </div>
 </div>`
@@ -999,6 +1482,29 @@ function initResearchModule() {
             cards.forEach(card => {
                 const cardStatus = card.getAttribute("data-status");
                 if (filterType === "all" || cardStatus === filterType) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+}
+
+function initCertificationsModule() {
+    const cards = document.querySelectorAll("#certifications .log-card");
+    const filterButtons = document.querySelectorAll("#cert-filter-bar .filter-btn");
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            filterButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const filterType = btn.getAttribute("data-filter");
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute("data-category");
+                if (filterType === "all" || cardCategory === filterType) {
                     card.style.display = "flex";
                 } else {
                     card.style.display = "none";
@@ -1475,6 +1981,24 @@ function init3DViewerModule() {
   });
 }
 
+function ensureModelViewerScript(callback) {
+  if (window.customElements && window.customElements.get('model-viewer')) {
+    if (callback) callback();
+    return;
+  }
+  let script = document.getElementById('model-viewer-script');
+  if (!script) {
+    script = document.createElement('script');
+    script.id = 'model-viewer-script';
+    script.type = 'module';
+    script.src = 'https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js';
+    script.onload = () => { if (callback) callback(); };
+    document.head.appendChild(script);
+  } else {
+    script.addEventListener('load', () => { if (callback) callback(); }, { once: true });
+  }
+}
+
 window.open3DViewer = function(modelSrc, titleText, metaText) {
   const modal = document.getElementById('cad-3d-lightbox-modal');
   const viewer = document.getElementById('active-model-viewer');
@@ -1487,18 +2011,20 @@ window.open3DViewer = function(modelSrc, titleText, metaText) {
 
   if (loading) {
     loading.classList.remove('hidden');
-    loading.innerHTML = '<span class="loading-spin">◰</span> LOADING 3D CAD ASSET &amp; INITIALIZING WEBGL SHADERS...';
+    loading.innerHTML = '<span class="loading-spin">◰</span> INITIALIZING WEBGL &amp; STREAMING 3D CAD ASSET...';
   }
 
   if (title && titleText) title.textContent = titleText;
   if (meta && metaText) meta.textContent = metaText;
 
-  viewer.src = modelSrc;
-  viewer.autoRotate = true;
-  if (rotateBtn) {
-    rotateBtn.classList.add('active');
-    rotateBtn.innerHTML = '<span>⟳ ROTATE: ON</span>';
-  }
+  ensureModelViewerScript(() => {
+    viewer.src = modelSrc;
+    viewer.autoRotate = true;
+    if (rotateBtn) {
+      rotateBtn.classList.add('active');
+      rotateBtn.innerHTML = '<span>⟳ ROTATE: ON</span>';
+    }
+  });
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';

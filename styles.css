@@ -1570,6 +1570,19 @@ input, textarea, select, button, .input-field {
   font-weight: 800;
 }
 
+/* Category Filter Colors for Certifications */
+.filter-btn[data-filter="aerospace"].active { color: #dc2626 !important; font-weight: 800; }
+.filter-btn[data-filter="cad"].active { color: #d97706 !important; font-weight: 800; }
+.filter-btn[data-filter="robotics"].active { color: #2563eb !important; font-weight: 800; }
+.filter-btn[data-filter="ai"].active { color: #7c3aed !important; font-weight: 800; }
+.filter-btn[data-filter="strategy"].active { color: #059669 !important; font-weight: 800; }
+
+/* Performance & Rendering Acceleration */
+.cinematic-section:not(#home) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 850px;
+}
+
 .research-logs-container {
   display: flex;
   flex-direction: column;
