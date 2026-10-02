@@ -3737,3 +3737,353 @@ html, body {
     padding: 6px 10px !important;
   }
 }
+
+/* ==========================================================================
+   INTERACTIVE 3D CAD INSPECTOR & TELEMETRY SUITE
+   ========================================================================== */
+
+/* 3D Action Buttons in Project Cards */
+.proj-action-btn.cad-3d-btn {
+  background: rgba(197, 160, 89, 0.09) !important;
+  border: 1px solid var(--color-accent-gold) !important;
+  color: #111111 !important;
+  font-weight: 700 !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.proj-action-btn.cad-3d-btn svg {
+  stroke: var(--color-accent-gold);
+  transition: stroke 0.2s ease, transform 0.3s ease;
+}
+
+.proj-action-btn.cad-3d-btn:hover {
+  background: var(--color-accent-gold) !important;
+  color: #000000 !important;
+  box-shadow: 0 0 16px rgba(197, 160, 89, 0.45), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+.proj-action-btn.cad-3d-btn:hover svg {
+  stroke: #000000;
+  transform: rotate(45deg);
+}
+
+/* 3D CAD Lightbox Modal Overlay */
+.cad-3d-lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(4, 5, 8, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn3D 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cad-3d-lightbox-overlay.active {
+  display: flex !important;
+}
+
+@keyframes fadeIn3D {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.cad-3d-lightbox-panel {
+  width: 92vw;
+  max-width: 1150px;
+  height: 86vh;
+  max-height: 840px;
+  background: #090a0f;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(197, 160, 89, 0.18);
+  position: relative;
+}
+
+.cad-3d-lightbox-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-gold), transparent);
+  pointer-events: none;
+}
+
+/* Header */
+.cad-3d-lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(14, 16, 24, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 2;
+}
+
+.cad-3d-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cad-3d-lightbox-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--color-accent-gold);
+  opacity: 0.9;
+}
+
+.cad-3d-lightbox-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+
+.cad-3d-controls-hud {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cad-3d-hud-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #CCCCCC;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: 0.05em;
+}
+
+.cad-3d-hud-btn:hover {
+  background: rgba(197, 160, 89, 0.15);
+  border-color: var(--color-accent-gold);
+  color: #FFFFFF;
+}
+
+.cad-3d-hud-btn.active {
+  background: rgba(197, 160, 89, 0.25);
+  border-color: var(--color-accent-gold);
+  color: var(--color-accent-gold);
+}
+
+.cad-3d-lightbox-close {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cad-3d-lightbox-close:hover {
+  background: rgba(214, 5, 5, 0.85);
+  border-color: #D60505;
+  color: #FFFFFF;
+}
+
+/* 3D Body */
+.cad-3d-lightbox-body {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #151821 0%, #06070a 100%);
+  overflow: hidden;
+}
+
+#active-model-viewer {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  --poster-color: transparent;
+  cursor: grab;
+}
+
+#active-model-viewer:active {
+  cursor: grabbing;
+}
+
+/* Loading HUD */
+.cad-3d-loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(8, 10, 15, 0.92);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: var(--color-accent-gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cad-3d-loading-indicator.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-spin {
+  display: inline-block;
+  animation: spin3D 1.2s infinite linear;
+}
+
+@keyframes spin3D {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Subtle Reticle / Crosshairs */
+.cad-3d-crosshairs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at center, transparent 70%, rgba(0,0,0,0.4) 100%),
+    linear-gradient(rgba(197, 160, 89, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(197, 160, 89, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  opacity: 0.7;
+}
+
+/* Footer */
+.cad-3d-lightbox-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(10, 12, 18, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.65rem;
+  color: #888888;
+  letter-spacing: 0.06em;
+  z-index: 2;
+}
+
+.cad-3d-meta-readout {
+  color: var(--color-accent-gold);
+}
+
+.cad-3d-hint {
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   SKILLS SECTION: 3D TELEMETRY CONSTELLATION
+   ========================================================================== */
+.skills-showcase-split {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-3d-hologram-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-3d-hologram-card:hover {
+  border-color: rgba(197, 160, 89, 0.5);
+  box-shadow: 0 8px 30px rgba(197, 160, 89, 0.12);
+}
+
+.hologram-hud-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #FAFAFA;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.68rem;
+}
+
+.hud-tag {
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.05em;
+}
+
+.hud-status {
+  color: #039855;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hologram-canvas-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 280px;
+  background: #FFFFFF;
+}
+
+#skills-3d-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+}
+
+.hologram-hud-footer {
+  padding: 8px 14px;
+  background: #FAFAFA;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.62rem;
+  color: #555555;
+  letter-spacing: 0.04em;
+}
+
+@media screen and (max-width: 1024px) {
+  .skills-showcase-split {
+    grid-template-columns: 1fr;
+  }
+  .skills-3d-hologram-card {
+    max-width: 500px;
+    margin: 10px auto 0;
+    width: 100%;
+  }
+}

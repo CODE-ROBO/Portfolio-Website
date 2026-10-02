@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactValidationModule();
   initWordLimitCounters();
   initEngineeringCanvas();
+  init3DViewerModule();
+  initSkills3DHologram();
 });
 
 function handleTabSwitch(tabId) {
@@ -1434,4 +1436,390 @@ function initThemeSwitcher() {
   // Apply default or cached theme on load
   applyTheme(activeTheme);
 }
+
+/**
+ * 13. Interactive 3D CAD Inspector Module (Powered by Google model-viewer)
+ * Governs CAD model lifecycle, auto-rotate toggles, camera resets, and mobile AR viewports
+ */
+function init3DViewerModule() {
+  const modal = document.getElementById('cad-3d-lightbox-modal');
+  const viewer = document.getElementById('active-model-viewer');
+  const loading = document.getElementById('cad-3d-loading');
+
+  if (viewer && loading) {
+    viewer.addEventListener('load', () => {
+      loading.classList.add('hidden');
+    });
+
+    viewer.addEventListener('progress', (e) => {
+      const pct = Math.round((e.detail.totalProgress || 0) * 100);
+      if (pct < 100) {
+        loading.innerHTML = `<span class="loading-spin">◰</span> STREAMING 3D CAD MESH: ${pct}%...`;
+      }
+    });
+
+    viewer.addEventListener('error', (err) => {
+      console.warn('3D Model Loading Notice:', err);
+      loading.innerHTML = '<span style="color:#D60505;">[ ERROR LOADING 3D CAD MESH ]</span>';
+    });
+  }
+
+  // Escape key bind
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const modal3d = document.getElementById('cad-3d-lightbox-modal');
+      if (modal3d && modal3d.classList.contains('active')) {
+        close3DViewer();
+      }
+    }
+  });
+}
+
+window.open3DViewer = function(modelSrc, titleText, metaText) {
+  const modal = document.getElementById('cad-3d-lightbox-modal');
+  const viewer = document.getElementById('active-model-viewer');
+  const title = document.getElementById('cad-3d-lightbox-title');
+  const meta = document.getElementById('cad-3d-meta-readout');
+  const loading = document.getElementById('cad-3d-loading');
+  const rotateBtn = document.getElementById('cad-3d-autorotate-btn');
+
+  if (!modal || !viewer) return;
+
+  if (loading) {
+    loading.classList.remove('hidden');
+    loading.innerHTML = '<span class="loading-spin">◰</span> LOADING 3D CAD ASSET &amp; INITIALIZING WEBGL SHADERS...';
+  }
+
+  if (title && titleText) title.textContent = titleText;
+  if (meta && metaText) meta.textContent = metaText;
+
+  viewer.src = modelSrc;
+  viewer.autoRotate = true;
+  if (rotateBtn) {
+    rotateBtn.classList.add('active');
+    rotateBtn.innerHTML = '<span>⟳ ROTATE: ON</span>';
+  }
+
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+
+window.close3DViewer = function(e) {
+  if (e && e.target && e.target.closest('.cad-3d-lightbox-panel') && !e.target.closest('.cad-3d-lightbox-close')) {
+    return;
+  }
+
+  const modal = document.getElementById('cad-3d-lightbox-modal');
+  const viewer = document.getElementById('active-model-viewer');
+
+  if (modal) modal.classList.remove('active');
+  if (viewer) viewer.src = ''; // Cleanly release GPU WebGL context
+  document.body.style.overflow = '';
+};
+
+window.toggle3DAutoRotate = function() {
+  const viewer = document.getElementById('active-model-viewer');
+  const rotateBtn = document.getElementById('cad-3d-autorotate-btn');
+  if (!viewer) return;
+
+  viewer.autoRotate = !viewer.autoRotate;
+  if (rotateBtn) {
+    if (viewer.autoRotate) {
+      rotateBtn.classList.add('active');
+      rotateBtn.innerHTML = '<span>⟳ ROTATE: ON</span>';
+    } else {
+      rotateBtn.classList.remove('active');
+      rotateBtn.innerHTML = '<span>⟳ ROTATE: OFF</span>';
+    }
+  }
+};
+
+window.reset3DCamera = function() {
+  const viewer = document.getElementById('active-model-viewer');
+  if (viewer) {
+    viewer.cameraOrbit = '0deg 75deg 105%';
+    viewer.cameraTarget = 'auto auto auto';
+  }
+};
+
+/**
+ * 14. Skills Section 3D Holographic Constellation Engine
+ * High-performance, zero-latency Canvas WebGL vector projection of orbiting skill nodes
+ */
+function initSkills3DHologram() {
+  const canvas = document.getElementById('skills-3d-canvas');
+  const targetReadout = document.getElementById('skills-3d-target');
+  const section = document.getElementById('skills');
+  if (!canvas || !section) return;
+
+  const ctx = canvas.getContext('2d');
+  let animationId = null;
+  let isVisible = false;
+
+  // Set crisp pixel density
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let width = canvas.clientWidth || 340;
+  let height = canvas.clientHeight || 320;
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+  ctx.scale(dpr, dpr);
+
+  window.addEventListener('resize', () => {
+    width = canvas.clientWidth || 340;
+    height = canvas.clientHeight || 320;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.scale(dpr, dpr);
+  });
+
+  // 3D Geodesic Core Geometry
+  const phi = (1 + Math.sqrt(5)) / 2;
+  const radius = 68;
+  const rawVertices = [
+    [-1,  phi,  0], [ 1,  phi,  0], [-1, -phi,  0], [ 1, -phi,  0],
+    [ 0, -1,  phi], [ 0,  1,  phi], [ 0, -1, -phi], [ 0,  1, -phi],
+    [ phi,  0, -1], [ phi,  0,  1], [-phi,  0, -1], [-phi,  0,  1]
+  ].map(v => {
+    const len = Math.hypot(v[0], v[1], v[2]);
+    return { x: (v[0] / len) * radius, y: (v[1] / len) * radius, z: (v[2] / len) * radius };
+  });
+
+  const edges = [
+    [0, 11], [0, 5], [0, 1], [0, 7], [0, 10],
+    [1, 5], [1, 9], [1, 8], [1, 7],
+    [2, 11], [2, 10], [2, 6], [2, 3], [2, 4],
+    [3, 4], [3, 9], [3, 8], [3, 6],
+    [4, 5], [4, 9], [4, 11],
+    [5, 9], [5, 11],
+    [6, 7], [6, 8], [6, 10],
+    [7, 8], [7, 10],
+    [8, 9],
+    [10, 11]
+  ];
+
+  // 6 Orbital Skill Nodes
+  const skillNodes = [
+    { id: '01', name: 'DESIGN', tools: 'FUSION 360 // SOLIDWORKS', angle: 0, r: 105, speed: 0.008, color: '#C5A059' },
+    { id: '02', name: 'AEROSPACE', tools: 'OPENMOTOR // NASA CEA', angle: (Math.PI / 3), r: 110, speed: 0.007, color: '#D60505' },
+    { id: '03', name: 'SIMULATION', tools: 'ANSYS // MATLAB', angle: (2 * Math.PI / 3), r: 100, speed: 0.009, color: '#0284C7' },
+    { id: '04', name: 'CODING', tools: 'PYTHON // C++', angle: Math.PI, r: 112, speed: 0.0075, color: '#039855' },
+    { id: '05', name: 'LEADERSHIP', tools: 'SCRUM // NEGOTIATION', angle: (4 * Math.PI / 3), r: 106, speed: 0.0085, color: '#F59E0B' },
+    { id: '06', name: 'COMPLIANCE', tools: 'PATENT // LATEX', angle: (5 * Math.PI / 3), r: 108, speed: 0.008, color: '#8B5CF6' }
+  ];
+
+  let activeNodeId = null;
+  let rotX = 0.2;
+  let rotY = 0.3;
+  let targetRotX = 0.2;
+  let targetRotY = 0.3;
+  let mouseX = 0;
+  let mouseY = 0;
+  let isDragging = false;
+  let prevMouseX = 0;
+  let prevMouseY = 0;
+
+  // Interactivity: Drag to rotate on canvas
+  canvas.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    prevMouseX = e.clientX;
+    prevMouseY = e.clientY;
+  });
+
+  window.addEventListener('mouseup', () => { isDragging = false; });
+
+  window.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      const dx = e.clientX - prevMouseX;
+      const dy = e.clientY - prevMouseY;
+      targetRotY += dx * 0.01;
+      targetRotX += dy * 0.01;
+      prevMouseX = e.clientX;
+      prevMouseY = e.clientY;
+    }
+  });
+
+  // Touch controls for mobile
+  canvas.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      isDragging = true;
+      prevMouseX = e.touches[0].clientX;
+      prevMouseY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  canvas.addEventListener('touchmove', (e) => {
+    if (isDragging && e.touches.length === 1) {
+      const dx = e.touches[0].clientX - prevMouseX;
+      const dy = e.touches[0].clientY - prevMouseY;
+      targetRotY += dx * 0.012;
+      targetRotX += dy * 0.012;
+      prevMouseX = e.touches[0].clientX;
+      prevMouseY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  canvas.addEventListener('touchend', () => { isDragging = false; });
+
+  // Skill Card Hover Synchronization
+  function bindSkillCardHovers() {
+    const cards = document.querySelectorAll('.skill-card-minimal');
+    cards.forEach(card => {
+      const nodeId = card.getAttribute('data-node');
+      card.addEventListener('mouseenter', () => {
+        activeNodeId = nodeId;
+        const matched = skillNodes.find(n => n.id === nodeId);
+        if (matched && targetReadout) {
+          targetReadout.innerHTML = `<span style="color:var(--color-accent-crimson); font-weight:700;">> LOCK: NODE_${matched.id} [${matched.name}]</span> // ${matched.tools}`;
+        }
+      });
+      card.addEventListener('mouseleave', () => {
+        activeNodeId = null;
+        if (targetReadout) {
+          targetReadout.textContent = '> ROTATE: INTERACTIVE // HOVER TO LOCK NODE';
+        }
+      });
+    });
+  }
+
+  setTimeout(bindSkillCardHovers, 300);
+
+  // 3D Rendering Projection Loop
+  function project(p, cx, cy, fl) {
+    const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+    const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
+
+    // Y rotation
+    let x1 = p.x * cosY + p.z * sinY;
+    let y1 = p.y;
+    let z1 = -p.x * sinY + p.z * cosY;
+
+    // X rotation
+    let x2 = x1;
+    let y2 = y1 * cosX - z1 * sinX;
+    let z2 = y1 * sinX + z1 * cosX;
+
+    const scale = fl / (fl + z2 + 180);
+    return {
+      x: cx + x2 * scale,
+      y: cy + y2 * scale,
+      z: z2,
+      scale: scale
+    };
+  }
+
+  function render() {
+    if (!isVisible) return;
+
+    // Smooth inertia
+    if (!isDragging) {
+      targetRotY += 0.005;
+      targetRotX += 0.001;
+    }
+    rotX += (targetRotX - rotX) * 0.08;
+    rotY += (targetRotY - rotY) * 0.08;
+
+    const cx = width / 2;
+    const cy = height / 2;
+    const fl = 260;
+
+    ctx.clearRect(0, 0, width, height);
+
+    // 1. Draw Subtle Background Concentric Radar Rings
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.035)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cx, cy, 70, 0, Math.PI * 2);
+    ctx.arc(cx, cy, 115, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // 2. Project Core Geodesic Vertices
+    const projectedCore = rawVertices.map(v => project(v, cx, cy, fl));
+
+    // Draw Core Edges
+    ctx.strokeStyle = 'rgba(17, 17, 17, 0.08)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    edges.forEach(([i, j]) => {
+      ctx.moveTo(projectedCore[i].x, projectedCore[i].y);
+      ctx.lineTo(projectedCore[j].x, projectedCore[j].y);
+    });
+    ctx.stroke();
+
+    // Draw Core Vertices
+    projectedCore.forEach(p => {
+      ctx.fillStyle = 'rgba(197, 160, 89, 0.6)';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, Math.max(1.2, 2 * p.scale), 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    // 3. Project & Draw Orbiting Skill Satellite Nodes
+    const time = Date.now() * 0.001;
+    skillNodes.forEach(node => {
+      const currentAngle = node.angle + time * node.speed;
+      const nx = Math.cos(currentAngle) * node.r;
+      const nz = Math.sin(currentAngle) * node.r;
+      const ny = Math.sin(currentAngle * 2) * 20;
+
+      const p = project({ x: nx, y: ny, z: nz }, cx, cy, fl);
+      const isActive = activeNodeId === node.id;
+
+      // Laser Tether from Core to Satellite
+      ctx.strokeStyle = isActive ? 'rgba(214, 5, 5, 0.55)' : 'rgba(197, 160, 89, 0.2)';
+      ctx.lineWidth = isActive ? 1.5 : 0.8;
+      ctx.setLineDash(isActive ? [4, 2] : [2, 4]);
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Node Halo on Active
+      if (isActive) {
+        ctx.fillStyle = 'rgba(214, 5, 5, 0.15)';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 14 * p.scale, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Outer Ring
+      ctx.strokeStyle = isActive ? '#D60505' : node.color;
+      ctx.lineWidth = isActive ? 2 : 1.2;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, (isActive ? 7 : 4.5) * p.scale, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Inner Core
+      ctx.fillStyle = isActive ? '#D60505' : '#111111';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, (isActive ? 3.5 : 2) * p.scale, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Node Label
+      ctx.font = `${isActive ? 'bold 10px' : '9px'} "JetBrains Mono", monospace`;
+      ctx.fillStyle = isActive ? '#D60505' : '#333333';
+      ctx.fillText(node.name, p.x + 8, p.y + 3);
+    });
+
+    animationId = requestAnimationFrame(render);
+  }
+
+  // Performance: Intersection Observer ensures 0% CPU consumption when scrolled away
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!isVisible) {
+          isVisible = true;
+          animationId = requestAnimationFrame(render);
+        }
+      } else {
+        isVisible = false;
+        if (animationId) cancelAnimationFrame(animationId);
+      }
+    });
+  }, { threshold: 0.05 });
+
+  observer.observe(section);
+}
+
 

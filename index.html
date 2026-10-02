@@ -19,7 +19,8 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://unpkg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=17.0">
+  <link rel="stylesheet" href="styles.css?v=18.0">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -157,10 +158,24 @@
       <div class="cinematic-section-inner">
         <div class="section-cinematic-header">
           <span class="spec-index font-mono">ARSENAL // SPECS_02</span>
-          <h2 class="cinematic-section-title">ENGINEERING & SIMULATION CAPABILITIES</h2>
+          <h2 class="cinematic-section-title">ENGINEERING &amp; SIMULATION CAPABILITIES</h2>
         </div>
-        <div class="skills-grid-container" id="skills-grid-container">
-          <!-- Rendered dynamically by renderSkillsGrid() in app.js -->
+        <div class="skills-showcase-split">
+          <div class="skills-grid-container" id="skills-grid-container">
+            <!-- Rendered dynamically by renderSkillsGrid() in app.js -->
+          </div>
+          <div class="skills-3d-hologram-card">
+            <div class="hologram-hud-header font-mono">
+              <span class="hud-tag">[ 3D TELEMETRY CONSTELLATION ]</span>
+              <span class="hud-status"><span class="status-pulse-dot"></span>ORBITAL // ACTIVE</span>
+            </div>
+            <div class="hologram-canvas-container">
+              <canvas id="skills-3d-canvas" width="340" height="340"></canvas>
+            </div>
+            <div class="hologram-hud-footer font-mono">
+              <span class="hud-target-readout" id="skills-3d-target">> ROTATE: INTERACTIVE // HOVER TO LOCK NODE</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -211,6 +226,10 @@
         </div>
 
         <div class="project-action-row">
+          <button class="proj-action-btn cad-3d-btn font-mono" onclick="open3DViewer('assets/models/prarambh_1.glb', 'PRARAMBH 1 // SOLID ROCKET MOTOR', 'AEROSPACE PROPULSION // SOLID MOTOR CAD DIGITAL TWIN')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <span>INSPECT 3D CAD [⤢]</span>
+          </button>
           <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/prarambh_1.jpg', 'PRARAMBH 1 // SOLID ROCKET MOTOR CAD SCHEMATIC')">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
             <span>EXPAND BLUEPRINT</span>
@@ -277,6 +296,10 @@
         </div>
 
         <div class="project-action-row">
+          <button class="proj-action-btn cad-3d-btn font-mono" onclick="open3DViewer('assets/models/cnc_cutter.glb', '4-AXIS CNC FOAM CUTTER', 'MECHATRONICS &amp; AUTOMATION // 4-AXIS GANTRY CAD MODEL')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <span>INSPECT 3D CAD [⤢]</span>
+          </button>
           <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/cnc_foam_cutter.jpg', '4-AXIS CNC FOAM CUTTER // CAD BLUEPRINT')">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
             <span>EXPAND BLUEPRINT</span>
@@ -343,6 +366,10 @@
         </div>
 
         <div class="project-action-row">
+          <button class="proj-action-btn cad-3d-btn font-mono" onclick="open3DViewer('assets/models/v6_engine.glb', 'BMW V6 ENGINE BLOCK', 'THERMAL &amp; MECHANICAL DYNAMICS // ENGINE ASSEMBLY 3D CAD')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <span>INSPECT 3D CAD [⤢]</span>
+          </button>
           <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/bmw_v6_engine.jpg', 'BMW V6 ENGINE BLOCK // FEA THERMAL GRADIENT BLUEPRINT')">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
             <span>EXPAND BLUEPRINT</span>
@@ -410,6 +437,10 @@
         </div>
 
         <div class="project-action-row">
+          <button class="proj-action-btn cad-3d-btn font-mono" onclick="open3DViewer('assets/models/autonomous_agv.glb', '4WD AUTONOMOUS MOBILE ROBOT (AGV)', 'AUTONOMOUS VEHICLES // 4WD CHASSIS DIGITAL TWIN')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <span>INSPECT 3D CAD [⤢]</span>
+          </button>
           <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/autonomous_agv.jpg', '4WD AUTONOMOUS MOBILE ROBOT (AGV) // CAD SCHEMATIC')">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
             <span>EXPAND BLUEPRINT</span>
@@ -476,6 +507,10 @@
         </div>
 
         <div class="project-action-row">
+          <button class="proj-action-btn cad-3d-btn font-mono" onclick="open3DViewer('assets/models/drone_hd800.glb', 'INDUSTRIAL HEAVY-DUTY QUADCOPTER HD-800', 'UAV AEROSPACE &amp; COMPOSITES // MULTIROTOR 3D CAD')">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <span>INSPECT 3D CAD [⤢]</span>
+          </button>
           <button class="proj-action-btn zoom-btn font-mono" onclick="openImageLightbox('assets/projects/industrial_quadcopter.jpg', 'INDUSTRIAL QUADCOPTER HD-800 // CAD SCHEMATIC')">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
             <span>EXPAND BLUEPRINT</span>
@@ -746,7 +781,53 @@
     </div>
   </div>
 
-  <script src="app.js?v=19.0" defer></script>
+  <!-- High-Precision 3D Interactive CAD Lightbox Modal -->
+  <div id="cad-3d-lightbox-modal" class="cad-3d-lightbox-overlay" onclick="close3DViewer(event)">
+    <div class="cad-3d-lightbox-panel" onclick="event.stopPropagation()">
+      <div class="cad-3d-lightbox-header">
+        <div class="cad-3d-title-group">
+          <div class="cad-3d-lightbox-badge font-mono">[ 3D CAD // DIGITAL TWIN ]</div>
+          <div class="cad-3d-lightbox-title font-mono" id="cad-3d-lightbox-title">PRARAMBH 1 // SOLID ROCKET MOTOR</div>
+        </div>
+        <div class="cad-3d-controls-hud">
+          <button class="cad-3d-hud-btn" id="cad-3d-autorotate-btn" onclick="toggle3DAutoRotate()" title="Toggle Auto-Rotation">
+            <span>⟳ ROTATE: ON</span>
+          </button>
+          <button class="cad-3d-hud-btn" onclick="reset3DCamera()" title="Reset Camera View">
+            <span>⊙ RESET VIEW</span>
+          </button>
+          <button class="cad-3d-lightbox-close" onclick="close3DViewer(event)" title="Close (Esc)">&times;</button>
+        </div>
+      </div>
+      <div class="cad-3d-lightbox-body">
+        <div class="cad-3d-loading-indicator font-mono" id="cad-3d-loading">
+          <span class="loading-spin">◰</span> LOADING 3D CAD ASSET &amp; INITIALIZING WEBGL SHADERS...
+        </div>
+        <model-viewer
+          id="active-model-viewer"
+          src=""
+          alt="3D Engineering CAD Model"
+          camera-controls
+          auto-rotate
+          rotation-per-second="20deg"
+          shadow-intensity="1.5"
+          shadow-softness="0.8"
+          exposure="1.0"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          interaction-prompt="auto"
+          loading="lazy">
+        </model-viewer>
+        <div class="cad-3d-crosshairs"></div>
+      </div>
+      <div class="cad-3d-lightbox-footer font-mono">
+        <div class="cad-3d-meta-readout" id="cad-3d-meta-readout">SUB-SYSTEM: AEROSPACE PROPULSION // MESH: TESSELLATED CAD // RENDERER: WEBGL 2.0</div>
+        <div class="cad-3d-hint">[ DRAG TO ORBIT 360° // PINCH/SCROLL TO ZOOM // ESC TO EXIT ]</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=20.0" defer></script>
 </body>
 </html>
 
