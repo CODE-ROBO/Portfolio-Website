@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCertificationsModule();
   initProjectLightbox();
   initHomeTerminal();
+  initTacticalFeatures();
   initContactValidationModule();
   initWordLimitCounters();
   initEngineeringCanvas();
@@ -20,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function handleTabSwitch(tabId) {
-    if (tabId === 'research') {
-        const cards = document.querySelectorAll(".log-card");
+    if (tabId === 'research' || tabId === 'certifications' || tabId === 'patents') {
+        const cards = document.querySelectorAll(`#${tabId} .log-card`);
         cards.forEach(card => {
-            card.style.display = "flex";
+            card.classList.remove("filtered-out");
         });
     }
 }
@@ -75,20 +76,12 @@ function initSPARouting() {
 
         // Update top navbar
         navLinks.forEach(link => {
-          if (link.getAttribute('data-section') === category) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
+          link.classList.toggle('active', link.getAttribute('data-section') === category);
         });
 
         // Update SpaceX-style side dot nav
         sideNavItems.forEach(item => {
-          if (item.getAttribute('data-target') === sectionId) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
+          item.classList.toggle('active', item.getAttribute('data-target') === sectionId);
         });
       }
     });
@@ -342,16 +335,18 @@ function initTacticalFeatures() {
         console.error('Error saving contact to localStorage:', err);
       }
 
-      // Transmission request to system-level server (appends to contacts.csv)
-      fetch('http://localhost:8000/submit-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email, subject, message })
-      }).catch(err => {
-        console.warn('Local HTTP server is not running or unreachable. Submission saved locally.', err);
-      });
+      // Transmission request to system-level server (only when running locally with Python server)
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        fetch('http://localhost:8000/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, email, subject, message })
+        }).catch(err => {
+          console.warn('Local HTTP server unreachable. Submission saved locally.', err);
+        });
+      }
       
       const mailtoUrl = `mailto:harshalgadekar72@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
 
@@ -1481,11 +1476,8 @@ function initResearchModule() {
 
             cards.forEach(card => {
                 const cardStatus = card.getAttribute("data-status");
-                if (filterType === "all" || cardStatus === filterType) {
-                    card.style.display = "flex";
-                } else {
-                    card.style.display = "none";
-                }
+                const shouldHide = filterType !== "all" && cardStatus !== filterType;
+                card.classList.toggle("filtered-out", shouldHide);
             });
         });
     });
@@ -1504,32 +1496,36 @@ function initCertificationsModule() {
 
             cards.forEach(card => {
                 const cardCategory = card.getAttribute("data-category");
-                if (filterType === "all" || cardCategory === filterType) {
-                    card.style.display = "flex";
-                } else {
-                    card.style.display = "none";
-                }
+                const shouldHide = filterType !== "all" && cardCategory !== filterType;
+                card.classList.toggle("filtered-out", shouldHide);
             });
         });
     });
 }
 
+let cachedTerminalModal = null;
+let cachedTerminalTitle = null;
+let cachedTerminalContent = null;
 
 function openTerminalViewport(nodeId) {
-    const modal = document.getElementById("terminal-viewport-modal");
-    const headerTitle = document.getElementById("modal-node-id");
-    const contentBox = document.getElementById("modal-dynamic-content");
+    if (!cachedTerminalModal) {
+        cachedTerminalModal = document.getElementById("terminal-viewport-modal");
+        cachedTerminalTitle = document.getElementById("modal-node-id");
+        cachedTerminalContent = document.getElementById("modal-dynamic-content");
+    }
 
-    if (abstractDatabase[nodeId] && modal) {
-        headerTitle.textContent = `CORE_NODE_READOUT // SEC_REF_REP_${nodeId.toUpperCase()}`;
-        contentBox.innerHTML = abstractDatabase[nodeId];
-        modal.style.display = "flex";
+    if (abstractDatabase[nodeId] && cachedTerminalModal) {
+        cachedTerminalTitle.textContent = `CORE_NODE_READOUT // SEC_REF_REP_${nodeId.toUpperCase()}`;
+        cachedTerminalContent.innerHTML = abstractDatabase[nodeId];
+        cachedTerminalModal.style.display = "flex";
     }
 }
 
 function closeTerminalViewport() {
-    const modal = document.getElementById("terminal-viewport-modal");
-    if (modal) modal.style.display = "none";
+    if (!cachedTerminalModal) {
+        cachedTerminalModal = document.getElementById("terminal-viewport-modal");
+    }
+    if (cachedTerminalModal) cachedTerminalModal.style.display = "none";
 }
 
 window.copyBibTeXCitation = function(doi, title) {
@@ -1643,7 +1639,7 @@ const skillsData = [
 
 function initSkillsGrid() {
   const container = document.getElementById('skills-grid-container');
-  if (!container) return;
+  if (!container || container.children.length > 0) return;
 
   container.innerHTML = skillsData.map(node => `
     <div class="skill-card-minimal" data-node="${node.id}">
@@ -2144,24 +2140,35 @@ function initSkills3DHologram() {
   let prevMouseX = 0;
   let prevMouseY = 0;
 
-  // Interactivity: Drag to rotate on canvas
+  // Interactivity: Scoped drag to rotate on canvas (0 event overhead when not dragging)
+  function onPointerMove(e) {
+    if (!isDragging) return;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    const dx = clientX - prevMouseX;
+    const dy = clientY - prevMouseY;
+    targetRotY += dx * 0.01;
+    targetRotX += dy * 0.01;
+    prevMouseX = clientX;
+    prevMouseY = clientY;
+  }
+
+  function onPointerUp() {
+    if (isDragging) {
+      isDragging = false;
+      window.removeEventListener('mousemove', onPointerMove);
+      window.removeEventListener('mouseup', onPointerUp);
+      window.removeEventListener('touchmove', onPointerMove);
+      window.removeEventListener('touchend', onPointerUp);
+    }
+  }
+
   canvas.addEventListener('mousedown', (e) => {
     isDragging = true;
     prevMouseX = e.clientX;
     prevMouseY = e.clientY;
-  });
-
-  window.addEventListener('mouseup', () => { isDragging = false; });
-
-  window.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-      const dx = e.clientX - prevMouseX;
-      const dy = e.clientY - prevMouseY;
-      targetRotY += dx * 0.01;
-      targetRotX += dy * 0.01;
-      prevMouseX = e.clientX;
-      prevMouseY = e.clientY;
-    }
+    window.addEventListener('mousemove', onPointerMove, { passive: true });
+    window.addEventListener('mouseup', onPointerUp, { passive: true });
   });
 
   // Touch controls for mobile
@@ -2170,23 +2177,12 @@ function initSkills3DHologram() {
       isDragging = true;
       prevMouseX = e.touches[0].clientX;
       prevMouseY = e.touches[0].clientY;
+      window.addEventListener('touchmove', onPointerMove, { passive: true });
+      window.addEventListener('touchend', onPointerUp, { passive: true });
     }
   }, { passive: true });
 
-  canvas.addEventListener('touchmove', (e) => {
-    if (isDragging && e.touches.length === 1) {
-      const dx = e.touches[0].clientX - prevMouseX;
-      const dy = e.touches[0].clientY - prevMouseY;
-      targetRotY += dx * 0.012;
-      targetRotX += dy * 0.012;
-      prevMouseX = e.touches[0].clientX;
-      prevMouseY = e.touches[0].clientY;
-    }
-  }, { passive: true });
-
-  canvas.addEventListener('touchend', () => { isDragging = false; });
-
-  // Skill Card Hover Synchronization
+  // Skill Card Hover Synchronization (Instant Binding)
   function bindSkillCardHovers() {
     const cards = document.querySelectorAll('.skill-card-minimal');
     cards.forEach(card => {
@@ -2207,7 +2203,7 @@ function initSkills3DHologram() {
     });
   }
 
-  setTimeout(bindSkillCardHovers, 300);
+  bindSkillCardHovers();
 
   // 3D Rendering Projection Loop
   function project(p, cx, cy, fl) {
@@ -2346,6 +2342,18 @@ function initSkills3DHologram() {
   }, { threshold: 0.05 });
 
   observer.observe(section);
+
+  // Automatically suspend 3D projection when browser tab is minimized or switched
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    } else if (isVisible && !animationId) {
+      animationId = requestAnimationFrame(render);
+    }
+  });
 }
 
 
