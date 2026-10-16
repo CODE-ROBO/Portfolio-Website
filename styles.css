@@ -310,24 +310,35 @@ input, textarea, select, button, .input-field {
 
 /* Cybernetic Avatar HUD Frame */
 .hud-avatar-wrapper {
-  width: 300px;
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 310px;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 6px;
+  padding: 8px;
   background: #FFFFFF;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hud-avatar-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.12);
 }
 
 /* Corner brackets */
 .hud-corner {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-color: var(--color-accent-crimson);
   border-style: solid;
   z-index: 5;
-  transition: transform 0.05s cubic-bezier(0.19, 1, 0.22, 1), border-color 0.05s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1), border-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hud-avatar-wrapper:hover .hud-corner {
+  border-color: var(--color-accent-gold);
 }
 
 .hud-corner.top-left {
@@ -356,13 +367,30 @@ input, textarea, select, button, .input-field {
 
 .hud-avatar-img {
   width: 100%;
+  height: auto;
   display: block;
-  filter: grayscale(100%) contrast(1.1) brightness(0.95);
-  transition: filter 0.05s ease;
+  border-radius: 2px;
+  object-fit: cover;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
 .hud-avatar-wrapper:hover .hud-avatar-img {
-  filter: grayscale(100%) contrast(1.2) brightness(1.0);
+  filter: contrast(1.04);
+}
+
+.hud-avatar-telemetry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 4px 3px 4px;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #333333;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 8px;
+  font-family: var(--font-mono);
 }
 
 /* Status Indicators */
@@ -2998,9 +3026,27 @@ html, body {
 }
 
 /* Hero Section Adjustments */
-.hero-cinematic-section .home-info-panel-new {
-  max-width: 900px;
+.hero-split-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  width: 100%;
+  max-width: 1180px;
   margin: 0 auto;
+}
+
+.hero-avatar-column {
+  flex: 0 0 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-cinematic-section .home-info-panel-new {
+  flex: 1;
+  max-width: 780px;
+  margin: 0;
 }
 
 .hero-cta-buttons {
@@ -3559,6 +3605,23 @@ html, body {
   }
 
   /* 3. Hero Section (#home) */
+  .hero-split-layout {
+    flex-direction: column !important;
+    gap: 24px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-avatar-column {
+    flex: 0 0 auto !important;
+    width: 210px !important;
+  }
+
+  .hud-avatar-wrapper {
+    max-width: 210px !important;
+    padding: 6px !important;
+  }
+
   .home-viewport, .home-viewport-new {
     grid-template-columns: 1fr !important;
     display: flex !important;
@@ -3566,12 +3629,6 @@ html, body {
     align-items: center !important;
     padding: 15px 10px !important;
     gap: 20px !important;
-  }
-
-  .home-avatar-container {
-    max-width: 180px !important;
-    max-height: 180px !important;
-    margin: 0 auto !important;
   }
 
   .home-name-title {

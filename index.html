@@ -19,7 +19,7 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=21.0">
+  <link rel="stylesheet" href="styles.css?v=22.0">
 </head>
 <body>
 
@@ -106,48 +106,67 @@
     <!-- SECTION 1: HERO / HOME -->
     <section id="home" class="cinematic-section hero-cinematic-section">
       <div class="cinematic-section-inner">
-        <div class="home-info-panel-new">
-          <h1 class="home-name-title">Harshal Gadekar</h1>
-          <div class="home-intro-subtitle font-mono">UNDERGRADUATE RESEARCHER IN AUTOMATION, ROBOTICS &amp; AEROSPACE PROPULSION | FOUNDER @ ROCKETRY &amp; RESEARCH CLUB</div>
-          <p class="home-bio-text">
-            I am a mechatronics and robotics engineer specializing in hybrid control systems, deterministic real-time architectures, and high-fidelity aerospace propulsion simulations. With a strong foundation in bridging physical hardware with numerical analysis, I design and construct solid rocket motor ballistics platforms and deploy vision-guided autonomous navigation pipelines. My expertise extends to programmable logic controllers (PLCs), multi-modal sensor fusion network design, and non-linear finite element structural stress modeling.
-          </p>
-          
-          <div class="hero-cta-buttons font-mono">
-            <a href="#proj-01" class="hero-primary-btn" onclick="scrollToSection('proj-01'); return false;">
-              <span>[ EXPLORE PROJECTS ↓ ]</span>
-            </a>
-            <a href="#research" class="hero-secondary-btn" onclick="scrollToSection('research'); return false;">
-              <span>[ RESEARCH PAPERS & DOIs ]</span>
-            </a>
-            <a href="#contact" class="hero-tertiary-btn" onclick="scrollToSection('contact'); return false;">
-              <span>[ CONTACT ]</span>
-            </a>
-          </div>
+        <div class="hero-split-layout">
 
-          <!-- Interactive Terminal Prompt -->
-          <div class="hud-terminal-console">
-            <div class="terminal-bar">
-              <div class="terminal-title">A.E.G.I.S. INTERFACE</div>
-            </div>
-            <div class="terminal-history" id="terminal-history">
-              <div class="term-line system">> CORE INITIALIZED. CONNECTION ONLINE.</div>
-              <div class="term-line system">> TYPE 'HELP' FOR AVAILABLE SYSTEMS COMMANDS.</div>
-            </div>
-            <div class="terminal-prompt-line">
-              <span class="prompt-prefix">HG:\&gt;</span>
-              <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" placeholder="HELP">
+          <!-- Cybernetic Portrait HUD Column -->
+          <div class="hero-avatar-column">
+            <div class="hud-avatar-wrapper">
+              <div class="hud-corner top-left"></div>
+              <div class="hud-corner top-right"></div>
+              <div class="hud-corner bottom-left"></div>
+              <div class="hud-corner bottom-right"></div>
+              <img src="assets/profile.jpg" alt="Harshal Gadekar" class="hud-avatar-img" width="310" height="413" loading="eager" decoding="async">
+              <div class="hud-avatar-telemetry font-mono">
+                <span class="status-pulse-dot"></span>
+                <span>HARSHAL GADEKAR // LEAD_RESEARCHER</span>
+              </div>
             </div>
           </div>
 
-          <!-- SpaceX Scroll Indicator -->
-          <div class="cinematic-scroll-indicator font-mono" onclick="scrollToSection('skills')">
-            <div class="scroll-mouse-icon">
-              <div class="scroll-wheel"></div>
+          <!-- Structured Info Panel -->
+          <div class="home-info-panel-new">
+            <h1 class="home-name-title">Harshal Gadekar</h1>
+            <div class="home-intro-subtitle font-mono">UNDERGRADUATE RESEARCHER IN AUTOMATION, ROBOTICS &amp; AEROSPACE PROPULSION | FOUNDER @ ROCKETRY &amp; RESEARCH CLUB</div>
+            <p class="home-bio-text">
+              I am a mechatronics and robotics engineer specializing in hybrid control systems, deterministic real-time architectures, and high-fidelity aerospace propulsion simulations. With a strong foundation in bridging physical hardware with numerical analysis, I design and construct solid rocket motor ballistics platforms and deploy vision-guided autonomous navigation pipelines. My expertise extends to programmable logic controllers (PLCs), multi-modal sensor fusion network design, and non-linear finite element structural stress modeling.
+            </p>
+            
+            <div class="hero-cta-buttons font-mono">
+              <a href="#proj-01" class="hero-primary-btn" onclick="scrollToSection('proj-01'); return false;">
+                <span>[ EXPLORE PROJECTS ↓ ]</span>
+              </a>
+              <a href="#research" class="hero-secondary-btn" onclick="scrollToSection('research'); return false;">
+                <span>[ RESEARCH PAPERS & DOIs ]</span>
+              </a>
+              <a href="#contact" class="hero-tertiary-btn" onclick="scrollToSection('contact'); return false;">
+                <span>[ CONTACT ]</span>
+              </a>
             </div>
-            <span class="scroll-indicator-text">SCROLL TO EXPLORE ↓</span>
-          </div>
 
+            <!-- Interactive Terminal Prompt -->
+            <div class="hud-terminal-console">
+              <div class="terminal-bar">
+                <div class="terminal-title">A.E.G.I.S. INTERFACE</div>
+              </div>
+              <div class="terminal-history" id="terminal-history">
+                <div class="term-line system">> CORE INITIALIZED. CONNECTION ONLINE.</div>
+                <div class="term-line system">> TYPE 'HELP' FOR AVAILABLE SYSTEMS COMMANDS.</div>
+              </div>
+              <div class="terminal-prompt-line">
+                <span class="prompt-prefix">HG:\&gt;</span>
+                <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" placeholder="HELP">
+              </div>
+            </div>
+
+            <!-- SpaceX Scroll Indicator -->
+            <div class="cinematic-scroll-indicator font-mono" onclick="scrollToSection('skills')">
+              <div class="scroll-mouse-icon">
+                <div class="scroll-wheel"></div>
+              </div>
+              <span class="scroll-indicator-text">SCROLL TO EXPLORE ↓</span>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
