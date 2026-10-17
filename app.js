@@ -1499,6 +1499,9 @@ function closeTerminalViewport() {
     if (cachedTerminalModal) cachedTerminalModal.style.display = "none";
 }
 
+window.openTerminalViewport = openTerminalViewport;
+window.closeTerminalViewport = closeTerminalViewport;
+
 window.copyBibTeXCitation = function(doi, title) {
     const bibtex = `@techreport{gadekar2026_${doi.replace(/[^a-zA-Z0-9]/g, '_')},
   title={${title}},
@@ -1907,8 +1910,3 @@ window.reset3DCamera = function() {
     viewer.cameraTarget = 'auto auto auto';
   }
 };
-
-/**
-
-
-
