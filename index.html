@@ -21,12 +21,9 @@
   <link rel="dns-prefetch" href="https://ajax.googleapis.com">
   <link rel="preload" as="image" href="assets/profile.jpg?v=3.0" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=25.0">
+  <link rel="stylesheet" href="styles.css?v=26.0">
 </head>
 <body>
-
-  <!-- Precision Engineering CAD Matrix Background Canvas -->
-  <canvas id="engineering-canvas"></canvas>
 
   <!-- Fixed Top Navigation Bar -->
   <header class="global-header">
@@ -54,55 +51,7 @@
     </div>
   </header>
 
-  <!-- SpaceX-Style Side Dot Navigation Tracker -->
-  <nav class="cinematic-side-nav" id="cinematic-side-nav" aria-label="Section Navigation">
-    <div class="side-nav-item active" data-target="home" onclick="scrollToSection('home')">
-      <span class="side-nav-label font-mono">01 // HOME</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="skills" onclick="scrollToSection('skills')">
-      <span class="side-nav-label font-mono">02 // SKILLS</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="proj-01" onclick="scrollToSection('proj-01')">
-      <span class="side-nav-label font-mono">03 // PRARAMBH 1</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="proj-02" onclick="scrollToSection('proj-02')">
-      <span class="side-nav-label font-mono">04 // CNC FOAM</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="proj-03" onclick="scrollToSection('proj-03')">
-      <span class="side-nav-label font-mono">05 // BMW V6</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="proj-04" onclick="scrollToSection('proj-04')">
-      <span class="side-nav-label font-mono">06 // AGV ROBOT</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="proj-05" onclick="scrollToSection('proj-05')">
-      <span class="side-nav-label font-mono">07 // HD-800 DRONE</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="research" onclick="scrollToSection('research')">
-      <span class="side-nav-label font-mono">08 // RESEARCH</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="patents" onclick="scrollToSection('patents')">
-      <span class="side-nav-label font-mono">09 // PATENTS</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="certifications" onclick="scrollToSection('certifications')">
-      <span class="side-nav-label font-mono">10 // CERTIFICATIONS</span>
-      <span class="side-nav-dot"></span>
-    </div>
-    <div class="side-nav-item" data-target="contact" onclick="scrollToSection('contact')">
-      <span class="side-nav-label font-mono">11 // CONTACT</span>
-      <span class="side-nav-dot"></span>
-    </div>
-  </nav>
-
-  <!-- Viewport Container (Cinematic Scroll-Snap Architecture) -->
+  <!-- Main Viewport Container -->
   <main class="cinematic-scroll-container" id="main-scroll-container">
     
     <!-- SECTION 1: HERO / HOME -->
@@ -110,18 +59,10 @@
       <div class="cinematic-section-inner">
         <div class="hero-split-layout">
 
-          <!-- Cybernetic Portrait HUD Column -->
+          <!-- Clean Portrait Column -->
           <div class="hero-avatar-column">
             <div class="hud-avatar-wrapper">
-              <div class="hud-corner top-left"></div>
-              <div class="hud-corner top-right"></div>
-              <div class="hud-corner bottom-left"></div>
-              <div class="hud-corner bottom-right"></div>
               <img src="assets/profile.jpg?v=3.0" alt="Harshal Gadekar" class="hud-avatar-img" width="310" height="346" loading="eager" fetchpriority="high" decoding="async">
-              <div class="hud-avatar-telemetry font-mono">
-                <span class="status-pulse-dot"></span>
-                <span>HARSHAL GADEKAR // LEAD_RESEARCHER</span>
-              </div>
             </div>
           </div>
 
@@ -138,34 +79,11 @@
                 <span>[ EXPLORE PROJECTS ↓ ]</span>
               </a>
               <a href="#research" class="hero-secondary-btn" onclick="scrollToSection('research'); return false;">
-                <span>[ RESEARCH PAPERS & DOIs ]</span>
+                <span>[ RESEARCH PAPERS &amp; DOIs ]</span>
               </a>
               <a href="#contact" class="hero-tertiary-btn" onclick="scrollToSection('contact'); return false;">
                 <span>[ CONTACT ]</span>
               </a>
-            </div>
-
-            <!-- Interactive Terminal Prompt -->
-            <div class="hud-terminal-console">
-              <div class="terminal-bar">
-                <div class="terminal-title">A.E.G.I.S. INTERFACE</div>
-              </div>
-              <div class="terminal-history" id="terminal-history">
-                <div class="term-line system">> CORE INITIALIZED. CONNECTION ONLINE.</div>
-                <div class="term-line system">> TYPE 'HELP' FOR AVAILABLE SYSTEMS COMMANDS.</div>
-              </div>
-              <div class="terminal-prompt-line">
-                <span class="prompt-prefix">HG:\&gt;</span>
-                <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" placeholder="HELP">
-              </div>
-            </div>
-
-            <!-- SpaceX Scroll Indicator -->
-            <div class="cinematic-scroll-indicator font-mono" onclick="scrollToSection('skills')">
-              <div class="scroll-mouse-icon">
-                <div class="scroll-wheel"></div>
-              </div>
-              <span class="scroll-indicator-text">SCROLL TO EXPLORE ↓</span>
             </div>
 
           </div>
@@ -173,156 +91,114 @@
       </div>
     </section>
 
-    <!-- SECTION 2: SKILLS -->
+    <!-- SECTION 2: SKILLS & CAPABILITIES -->
     <section id="skills" class="cinematic-section skills-cinematic-section">
       <div class="cinematic-section-inner">
         <div class="section-cinematic-header">
-          <span class="spec-index font-mono">ARSENAL // SPECS_02</span>
+          <span class="spec-index font-mono">CAPABILITIES // SPECS_02</span>
           <h2 class="cinematic-section-title">ENGINEERING &amp; SIMULATION CAPABILITIES</h2>
         </div>
-        <div class="skills-showcase-split">
-          <div class="skills-grid-container" id="skills-grid-container">
-            <div class="skill-card-minimal" data-node="01">
-              <div>
-                <div class="skill-card-header">
-                  <span class="skill-card-node">NODE_01</span>
-                  <div class="skill-card-status">
-                    <svg class="gear-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                      <g class="gear-1"><circle cx="8" cy="12" r="3"/><path d="M8 7v2M8 15v2M3 12h2M11 12h2M4.5 8.5l1.5 1.5M10 14l1.5 1.5M4.5 15.5l1.5-1.5M10 10l1.5-1.5"/></g>
-                      <g class="gear-2"><circle cx="16" cy="12" r="3"/><path d="M16 7v2M16 15v2M11 12h2M19 12h2M12.5 8.5l1.5 1.5M18 14l1.5 1.5M12.5 15.5l1.5-1.5M18 10l1.5-1.5"/></g>
-                    </svg>
-                  </div>
-                </div>
-                <div class="skill-title">DESIGN</div>
-              </div>
-              <div class="skill-card-bottom">
-                <div class="skill-card-tools">FUSION 360 // SOLIDWORKS</div>
-                <div class="capacity-bar-wrapper">
-                  <div class="capacity-bar-info"><span class="capacity-val">95%</span></div>
-                  <div class="capacity-track"><div class="capacity-fill" style="width: 95%;"></div></div>
-                </div>
-              </div>
+        
+        <div class="skills-minimal-grid">
+          <div class="skill-minimal-card">
+            <div class="skill-minimal-header font-mono">
+              <span class="skill-node-tag">DOMAIN // 01</span>
+              <span class="skill-category-pill">MECHANICAL &amp; CAD</span>
             </div>
-            <div class="skill-card-minimal" data-node="02">
-              <div>
-                <div class="skill-card-header">
-                  <span class="skill-card-node">NODE_02</span>
-                  <div class="skill-card-status">
-                    <svg class="rocket-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                      <path d="M12 2L9 7v6l-2 3v3h10v-3l-2-3V7l-3-5z" />
-                      <line x1="12" y1="19" x2="12" y2="23" class="thrust-flame" />
-                      <line x1="10" y1="19" x2="10" y2="21" class="thrust-flame-left" />
-                      <line x1="14" y1="19" x2="14" y2="21" class="thrust-flame-right" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="skill-title">AEROSPACE</div>
-              </div>
-              <div class="skill-card-bottom">
-                <div class="skill-card-tools">OPENMOTOR // NASA CEA</div>
-                <div class="capacity-bar-wrapper">
-                  <div class="capacity-bar-info"><span class="capacity-val">80%</span></div>
-                  <div class="capacity-track"><div class="capacity-fill" style="width: 80%;"></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="skill-card-minimal" data-node="03">
-              <div>
-                <div class="skill-card-header">
-                  <span class="skill-card-node">NODE_03</span>
-                  <div class="skill-card-status">
-                    <svg class="fea-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                      <path d="M12 2v20M2 7v10M22 7v10" class="fea-mesh-lines" stroke-dasharray="2" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="skill-title">SIMULATION</div>
-              </div>
-              <div class="skill-card-bottom">
-                <div class="skill-card-tools">ANSYS // MATLAB</div>
-                <div class="capacity-bar-wrapper">
-                  <div class="capacity-bar-info"><span class="capacity-val">85%</span></div>
-                  <div class="capacity-track"><div class="capacity-fill" style="width: 85%;"></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="skill-card-minimal" data-node="04">
-              <div>
-                <div class="skill-card-header">
-                  <span class="skill-card-node">NODE_04</span>
-                  <div class="skill-card-status">
-                    <svg class="term-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                      <rect x="2" y="4" width="20" height="16" rx="1"/>
-                      <path d="M6 9l3 3-3 3M11 15h4" class="term-cursor"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="skill-title">CODING</div>
-              </div>
-              <div class="skill-card-bottom">
-                <div class="skill-card-tools">PYTHON // C++</div>
-                <div class="capacity-bar-wrapper">
-                  <div class="capacity-bar-info"><span class="capacity-val">80%</span></div>
-                  <div class="capacity-track"><div class="capacity-fill" style="width: 80%;"></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="skill-card-minimal" data-node="05">
-              <div>
-                <div class="skill-card-header">
-                  <span class="skill-card-node">NODE_05</span>
-                  <div class="skill-card-status">
-                    <svg class="scrum-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                      <path d="M3 3h18v18H3V3zM9 3v18M15 3v18"/>
-                      <rect class="scrum-card" x="11" y="6" width="2" height="4" rx="0.5" fill="currentColor"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="skill-title">LEADERSHIP</div>
-              </div>
-              <div class="skill-card-bottom">
-                <div class="skill-card-tools">SCRUM // NEGOTIATION</div>
-                <div class="capacity-bar-wrapper">
-                  <div class="capacity-bar-info"><span class="capacity-val">90%</span></div>
-                  <div class="capacity-track"><div class="capacity-fill" style="width: 90%;"></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="skill-card-minimal" data-node="06">
-              <div>
-                <div class="skill-card-header">
-                  <span class="skill-card-node">NODE_06</span>
-                  <div class="skill-card-status">
-                    <svg class="strategy-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                      <circle cx="12" cy="5" r="2"/>
-                      <circle cx="5" cy="15" r="2"/>
-                      <circle cx="19" cy="15" r="2"/>
-                      <path class="strategy-link" d="M12 7l-5 6M12 7l5 6" stroke-dasharray="2"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="skill-title">COMPLIANCE</div>
-              </div>
-              <div class="skill-card-bottom">
-                <div class="skill-card-tools">PATENT // LATEX</div>
-                <div class="capacity-bar-wrapper">
-                  <div class="capacity-bar-info"><span class="capacity-val">80%</span></div>
-                  <div class="capacity-track"><div class="capacity-fill" style="width: 80%;"></div></div>
-                </div>
-              </div>
+            <h3 class="skill-minimal-title">Mechanical &amp; CAD Modeling</h3>
+            <p class="skill-minimal-desc">
+              Parametric 3D part &amp; assembly architecture, kinematic mechanism simulation, tolerance stack-up analysis, GD&amp;T drafting, and precision manufacturing prototyping.
+            </p>
+            <div class="skill-minimal-tools font-mono">
+              <span class="tool-tag">Autodesk Fusion 360</span>
+              <span class="tool-tag">SolidWorks</span>
+              <span class="tool-tag">GD&amp;T Standards</span>
+              <span class="tool-tag">Rapid Prototyping</span>
             </div>
           </div>
-          <div class="skills-3d-hologram-card">
-            <div class="hologram-hud-header font-mono">
-              <span class="hud-tag">[ 3D TELEMETRY CONSTELLATION ]</span>
-              <span class="hud-status"><span class="status-pulse-dot"></span>ORBITAL // ACTIVE</span>
+
+          <div class="skill-minimal-card">
+            <div class="skill-minimal-header font-mono">
+              <span class="skill-node-tag">DOMAIN // 02</span>
+              <span class="skill-category-pill">AEROSPACE &amp; PROPULSION</span>
             </div>
-            <div class="hologram-canvas-container">
-              <canvas id="skills-3d-canvas" width="340" height="340"></canvas>
+            <h3 class="skill-minimal-title">Aerospace Propulsion</h3>
+            <p class="skill-minimal-desc">
+              Solid rocket motor internal ballistics digital twin formulation, KNSB propellant grain regression modeling, static test stand instrumentation, and chamber pressure profiling.
+            </p>
+            <div class="skill-minimal-tools font-mono">
+              <span class="tool-tag">OpenMotor</span>
+              <span class="tool-tag">NASA CEA</span>
+              <span class="tool-tag">Internal Ballistics</span>
+              <span class="tool-tag">80 Hz DAQ Instrumentation</span>
             </div>
-            <div class="hologram-hud-footer font-mono">
-              <span class="hud-target-readout" id="skills-3d-target">> ROTATE: INTERACTIVE // HOVER TO LOCK NODE</span>
+          </div>
+
+          <div class="skill-minimal-card">
+            <div class="skill-minimal-header font-mono">
+              <span class="skill-node-tag">DOMAIN // 03</span>
+              <span class="skill-category-pill">SIMULATION &amp; FEM</span>
+            </div>
+            <h3 class="skill-minimal-title">Finite Element Analysis &amp; Multiphysics</h3>
+            <p class="skill-minimal-desc">
+              Coupled transient thermo-structural analysis, convergent-divergent nozzle heat flux mapping, Block Lanczos pre-stressed modal dynamics, and asymptotic grid independence studies.
+            </p>
+            <div class="skill-minimal-tools font-mono">
+              <span class="tool-tag">ANSYS Mechanical</span>
+              <span class="tool-tag">Tet10 &amp; Wedge15 Meshing</span>
+              <span class="tool-tag">Modal Dynamics</span>
+              <span class="tool-tag">MATLAB</span>
+            </div>
+          </div>
+
+          <div class="skill-minimal-card">
+            <div class="skill-minimal-header font-mono">
+              <span class="skill-node-tag">DOMAIN // 04</span>
+              <span class="skill-category-pill">INDUSTRIAL AUTOMATION</span>
+            </div>
+            <h3 class="skill-minimal-title">Industrial Automation &amp; PLCs</h3>
+            <p class="skill-minimal-desc">
+              Deterministic control architectures, optocoupled EMI firewalls for 24V/5V galvanic isolation, sub-millisecond Boolean logic matrices, and material sorting mechatronics.
+            </p>
+            <div class="skill-minimal-tools font-mono">
+              <span class="tool-tag">Siemens S7-1200 PLC</span>
+              <span class="tool-tag">TIA Portal</span>
+              <span class="tool-tag">Optocoupled Isolation</span>
+              <span class="tool-tag">Industrial Mechatronics</span>
+            </div>
+          </div>
+
+          <div class="skill-minimal-card">
+            <div class="skill-minimal-header font-mono">
+              <span class="skill-node-tag">DOMAIN // 05</span>
+              <span class="skill-category-pill">ROBOTICS &amp; EMBEDDED AI</span>
+            </div>
+            <h3 class="skill-minimal-title">Robotics &amp; Computer Vision</h3>
+            <p class="skill-minimal-desc">
+              Vision-guided differential drive kinematics, OpenCV HSV color-space processing, dynamic look-ahead vector mapping, 200 Hz closed-loop PID control, and ESP32 edge nodes.
+            </p>
+            <div class="skill-minimal-tools font-mono">
+              <span class="tool-tag">ROS 2</span>
+              <span class="tool-tag">OpenCV</span>
+              <span class="tool-tag">Python &amp; C++</span>
+              <span class="tool-tag">ESP32 &amp; ARM Cortex</span>
+            </div>
+          </div>
+
+          <div class="skill-minimal-card">
+            <div class="skill-minimal-header font-mono">
+              <span class="skill-node-tag">DOMAIN // 06</span>
+              <span class="skill-category-pill">RESEARCH &amp; IP</span>
+            </div>
+            <h3 class="skill-minimal-title">Intellectual Property &amp; Research</h3>
+            <p class="skill-minimal-desc">
+              Indian design patent drafting (Form 1, representation sheets, FER responses), open-science DOI indexing (Zenodo), reproducible technical reports, and peer-reviewed papers.
+            </p>
+            <div class="skill-minimal-tools font-mono">
+              <span class="tool-tag">IP India Patents</span>
+              <span class="tool-tag">Zenodo DOIs</span>
+              <span class="tool-tag">ResearchGate &amp; ORCID</span>
+              <span class="tool-tag">LaTeX &amp; BibTeX</span>
             </div>
           </div>
         </div>
@@ -331,15 +207,7 @@
 
     <!-- SECTION 3: PROJECT 1 - PRARAMBH 1 SOLID ROCKET MOTOR -->
     <section id="proj-01" class="cinematic-section project-cinematic-section" data-section="projects">
-      <div class="project-cinematic-backdrop">
-        <img src="assets/projects/prarambh_1.jpg" alt="Prarambh 1 Solid Rocket Motor CAD Schematic" class="project-bg-img" loading="lazy" decoding="async" width="1920" height="1080">
-        <div class="project-bg-overlay"></div>
-      </div>
       <div class="project-cinematic-card">
-        <div class="hud-corner top-left"></div>
-        <div class="hud-corner top-right"></div>
-        <div class="hud-corner bottom-left"></div>
-        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_01</span>
@@ -368,7 +236,7 @@
 
         <div class="spec-body">
           <div class="spec-row"><span class="spec-label">GRAIN_GEOMETRY</span><span class="spec-divider"></span><span class="spec-val accent-gold">8-POINT_STAR_CONFIG</span></div>
-          <div class="spec-row"><span class="spec-label">COMBUSTION_EFF</span><span class="spec-divider"></span><span class="spec-val">η > 98.4% (NEUTRAL_BURN)</span></div>
+          <div class="spec-row"><span class="spec-label">COMBUSTION_EFF</span><span class="spec-divider"></span><span class="spec-val">η &gt; 98.4% (NEUTRAL_BURN)</span></div>
           <div class="spec-row"><span class="spec-label">CASING_STRESS</span><span class="spec-divider"></span><span class="spec-val">320 MPa (STRUCTURAL_MARGIN)</span></div>
           <div class="spec-row"><span class="spec-label">PEAK_THRUST</span><span class="spec-divider"></span><span class="spec-val accent-crimson">12.4 kN (VALIDATED)</span></div>
           <div class="spec-row"><span class="spec-label">SPECIFIC_IMPULSE</span><span class="spec-divider"></span><span class="spec-val">242.6 SECONDS</span></div>
@@ -387,29 +255,17 @@
             <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             <span>GITHUB REPO</span>
           </a>
-          <div class="project-status-badge">
-            <span class="status-pulse-dot"></span>
-            [STATIC_TEST // PASS]
-          </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 4: PROJECT 2 - CNC FOAM CUTTING MACHINE -->
     <section id="proj-02" class="cinematic-section project-cinematic-section" data-section="projects">
-      <div class="project-cinematic-backdrop">
-        <img src="assets/projects/cnc_foam_cutter.jpg" alt="4-Axis CNC Foam Cutting Machine CAD Schematic" class="project-bg-img" loading="lazy" decoding="async" width="1920" height="1080">
-        <div class="project-bg-overlay"></div>
-      </div>
       <div class="project-cinematic-card">
-        <div class="hud-corner top-left"></div>
-        <div class="hud-corner top-right"></div>
-        <div class="hud-corner bottom-left"></div>
-        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_02</span>
-            <span class="project-cat-badge">AUTOMATION & MECHATRONICS</span>
+            <span class="project-cat-badge">AUTOMATION &amp; MECHATRONICS</span>
           </div>
           <h3 class="spec-title">4-AXIS CNC FOAM CUTTING MACHINE</h3>
         </div>
@@ -436,7 +292,7 @@
           <div class="spec-row"><span class="spec-label">CUTTING_ELEMENT</span><span class="spec-divider"></span><span class="spec-val">0.4mm TAUT NICHROME WIRE</span></div>
           <div class="spec-row"><span class="spec-label">DRIVE_MECHANISM</span><span class="spec-divider"></span><span class="spec-val accent-gold">LEAD SCREW / MGN12H RAILS</span></div>
           <div class="spec-row"><span class="spec-label">TRAVEL_LIMITS</span><span class="spec-divider"></span><span class="spec-val">1500 x 1000 x 500 mm</span></div>
-          <div class="spec-row"><span class="spec-label">STEPPER_DRIVE</span><span class="spec-divider"></span><span class="spec-val">NEMA 17 & NEMA 23 MOTORS</span></div>
+          <div class="spec-row"><span class="spec-label">STEPPER_DRIVE</span><span class="spec-divider"></span><span class="spec-val">NEMA 17 &amp; NEMA 23 MOTORS</span></div>
           <div class="spec-row"><span class="spec-label">POSITION_ACCURACY</span><span class="spec-divider"></span><span class="spec-val accent-crimson">±0.1 mm VALIDATION</span></div>
         </div>
 
@@ -453,29 +309,17 @@
             <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             <span>GITHUB REPO</span>
           </a>
-          <div class="project-status-badge">
-            <span class="status-pulse-dot"></span>
-            [AXIS_CALIBRATED // PASS]
-          </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 5: PROJECT 3 - BMW V6 ENGINE BLOCK -->
     <section id="proj-03" class="cinematic-section project-cinematic-section" data-section="projects">
-      <div class="project-cinematic-backdrop">
-        <img src="assets/projects/bmw_v6_engine.jpg" alt="BMW V6 Engine Block FEA Thermal Analysis" class="project-bg-img" loading="lazy" decoding="async" width="1920" height="1080">
-        <div class="project-bg-overlay"></div>
-      </div>
       <div class="project-cinematic-card">
-        <div class="hud-corner top-left"></div>
-        <div class="hud-corner top-right"></div>
-        <div class="hud-corner bottom-left"></div>
-        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_03</span>
-            <span class="project-cat-badge">THERMAL & FLUID DYNAMICS</span>
+            <span class="project-cat-badge">THERMAL &amp; FLUID DYNAMICS</span>
           </div>
           <h3 class="spec-title">BMW V6 ENGINE BLOCK</h3>
         </div>
@@ -519,29 +363,17 @@
             <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             <span>GITHUB REPO</span>
           </a>
-          <div class="project-status-badge">
-            <span class="status-pulse-dot"></span>
-            [SIMULATION_STABLE // PASS]
-          </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 6: PROJECT 4 - AUTONOMOUS AGV -->
     <section id="proj-04" class="cinematic-section project-cinematic-section" data-section="projects">
-      <div class="project-cinematic-backdrop">
-        <img src="assets/projects/autonomous_agv.jpg" alt="Autonomous Mobile Robot AGV Blueprint" class="project-bg-img" loading="lazy" decoding="async" width="1920" height="1080">
-        <div class="project-bg-overlay"></div>
-      </div>
       <div class="project-cinematic-card">
-        <div class="hud-corner top-left"></div>
-        <div class="hud-corner top-right"></div>
-        <div class="hud-corner bottom-left"></div>
-        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_04</span>
-            <span class="project-cat-badge">ROBOTICS & EMBEDDED AI</span>
+            <span class="project-cat-badge">ROBOTICS &amp; EMBEDDED AI</span>
           </div>
           <h3 class="spec-title">4WD AUTONOMOUS MOBILE ROBOT (AGV)</h3>
         </div>
@@ -586,29 +418,17 @@
             <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             <span>GITHUB REPO</span>
           </a>
-          <div class="project-status-badge">
-            <span class="status-pulse-dot"></span>
-            [NAVIGATION_LOCKED // PASS]
-          </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 7: PROJECT 5 - HEAVY DUTY QUADCOPTER -->
     <section id="proj-05" class="cinematic-section project-cinematic-section" data-section="projects">
-      <div class="project-cinematic-backdrop">
-        <img src="assets/projects/industrial_quadcopter.jpg" alt="Industrial Heavy Duty Quadcopter Drone CAD Blueprint" class="project-bg-img" loading="lazy" decoding="async" width="1920" height="1080">
-        <div class="project-bg-overlay"></div>
-      </div>
       <div class="project-cinematic-card">
-        <div class="hud-corner top-left"></div>
-        <div class="hud-corner top-right"></div>
-        <div class="hud-corner bottom-left"></div>
-        <div class="hud-corner bottom-right"></div>
         <div class="spec-header">
           <div class="spec-index-row">
             <span class="spec-index">PROJ_RECORD_05</span>
-            <span class="project-cat-badge">UAV AEROSPACE & COMPOSITES</span>
+            <span class="project-cat-badge">UAV AEROSPACE &amp; COMPOSITES</span>
           </div>
           <h3 class="spec-title">INDUSTRIAL HEAVY-DUTY QUADCOPTER</h3>
         </div>
@@ -652,10 +472,6 @@
             <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             <span>GITHUB REPO</span>
           </a>
-          <div class="project-status-badge">
-            <span class="status-pulse-dot"></span>
-            [STRUCTURAL_VALID // PASS]
-          </div>
         </div>
       </div>
     </section>
@@ -1287,7 +1103,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=25.0" defer></script>
+  <script src="app.js?v=26.0" defer></script>
 </body>
 </html>
 

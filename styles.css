@@ -30,7 +30,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 0px !important; /* Strict 90-degree sharp corners override */
 }
 
 /* Base resets override to allow circular containers where explicitly designed */
@@ -45,11 +44,14 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
+  background-color: #FAFAFA;
+  background-image: radial-gradient(#CBD5E1 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
   color: var(--color-text);
-  font-family: var(--font-title); /* Crisp premium Sans-Serif font stack as default */
+  font-family: var(--font-title);
   font-size: 14px;
-  letter-spacing: 0.05em;
+  line-height: 1.6;
+  letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -324,43 +326,9 @@ input, textarea, select, button, .input-field {
   box-shadow: 0 16px 42px rgba(0, 0, 0, 0.12);
 }
 
-/* Corner brackets */
+/* Corner brackets - suppressed for clean minimal aesthetic */
 .hud-corner {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-color: var(--color-accent-crimson);
-  border-style: solid;
-  z-index: 5;
-  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1), border-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.hud-avatar-wrapper:hover .hud-corner {
-  border-color: var(--color-accent-gold);
-}
-
-.hud-corner.top-left {
-  top: -1px;
-  left: -1px;
-  border-width: 2px 0 0 2px;
-}
-
-.hud-corner.top-right {
-  top: -1px;
-  right: -1px;
-  border-width: 2px 2px 0 0;
-}
-
-.hud-corner.bottom-left {
-  bottom: -1px;
-  left: -1px;
-  border-width: 0 0 2px 2px;
-}
-
-.hud-corner.bottom-right {
-  bottom: -1px;
-  right: -1px;
-  border-width: 0 2px 2px 0;
+  display: none !important;
 }
 
 .hud-avatar-img {
@@ -3541,79 +3509,40 @@ html, body {
   margin-top: 4px;
 }
 
-/* Full-Bleed Project Showcase Section */
+/* Minimal Project Showcase Section */
 .project-cinematic-section {
-  min-height: 100vh;
-  padding: 90px 0 50px 0 !important;
+  min-height: auto;
+  padding: 40px 20px !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important;
+  justify-content: center !important;
 }
 
 .project-cinematic-backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.project-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 45%, rgba(255,255,255,0.45) 100%);
+  display: none !important;
 }
 
 .project-cinematic-card {
   position: relative;
   z-index: 5;
-  max-width: 580px;
-  margin-left: 7%;
-  background: rgba(255, 255, 255, 0.98);
-  border: 1px solid var(--color-border);
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-left: 4px solid var(--color-accent-crimson);
-  padding: 28px;
+  padding: 32px;
   border-radius: 4px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-cinematic-card .hud-corner {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-color: var(--color-accent-gold);
-  pointer-events: none;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.project-cinematic-card:hover .hud-corner {
-  border-color: var(--color-accent-crimson);
-}
-.project-cinematic-card:hover .hud-corner.top-left {
-  transform: translate(-3px, -3px);
-}
-.project-cinematic-card:hover .hud-corner.top-right {
-  transform: translate(3px, -3px);
-}
-.project-cinematic-card:hover .hud-corner.bottom-left {
-  transform: translate(-3px, 3px);
-}
-.project-cinematic-card:hover .hud-corner.bottom-right {
-  transform: translate(3px, 3px);
+.project-cinematic-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
 .project-cinematic-card .spec-title {
@@ -4378,90 +4307,106 @@ html, body {
 /* ==========================================================================
    SKILLS SECTION: 3D TELEMETRY CONSTELLATION
    ========================================================================== */
-.skills-showcase-split {
+/* ==========================================================================
+   MINIMAL ENGINEERING SKILLS GRID
+   ========================================================================== */
+.skills-minimal-grid {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  align-items: stretch;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.skills-3d-hologram-card {
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+.skill-minimal-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 3px solid #111111;
   border-radius: 4px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  position: relative;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
-.skills-3d-hologram-card:hover {
-  border-color: rgba(197, 160, 89, 0.5);
-  box-shadow: 0 8px 30px rgba(197, 160, 89, 0.12);
+.skill-minimal-card:hover {
+  transform: translateY(-2px);
+  border-top-color: var(--color-accent-crimson);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.hologram-hud-header {
+.skill-minimal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 14px;
-  background: #FAFAFA;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  font-size: 0.68rem;
+  margin-bottom: 14px;
+  font-size: 0.7rem;
 }
 
-.hud-tag {
+.skill-node-tag {
+  color: #718096;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.skill-category-pill {
+  background: #F1F5F9;
+  color: #0F172A;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: #111111;
-  letter-spacing: 0.05em;
-}
-
-.hud-status {
-  color: #039855;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.hologram-canvas-container {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-height: 280px;
-  background: #FFFFFF;
-}
-
-#skills-3d-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-  cursor: crosshair;
-}
-
-.hologram-hud-footer {
-  padding: 8px 14px;
-  background: #FAFAFA;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  font-size: 0.62rem;
-  color: #555555;
   letter-spacing: 0.04em;
 }
 
+.skill-minimal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.skill-minimal-desc {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.skill-minimal-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.tool-tag {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
 @media screen and (max-width: 1024px) {
-  .skills-showcase-split {
-    grid-template-columns: 1fr;
+  .skills-minimal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
-  .skills-3d-hologram-card {
-    max-width: 500px;
-    margin: 10px auto 0;
-    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .skills-minimal-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .skill-minimal-card {
+    padding: 18px;
   }
 }
