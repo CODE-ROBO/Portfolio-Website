@@ -1797,6 +1797,257 @@ input, textarea, select, button, .input-field {
 }
 
 /* ==========================================================================
+   SCHOLARLY REGISTRY & INTERCONNECTED REPOSITORIES
+   ========================================================================== */
+
+/* Scholarly Registry Top Bar (#research) */
+.scholarly-registry-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E8;
+  border-left: 3px solid var(--color-accent-crimson);
+  padding: 11px 18px;
+  margin-bottom: 14px;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.registry-label-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.registry-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-accent-crimson);
+  box-shadow: 0 0 6px rgba(220, 38, 38, 0.5);
+  animation: pulse-registry-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-registry-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.85); }
+}
+
+.registry-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.06em;
+}
+
+.registry-badges-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.registry-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 2px;
+  border: 1px solid #D1D5DB;
+  background: #F9FAFB;
+  color: #374151;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.03em;
+  transition: all 0.15s ease;
+}
+
+.registry-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.registry-badge.badge-rg:hover {
+  background: #00ccbb;
+  color: #00332c;
+  border-color: #00ccbb;
+  font-weight: 700;
+}
+
+.registry-badge.badge-zenodo:hover {
+  background: #005a9c;
+  color: #FFFFFF;
+  border-color: #005a9c;
+}
+
+.registry-badge.badge-github:hover {
+  background: #24292e;
+  color: #FFFFFF;
+  border-color: #24292e;
+}
+
+.registry-badge.badge-academia:hover {
+  background: #9b1b30;
+  color: #FFFFFF;
+  border-color: #9b1b30;
+}
+
+.registry-badge.badge-orcid:hover {
+  background: #a6ce39;
+  color: #1a2a00;
+  border-color: #a6ce39;
+  font-weight: 700;
+}
+
+/* Research Log Card Interconnected Link Pills */
+.log-interconnected-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  padding-right: 140px;
+}
+
+.interconnect-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #4B5563;
+  letter-spacing: 0.04em;
+  margin-right: 2px;
+}
+
+.scholarly-pill {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 2.5px 7px;
+  border-radius: 2px;
+  border: 1px solid #E5E7EB;
+  background: #F9FAFB;
+  color: #4B5563;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.02em;
+  transition: all 0.12s ease;
+}
+
+.scholarly-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.scholarly-pill.pill-zenodo:hover {
+  background: #005a9c;
+  color: #FFFFFF;
+  border-color: #005a9c;
+}
+
+.scholarly-pill.pill-rg:hover {
+  background: #00ccbb;
+  color: #00332c;
+  border-color: #00ccbb;
+  font-weight: 700;
+}
+
+.scholarly-pill.pill-github:hover {
+  background: #24292e;
+  color: #FFFFFF;
+  border-color: #24292e;
+}
+
+.scholarly-pill.pill-academia:hover {
+  background: #9b1b30;
+  color: #FFFFFF;
+  border-color: #9b1b30;
+}
+
+.scholarly-pill.pill-orcid:hover {
+  background: #a6ce39;
+  color: #1a2a00;
+  border-color: #a6ce39;
+  font-weight: 700;
+}
+
+/* Modal Interconnect Grid */
+.modal-interconnect-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.modal-interconnect-btn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 2px;
+  border: 1px solid #D1D5DB;
+  background: #F9FAFB;
+  color: #1F2937;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.03em;
+  transition: all 0.15s ease;
+}
+
+.modal-interconnect-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.09);
+}
+
+.modal-interconnect-btn.btn-zenodo:hover {
+  background: #005a9c;
+  color: #FFFFFF;
+  border-color: #005a9c;
+}
+
+.modal-interconnect-btn.btn-rg:hover {
+  background: #00ccbb;
+  color: #00332c;
+  border-color: #00ccbb;
+  font-weight: 700;
+}
+
+.modal-interconnect-btn.btn-github:hover {
+  background: #24292e;
+  color: #FFFFFF;
+  border-color: #24292e;
+}
+
+.modal-interconnect-btn.btn-academia:hover {
+  background: #9b1b30;
+  color: #FFFFFF;
+  border-color: #9b1b30;
+}
+
+.modal-interconnect-btn.btn-orcid:hover {
+  background: #a6ce39;
+  color: #1a2a00;
+  border-color: #a6ce39;
+  font-weight: 700;
+}
+
+.modal-interconnect-btn.btn-bibtex:hover {
+  background: var(--color-accent-gold);
+  color: #000000;
+  border-color: var(--color-accent-gold);
+}
+
+/* ==========================================================================
    PAGE 5: TESTING CONSOLE DIAGNOSTIC
    ========================================================================== */
 .testing-viewport {
@@ -2181,20 +2432,30 @@ input, textarea, select, button, .input-field {
 }
 
 .copied-hud-notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #111111;
+  color: #FFFFFF;
+  border: 1px solid var(--color-accent-gold);
+  padding: 8px 18px;
+  border-radius: 3px;
   font-family: var(--font-mono);
-  font-size: 10.5px;
-  color: var(--color-accent-gold);
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.05s ease;
-  margin-top: 4px;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
-  text-shadow: 0 0 8px var(--color-accent-gold-glow);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  z-index: 100005;
 }
 
 .copied-hud-notification.show {
   opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Terminal input horizontal shake animation */
@@ -2328,22 +2589,7 @@ input, textarea, select, button, .input-field {
   opacity: 1;
 }
 
-.copied-hud-notification {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  color: var(--color-accent-gold);
-  letter-spacing: 0.1em;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.05s ease;
-  margin-top: 4px;
-  text-align: center;
-  text-shadow: 0 0 8px var(--color-accent-gold-glow);
-}
 
-.copied-hud-notification.show {
-  opacity: 1;
-}
 
 /* Terminal input horizontal shake animation */
 @keyframes terminal-shake {
@@ -3778,6 +4024,33 @@ html, body {
     padding: 16px 14px !important;
   }
 
+  .scholarly-registry-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+  }
+
+  .registry-badges-group {
+    width: 100% !important;
+    gap: 6px !important;
+  }
+
+  .registry-badge {
+    font-size: 0.62rem !important;
+    padding: 3px 7px !important;
+  }
+
+  .log-interconnected-links {
+    padding-right: 0 !important;
+    gap: 5px !important;
+  }
+
+  .scholarly-pill {
+    font-size: 0.6rem !important;
+    padding: 2.5px 6px !important;
+  }
+
   .open-data-btn {
     width: 100% !important;
     text-align: center !important;
@@ -3794,6 +4067,10 @@ html, body {
   .contact-links-row {
     flex-direction: column !important;
     gap: 10px !important;
+  }
+
+  .contact-link-sep {
+    display: none !important;
   }
 
   .contact-external-link {

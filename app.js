@@ -537,15 +537,22 @@ const abstractDatabase = {
     log01: `<div class="structured-modal-content">
     <div class="modal-info-title">Design, Simulation, and Empirical Validation of the Prarambh 1 Solid Rocket Motor</div>
     <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21173319" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPOSITORY / DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PUBLICATION ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/Prarambh-1-Solid-Rocket-Motor" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CODEBASE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21173319', 'Design, Simulation, and Empirical Validation of the Prarambh 1 Solid Rocket Motor')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">DOCUMENT METADATA &amp; DOI ARCHIVE //</div>
         <div class="modal-info-text">
             <strong>DOCUMENT ID:</strong> TDRSR-PROP-TR-2026-001<br>
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21173319" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21173319</a><br>
-            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Aerospace Propulsion Technical Report<br>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
-                <a href="https://zenodo.org/records/21173319" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT &amp; PDF ↗ ]</a>
-                <button class="bibtex-btn font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21173319', 'Design, Simulation, and Empirical Validation of the Prarambh 1 Solid Rocket Motor')">[ COPY BIBTEX CITATION 📋 ]</button>
-            </div>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21173319" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21173319</a><br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Aerospace Propulsion Technical Report
         </div>
     </div>
     <div class="modal-info-section">
@@ -576,14 +583,21 @@ const abstractDatabase = {
     log02: `<div class="structured-modal-content">
     <div class="modal-info-title">Development of a Scalable Hybrid Sorting System: A Deterministic Mechatronic Architecture for High-Fidelity Material Recovery</div>
     <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21740853" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPOSITORY / DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PUBLICATION ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/Automated-Waste-Segregation-System" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CODEBASE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21740853', 'Development of a Scalable Hybrid Sorting System: A Deterministic Mechatronic Architecture for High-Fidelity Material Recovery')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">DOCUMENT METADATA &amp; DOI ARCHIVE //</div>
         <div class="modal-info-text">
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21740853" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21740853</a><br>
-            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Industrial Mechatronics Technical Report<br>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
-                <a href="https://zenodo.org/records/21740853" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT &amp; PDF ↗ ]</a>
-                <button class="bibtex-btn font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21740853', 'Development of a Scalable Hybrid Sorting System: A Deterministic Mechatronic Architecture for High-Fidelity Material Recovery')">[ COPY BIBTEX CITATION 📋 ]</button>
-            </div>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21740853" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21740853</a><br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Industrial Mechatronics Technical Report
         </div>
     </div>
     <div class="modal-info-section">
@@ -614,15 +628,22 @@ const abstractDatabase = {
     log03: `<div class="structured-modal-content">
     <div class="modal-info-title">Design, Integration, and Performance Evaluation of a Vision-Guided Line Follower Robot</div>
     <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21904756" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPOSITORY / DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PUBLICATION ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/4WD-Vision-Line-Follower" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CODEBASE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904756', 'Design, Integration, and Performance Evaluation of a Vision-Guided Line Follower Robot')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">DOCUMENT METADATA &amp; DOI ARCHIVE //</div>
         <div class="modal-info-text">
             <strong>DOCUMENT ID:</strong> MVS-REPORT-003<br>
-            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904756" target="_blank" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21904756</a><br>
-            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Machine Vision &amp; Mobile Robotics Report<br>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
-                <a href="https://zenodo.org/records/21904756" target="_blank" class="zenodo-link-btn font-mono" style="display: inline-flex;">[ OPEN FULL ZENODO REPORT &amp; PDF ↗ ]</a>
-                <button class="bibtex-btn font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904756', 'Design, Integration, and Performance Evaluation of a Vision-Guided Line Follower Robot')">[ COPY BIBTEX CITATION 📋 ]</button>
-            </div>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904756" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21904756</a><br>
+            <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Machine Vision &amp; Mobile Robotics Report
         </div>
     </div>
     <div class="modal-info-section">
@@ -652,9 +673,21 @@ const abstractDatabase = {
     log04: `<div class="structured-modal-content">
     <div class="modal-info-title">AI-Powered Patient Registration and Triage Kiosk for Low-Resource Healthcare</div>
     <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21904760" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPOSITORY / DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PUBLICATION ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/Automated-Health-Diagnostic-Kiosk" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CODEBASE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904760', 'AI-Powered Patient Registration and Triage Kiosk for Low-Resource Healthcare')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">DOCUMENT METADATA &amp; IP FILING //</div>
         <div class="modal-info-text">
             <strong>DOMAIN:</strong> Healthcare Cyber-Physical Systems &amp; Edge-AI Biomedical Triage<br>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904760" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21904760</a><br>
             <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Technical Report<br>
             <strong>RELATED IP FILING:</strong> Design Patent Application No. 507688-001 (IP India)
         </div>
@@ -686,9 +719,21 @@ const abstractDatabase = {
     log05: `<div class="structured-modal-content">
     <div class="modal-info-title">Design, Kinematic Modeling, and Feasibility Evaluation of an Autonomous Modular Seedling Planting Robot for High-Value Agriculture (AgroBot)</div>
     <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21904765" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPOSITORY / DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PUBLICATION ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/AgroBot-Autonomous-Transplanter" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CODEBASE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904765', 'Design, Kinematic Modeling, and Feasibility Evaluation of an Autonomous Modular Seedling Planting Robot for High-Value Agriculture (AgroBot)')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">PROGRAM AFFILIATION &amp; IP FILING //</div>
         <div class="modal-info-text">
             <strong>PROGRAM AFFILIATION:</strong> Developed under Purdue University EPICS (Engineering Projects in Community Service) Mentorship<br>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904765" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21904765</a><br>
             <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Agricultural Robotics Technical Report<br>
             <strong>RELATED IP FILING:</strong> Design Patent Application No. 517599-001 (IP India)
         </div>
@@ -721,9 +766,21 @@ const abstractDatabase = {
     log06: `<div class="structured-modal-content">
     <div class="modal-info-title">Optical Illumination Adaptation and Real-Time Kinetic Orientation in Industrial Robotic Sorting: A Systematic Review and Algorithmic Taxonomy</div>
     <div class="modal-info-section">
-        <div class="modal-info-subtitle">PUBLICATION &amp; ZENODO / RESEARCHGATE ARCHIVE //</div>
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21904770" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPOSITORY / DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PUBLICATION ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/Optical-Sorting-Taxonomy" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CODEBASE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904770', 'Optical Illumination Adaptation and Real-Time Kinetic Orientation in Industrial Robotic Sorting: A Systematic Review and Algorithmic Taxonomy')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">DOCUMENT TYPE &amp; ARCHIVE //</div>
         <div class="modal-info-text">
             <strong>DOCUMENT TYPE:</strong> Systematic Review &amp; Algorithmic Taxonomy<br>
+            <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.21904770" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-crimson); text-decoration: underline;">10.5281/zenodo.21904770</a><br>
             <strong>REPOSITORY STATUS:</strong> Published on Zenodo &amp; ResearchGate // Open Access Computer Vision &amp; Industrial Robotics Review
         </div>
     </div>
@@ -755,6 +812,17 @@ const abstractDatabase = {
     log07: `<div class="structured-modal-content">
     <div class="modal-info-title">Design of Explainable AI Alerts for Cognitive Overload in Cobot Task Handover Panels</div>
     <div class="modal-info-section">
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21904775" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO PREPRINT ARCHIVE ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PUBLICATION ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/XAI-Cobot-Handover" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CODEBASE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904775', 'Design of Explainable AI Alerts for Cognitive Overload in Cobot Task Handover Panels')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
         <div class="modal-info-subtitle">CONFERENCE SUBMISSION METADATA //</div>
         <div class="modal-info-text">
             <strong>CONFERENCE:</strong> International Conference on Research into Design (ICoRD '27)<br>
@@ -766,7 +834,7 @@ const abstractDatabase = {
     <div class="modal-info-section">
         <div class="modal-info-subtitle">ABSTRACT &amp; TECHNICAL ARCHITECTURE //</div>
         <div class="modal-info-text">
-            Human-robot collaboration (HRC) in modern industrial assembly lines requires rapid, high-integrity decision-making during physical part handover sequences. However, traditional human-machine interfaces (HMIs) frequently induce acute cognitive overload in human operators by streaming raw, uninterpreted sensor logs, complex coordinate vectors, and cryptic hexadecimal error codes. This research addresses these deficiencies by engineering an Explainable AI (XAI) alert framework integrated with real-time cognitive workload estimation using MediaPipe Eye Aspect Ratio (EAR) and 3D head-pose telemetry. By monitoring operator physiological cues and reaction latencies in a Software-in-the-Loop (SITL) ROS 2 environment, the system determines the onset of cognitive fatigue and dynamically adapts HMI alerts into context-aware, color-coded semantic explanation alerts, demonstrating a 34% reduction in operator decision latency and a 28% improvement in NASA-TLX usability scores.
+            Human-robot collaboration (HRC) in modern industrial assembly lines requires rapid, high-integrity decision-making during physical part handover sequences. However, traditional human-machine interfaces (HMIs) frequently induce acute cognitive overload in human operators by streaming raw, uninterpreted sensor logs, complex coordinate vectors, and cryptic hexadecimal error codes. This research addresses these deficiencies by engineering an Explainable AI (XAI) alert framework integrated with real-time cognitive workload estimation using MediaPipe Eye Aspect Ratio (EAR) and 3D head-pose telemetry. By monitoring operator physiological cues and reaction latencies in a Software-in-the-Loop (SITL) ROS 2 environment, the system determines the onset of cognitive fatigue and dynamically adapts HMI alerts into context-aware, color-coded semantic explanation alerts, demonstrating a <strong>34% reduction in operator decision latency</strong> and a <strong>28% improvement in NASA-TLX usability scores</strong>.
         </div>
     </div>
     <div class="modal-info-section">
@@ -787,6 +855,17 @@ const abstractDatabase = {
 
     log08: `<div class="structured-modal-content">
     <div class="modal-info-title">Coupled Thermo-Structural and Pre-Stressed Modal Dynamics of a Solid Rocket Motor Convergent-Divergent Nozzle</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21904780" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO PREPRINT ARCHIVE ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PUBLICATION ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/SRM-Nozzle-Multiphysics" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CODEBASE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904780', 'Coupled Thermo-Structural and Pre-Stressed Modal Dynamics of a Solid Rocket Motor Convergent-Divergent Nozzle')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">CONFERENCE SUBMISSION METADATA //</div>
         <div class="modal-info-text">
@@ -830,6 +909,17 @@ const abstractDatabase = {
     pat01: `<div class="structured-modal-content">
     <div class="modal-info-title">Autonomous Precision Seedling Planting Robot</div>
     <div class="modal-info-section">
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21904765" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPORT &amp; DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PROFILE ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/AgroBot-Autonomous-Transplanter" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CAD &amp; CODE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904765', 'Autonomous Precision Seedling Planting Robot')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
         <div class="modal-info-subtitle">INTELLECTUAL PROPERTY INDIA // DESIGN FILING METADATA</div>
         <div class="modal-info-text">
             <strong>APPLICATION NO:</strong> 517599-001<br>
@@ -850,6 +940,17 @@ const abstractDatabase = {
     pat02: `<div class="structured-modal-content">
     <div class="modal-info-title">Automated Health Diagnostic Kiosk</div>
     <div class="modal-info-section">
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21904760" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPORT &amp; DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PROFILE ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO/Automated-Health-Diagnostic-Kiosk" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CAD &amp; CODE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21904760', 'Automated Health Diagnostic Kiosk')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
+    <div class="modal-info-section">
         <div class="modal-info-subtitle">INTELLECTUAL PROPERTY INDIA // DESIGN FILING METADATA</div>
         <div class="modal-info-text">
             <strong>APPLICATION NO:</strong> 507688-001<br>
@@ -869,6 +970,17 @@ const abstractDatabase = {
 
     pat03: `<div class="structured-modal-content">
     <div class="modal-info-title">High-Tech Rover Adaptive Suspension Mechanism</div>
+    <div class="modal-info-section">
+        <div class="modal-info-subtitle">INTERCONNECTED SCHOLARLY REPOSITORIES &amp; CITATION //</div>
+        <div class="modal-interconnect-grid">
+            <a href="https://zenodo.org/records/21740853" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-zenodo font-mono">[ ZENODO REPORT &amp; DOI ↗ ]</a>
+            <a href="https://www.researchgate.net/profile/Harshal-Gadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-rg font-mono">[ RESEARCHGATE PROFILE ↗ ]</a>
+            <a href="https://github.com/CODE-ROBO" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-github font-mono">[ GITHUB CAD &amp; CODE ↗ ]</a>
+            <a href="https://independent.academia.edu/HarshalGadekar" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-academia font-mono">[ ACADEMIA.EDU ARCHIVE ↗ ]</a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer" class="modal-interconnect-btn btn-orcid font-mono">[ ORCID VERIFIED RECORD ↗ ]</a>
+            <button class="modal-interconnect-btn btn-bibtex font-mono" onclick="copyBibTeXCitation('10.5281/zenodo.21740853', 'High-Tech Rover Adaptive Suspension Mechanism')">[ COPY BIBTEX CITATION 📋 ]</button>
+        </div>
+    </div>
     <div class="modal-info-section">
         <div class="modal-info-subtitle">DESIGN PATENT INITIATIVE // MECHANICAL &amp; AEROSPACE SYSTEMS</div>
         <div class="modal-info-text">
@@ -1542,9 +1654,9 @@ window.copyBibTeXCitation = function(doi, title) {
             const notif = document.getElementById("copied-notification");
             if (notif) {
                 notif.textContent = "[ BIBTEX CITATION COPIED TO CLIPBOARD ]";
-                notif.style.opacity = "1";
+                notif.classList.add("show");
                 setTimeout(() => {
-                    notif.style.opacity = "0";
+                    notif.classList.remove("show");
                 }, 2500);
             }
         }).catch(() => {});
