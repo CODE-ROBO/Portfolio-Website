@@ -4714,3 +4714,199 @@ html, body {
     font-size: 0.65rem;
   }
 }
+
+
+/* ==========================================================================
+   PREMIER ACCREDITATIONS (TOP 15) SHOWCASE GRID & PRO CARDS
+   ========================================================================== */
+
+.cert-section-subtitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #666666;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+
+#certifications-logs-container.cert-pro-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.log-card.cert-card-pro {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-left: 3px solid var(--color-accent-gold) !important;
+  border-radius: 3px !important;
+  padding: 22px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
+  min-height: 230px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.log-card.cert-card-pro:hover {
+  transform: translateY(-3px) !important;
+  border-color: #111111 !important;
+  border-left-color: var(--color-accent-crimson) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Card Topbar */
+.cert-card-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cert-issuer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.04em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cert-issuer-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent-crimson);
+  flex-shrink: 0;
+}
+
+.cert-domain-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #555555;
+  background: #F1F3F5;
+  padding: 2px 7px;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* Card Title */
+.cert-title {
+  font-family: var(--font-title);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #111111;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+/* Card Specs */
+.cert-meta-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.7rem;
+  color: #666666;
+  margin-bottom: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.cert-spec-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cert-spec-item .spec-k {
+  color: #888888;
+  font-weight: 600;
+  font-size: 0.65rem;
+}
+
+.cert-spec-item .spec-v {
+  color: #222222;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cert-status-badge {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 4px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.cert-status-badge.status-complete {
+  color: #039855;
+  background: rgba(3, 152, 85, 0.08);
+  border: 1px solid rgba(3, 152, 85, 0.2);
+}
+
+/* Dedicated Action Button */
+.cert-open-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 14px;
+  background: #F8F9FA;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #111111;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.cert-open-btn:hover {
+  background: #111111;
+  color: #FFFFFF;
+  border-color: #111111;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1080px) {
+  #certifications-logs-container.cert-pro-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #certifications-logs-container.cert-pro-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .log-card.cert-card-pro {
+    padding: 16px !important;
+    min-height: auto !important;
+  }
+}

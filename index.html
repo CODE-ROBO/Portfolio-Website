@@ -63,7 +63,7 @@
   <link rel="dns-prefetch" href="https://ajax.googleapis.com">
   <link rel="preload" as="image" href="assets/profile.jpg?v=3.0" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=28.0">
+  <link rel="stylesheet" href="styles.css?v=29.0">
 </head>
 <body>
 
@@ -129,8 +129,8 @@
               </div>
               <div class="hero-metric-sep">/</div>
               <div class="hero-metric-item">
-                <span class="hero-metric-num">31</span>
-                <span class="hero-metric-lbl">ACCREDITATIONS</span>
+                <span class="hero-metric-num">15</span>
+                <span class="hero-metric-lbl">PREMIER ACCREDITATIONS</span>
               </div>
               <div class="hero-metric-sep">/</div>
               <div class="hero-metric-item">
@@ -835,250 +835,345 @@
     </section>
 
     <!-- SECTION 10: CERTIFICATIONS -->
+        <!-- SECTION 10: PREMIER ACCREDITATIONS (TOP 15) -->
     <section id="certifications" class="cinematic-section research-cinematic-section">
       <div class="cinematic-section-inner">
         <div class="section-cinematic-header">
-          <span class="spec-index font-mono">CREDENTIALS // CERTIFICATIONS_05</span>
-          <h2 class="cinematic-section-title">TECHNICAL CERTIFICATIONS &amp; ACCREDITATIONS</h2>
+          <span class="spec-index font-mono">CREDENTIALS // SPECS_05</span>
+          <h2 class="cinematic-section-title">PREMIER ACCREDITATIONS &amp; CERTIFICATIONS</h2>
+          <div class="cert-section-subtitle font-mono">TOP 15 INDUSTRY-VALIDATED CREDENTIALS // AEROSPACE · CAD/CFD · ROBOTICS · APPLIED AI</div>
         </div>
 
         <!-- Real-Time Accreditations Search Filter -->
         <div class="cert-search-wrapper font-mono">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" class="cert-search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="cert-search-input" placeholder="SEARCH 31 ACCREDITATIONS (e.g. ISRO, ANSYS, ROS2, Python, AI, TUM)..." autocomplete="off" spellcheck="false">
+          <input type="text" id="cert-search-input" placeholder="SEARCH 15 PREMIER ACCREDITATIONS (e.g. ISRO, STAR-CCM+, SOLIDWORKS, Omron, Python, Google)..." autocomplete="off" spellcheck="false">
           <button id="cert-search-clear" type="button" class="cert-search-clear-btn" title="Clear Search">&times;</button>
         </div>
 
         <div class="console-filter-bar" id="cert-filter-bar">
-            <span class="filter-btn active" data-filter="all">ALL_ACCREDITATIONS (31) //</span>
+            <span class="filter-btn active" data-filter="all">ALL_PREMIER (15) //</span>
             <span class="filter-btn" data-filter="aerospace">AEROSPACE &amp; PROPULSION (4) //</span>
-            <span class="filter-btn" data-filter="cad">CAD, CAM &amp; SIMULATION (5) //</span>
-            <span class="filter-btn" data-filter="robotics">PLC, ROBOTICS &amp; AUTOMATION (5) //</span>
-            <span class="filter-btn" data-filter="ai">AI, ML &amp; DATA SCIENCE (9) //</span>
-            <span class="filter-btn" data-filter="strategy">STRATEGY &amp; LEADERSHIP (8) //</span>
+            <span class="filter-btn" data-filter="cad">CAD, CFD &amp; SIMULATION (4) //</span>
+            <span class="filter-btn" data-filter="robotics">ROBOTICS &amp; AUTOMATION (3) //</span>
+            <span class="filter-btn" data-filter="ai">AI &amp; COMPUTING (3) //</span>
+            <span class="filter-btn" data-filter="strategy">LEADERSHIP &amp; MGT (1) //</span>
         </div>
 
-        <div class="research-logs-container" id="certifications-logs-container">
-            <!-- AEROSPACE & PROPULSION -->
-            <div class="log-card" data-category="aerospace" data-index="01">
-                <div class="log-meta">ISRO SPACE TUTOR // KODACY &amp; SPACE</div>
-                <div class="log-title">Rocket Propulsion and Spacecraft Dynamics</div>
-                <div class="log-tags">ID: bf067fe3de6cffc4 // DATE: MAY 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert01')">OPEN DATA</button>
+        <div class="research-logs-container cert-pro-grid" id="certifications-logs-container">
+            <!-- 01: ISRO SPACE TUTOR -->
+            <div class="log-card cert-card-pro" data-category="aerospace" data-index="01">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">ISRO SPACE TUTOR // KODACY</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">AEROSPACE</span>
+                </div>
+                <h3 class="cert-title">Rocket Propulsion and Spacecraft Dynamics</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">RECORD ID:</span> <span class="spec-v">bf067fe3de6cffc4</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">MAY 2025</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert01')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="aerospace" data-index="02">
-                <div class="log-meta">TECHNICAL UNIVERSITY OF MUNICH (TUM) // COURSERA</div>
-                <div class="log-title">Space Exploration</div>
-                <div class="log-tags">INSTRUCTOR: DR. THOMAS REITER (ESA ASTRONAUT) // DATE: JUL 2026 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert02')">OPEN DATA</button>
+            <!-- 02: TUM / COURSERA (ESA ASTRONAUT) -->
+            <div class="log-card cert-card-pro" data-category="aerospace" data-index="02">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">TECH. UNIV. OF MUNICH (TUM)</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">ASTRONAUTICS</span>
+                </div>
+                <h3 class="cert-title">Space Exploration</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">FACULTY:</span> <span class="spec-v">DR. THOMAS REITER (ESA ASTRONAUT)</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">JUL 2026</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert02')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="aerospace" data-index="03">
-                <div class="log-meta">iTMD 2026 // NIT JALANDHAR</div>
-                <div class="log-title">Coupled Thermo-Structural &amp; Pre-Stressed Modal Dynamics of SRM Nozzle</div>
-                <div class="log-tags">PAPER ID: 419 // DOMAIN: AERO-PROPULSION FEA &amp; MODAL SHOCK // STATUS: <span class="status-complete">ACCEPTED RESEARCH</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert03')">OPEN DATA</button>
+            <!-- 03: NIT JALANDHAR iTMD 2026 -->
+            <div class="log-card cert-card-pro" data-category="aerospace" data-index="03">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">iTMD 2026 // NIT JALANDHAR</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">PROPULSION FEA</span>
+                </div>
+                <h3 class="cert-title">Coupled Thermo-Structural &amp; Pre-Stressed Modal Dynamics of SRM Nozzle</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">PAPER ID:</span> <span class="spec-v">419</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DOMAIN:</span> <span class="spec-v">AERO-PROPULSION FEA &amp; MODAL SHOCK</span></div>
+                    <div class="cert-status-badge status-complete">ACCEPTED RESEARCH</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert03')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="aerospace" data-index="04">
-                <div class="log-meta">MATHWORKS // TRAINING SERVICES</div>
-                <div class="log-title">Wireless Communications Onramp</div>
-                <div class="log-tags">PLATFORM: MATLAB // DATE: NOV 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert04')">OPEN DATA</button>
+            <!-- 04: MATHWORKS -->
+            <div class="log-card cert-card-pro" data-category="aerospace" data-index="04">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">MATHWORKS // TRAINING</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">MATLAB &amp; DSP</span>
+                </div>
+                <h3 class="cert-title">Wireless Communications Onramp</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">PLATFORM:</span> <span class="spec-v">MATLAB / SIMULINK</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">NOV 2025</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert04')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <!-- CAD, CAM & SIMULATION -->
-            <div class="log-card" data-category="cad" data-index="05">
-                <div class="log-meta">SIEMENS DIGITAL INDUSTRIES // ENTERPRISE LEARNING</div>
-                <div class="log-title">Fundamentals of Simcenter STAR-CCM+</div>
-                <div class="log-tags">MEMBERSHIP: ENTERPRISE // DATE: SEP 2026 // DOMAIN: CFD &amp; MULTIPHYSICS // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert05')">OPEN DATA</button>
+            <!-- 05: SIEMENS STAR-CCM+ -->
+            <div class="log-card cert-card-pro" data-category="cad" data-index="05">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">SIEMENS DIGITAL INDUSTRIES</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">CFD MULTIPHYSICS</span>
+                </div>
+                <h3 class="cert-title">Fundamentals of Simcenter STAR-CCM+</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">MEMBERSHIP:</span> <span class="spec-v">ENTERPRISE LEARNING</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">SEP 2026</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert05')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="cad" data-index="06">
-                <div class="log-meta">DASSAULT SYSTÈMES // SOLIDWORKS</div>
-                <div class="log-title">Certified SOLIDWORKS Associate (CSWA) / Foundations</div>
-                <div class="log-tags">SCORE: 130 / 130 (100% PERFECT) // DOMAIN: PART &amp; ASSEMBLY MODELING // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert06')">OPEN DATA</button>
+            <!-- 06: DASSAULT SYSTÈMES SOLIDWORKS CSWA -->
+            <div class="log-card cert-card-pro" data-category="cad" data-index="06">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">DASSAULT SYSTÈMES</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">MECHANICAL CAD</span>
+                </div>
+                <h3 class="cert-title">Certified SOLIDWORKS Associate (CSWA) / Foundations</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">BENCHMARK:</span> <span class="spec-v">SOLIDWORKS CSWA MECHANICAL DESIGN</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">MAR 2024</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED BENCHMARK</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert06')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="cad" data-index="07">
-                <div class="log-meta">SKILLS &amp; JOBS // G2G INNOVATION PUNE</div>
-                <div class="log-title">CATIA V5 Mechanical Design &amp; Advanced Part Modeling</div>
-                <div class="log-tags">SERIAL: E3692P9T // DATE: JAN 2025 // DOMAIN: PARAMETRIC CAD &amp; SURFACING // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert07')">OPEN DATA</button>
+            <!-- 07: CATIA V5 -->
+            <div class="log-card cert-card-pro" data-category="cad" data-index="07">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">SKILLS &amp; JOBS // G2G INNOVATION</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">SURFACING &amp; CAD</span>
+                </div>
+                <h3 class="cert-title">CATIA V5 Mechanical Design &amp; Advanced Part Modeling</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">PROGRAM:</span> <span class="spec-v">CATIA V5 AEROSPACE MODELING</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">MAR-APR 2024</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert07')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="cad" data-index="08">
-                <div class="log-meta">BENTLEY SYSTEMS // ADVANCING INFRASTRUCTURE</div>
-                <div class="log-title">CAD with MicroStation for Beginners | Fundamental</div>
-                <div class="log-tags">CERT ID: C30176 // CEU: 2.00 // DATE: AUG 2024 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert08')">OPEN DATA</button>
+            <!-- 08: BENTLEY SYSTEMS MICROSTATION -->
+            <div class="log-card cert-card-pro" data-category="cad" data-index="08">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">BENTLEY SYSTEMS</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">PRECISION CAD</span>
+                </div>
+                <h3 class="cert-title">CAD with MicroStation for Beginners | Fundamental</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">STANDARD:</span> <span class="spec-v">BENTLEY MICROSTATION 3D</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">AUG 2024</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert08')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="cad" data-index="09">
-                <div class="log-meta">JANATICS PNEUMATIC // JASC 2025</div>
-                <div class="log-title">Janatics Automation Skill Challenge E-Learning Certification</div>
-                <div class="log-tags">GRADE: 85.00% // CERT ID: 684436e3-7e50-49d8-a8c0-7ed5ac202876 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert09')">OPEN DATA</button>
+            <!-- 09: JANATICS PNEUMATICS -->
+            <div class="log-card cert-card-pro" data-category="robotics" data-index="09">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">JANATICS PNEUMATIC // JASC</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">PNEUMATICS</span>
+                </div>
+                <h3 class="cert-title">Janatics Automation Skill Challenge E-Learning Certification</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">RECORD:</span> <span class="spec-v">JASC 2025 COMPLIANCE</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DOMAIN:</span> <span class="spec-v">ELECTRO-PNEUMATIC CIRCUITS</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert09')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <!-- PLC, ROBOTICS & AUTOMATION -->
-            <div class="log-card" data-category="robotics" data-index="10">
-                <div class="log-meta">OMRON AUTOMATION INDIA // JSPM RSCOE</div>
-                <div class="log-title">5-Day Industrial Automation Workshop: PLCs, Motion Controllers &amp; Servos</div>
-                <div class="log-tags">VENUE: JSPM RSCOE // DATE: JAN 2026 // DOMAIN: INDUSTRIAL AUTOMATION // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert10')">OPEN DATA</button>
+            <!-- 10: OMRON AUTOMATION -->
+            <div class="log-card cert-card-pro" data-category="robotics" data-index="10">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">OMRON AUTOMATION INDIA</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">PLCs &amp; SERVOS</span>
+                </div>
+                <h3 class="cert-title">5-Day Industrial Automation Workshop: PLCs, Motion Controllers &amp; Servos</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">PLATFORM:</span> <span class="spec-v">OMRON SYSMAC STUDIO &amp; CP1E</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DOMAIN:</span> <span class="spec-v">LADDER LOGIC &amp; SERVO CONTROL</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED WORKSHOP</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert10')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="robotics" data-index="11">
-                <div class="log-meta">CENTRE FOR INDUSTRY 4.0 (C4i4) // MINISTRY OF HEAVY INDUSTRIES</div>
-                <div class="log-title">'Elevates' Machine Learning &amp; Data Analytics using No-Code KNIME</div>
-                <div class="log-tags">CERT NO: C4i4Lab/EP2/2025/079 // DATE: OCT 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert11')">OPEN DATA</button>
+            <!-- 11: C4i4 MINISTRY OF HEAVY INDUSTRIES -->
+            <div class="log-card cert-card-pro" data-category="robotics" data-index="11">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">CENTRE FOR INDUSTRY 4.0</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">INDUSTRY 4.0</span>
+                </div>
+                <h3 class="cert-title">'Elevates' Machine Learning &amp; Data Analytics using No-Code KNIME</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">AUTHORITY:</span> <span class="spec-v">MINISTRY OF HEAVY INDUSTRIES, GOI</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DOMAIN:</span> <span class="spec-v">SMART FACTORY AUTOMATION</span></div>
+                    <div class="cert-status-badge status-complete">GOVT. RECOGNITION</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert11')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="robotics" data-index="12">
-                <div class="log-meta">IEEE RSCOE // ROBOTICS &amp; AUTOMATION SOCIETY</div>
-                <div class="log-title">Research Symposium 2.0 Participation</div>
-                <div class="log-tags">ORGANIZATION: IEEE RSCOE // DATE: APR 2025 // STATUS: <span class="status-complete">VERIFIED PARTICIPATION</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert12')">OPEN DATA</button>
+            <!-- 12: PYTHON INSTITUTE PCEP -->
+            <div class="log-card cert-card-pro" data-category="ai" data-index="12">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">PYTHON INSTITUTE // OPENEDG</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">PROGRAMMING</span>
+                </div>
+                <h3 class="cert-title">Python PCEP-30-01: Certified Entry-Level Python Programmer</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">CERT ID:</span> <span class="spec-v">UC-0570bdae-28bc-4aa8-9f2d-0b7300c0f4f9</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DOMAIN:</span> <span class="spec-v">ALGORITHMS, DATA STRUCTURES &amp; NUMERICAL OPS</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert15')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="robotics" data-index="13">
-                <div class="log-meta">INTERNSHIP STUDIO // NATIONAL BENCHMARK</div>
-                <div class="log-title">Common Internship Test - Automation &amp; Systems</div>
-                <div class="log-tags">CERT NO: CIT-P-1378595 // DATE: FEB 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert13')">OPEN DATA</button>
+            <!-- 13: MICROSOFT GENERATIVE AI -->
+            <div class="log-card cert-card-pro" data-category="ai" data-index="13">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">MICROSOFT &amp; LINKEDIN</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">GENERATIVE AI</span>
+                </div>
+                <h3 class="cert-title">Career Essentials in Generative AI</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">CERT ID:</span> <span class="spec-v">51a7c86032b8296e4fb9a6c917ab22ac06354b4e</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">JUL 2024</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert16')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <div class="log-card" data-category="robotics" data-index="14">
-                <div class="log-meta">MINISTRY OF YOUTH AFFAIRS AND SPORTS // GOVT. OF INDIA</div>
-                <div class="log-title">Mera Yuva Bharat (MY Bharat) National Recognition</div>
-                <div class="log-tags">PORTAL: MYBHARAT.GOV.IN // DOMAIN: STEM &amp; TECH INNOVATION // STATUS: <span class="status-complete">NATIONAL RECOGNITION</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert14')">OPEN DATA</button>
+            <!-- 14: AICTE & EDUNET 6-WEEK AI INTERNSHIP -->
+            <div class="log-card cert-card-pro" data-category="ai" data-index="14">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">AICTE &amp; EDUNET FOUNDATION</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">APPLIED AI &amp; ML</span>
+                </div>
+                <h3 class="cert-title">6-Week Government Certified Internship on Artificial Intelligence</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">STUDENT ID:</span> <span class="spec-v">STU659e52abbb9631704874667</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DATE:</span> <span class="spec-v">JUN-JUL 2025</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED INTERNSHIP</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert18')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
 
-            <!-- AI, MACHINE LEARNING & DATA SCIENCE -->
-            <div class="log-card" data-category="ai" data-index="15">
-                <div class="log-meta">PYTHON INSTITUTE // UDEMY</div>
-                <div class="log-title">Python PCEP-30-01: Certified Entry-Level Python Programmer</div>
-                <div class="log-tags">CERT ID: UC-bb78060a-cbc5-4c59-992b-edc2105b415b // DATE: JUN 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert15')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="ai" data-index="16">
-                <div class="log-meta">MICROSOFT &amp; LINKEDIN LEARNING</div>
-                <div class="log-title">Career Essentials in Generative AI</div>
-                <div class="log-tags">CERT ID: 51a7c86032b8296e4fb9a6c917ab22ac06354b4e15b22cb21a875421fa105ec8 // DATE: JUL 2024 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert16')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="ai" data-index="17">
-                <div class="log-meta">IBM SKILLSBUILD // CREDLY</div>
-                <div class="log-title">Artificial Intelligence Fundamentals</div>
-                <div class="log-tags">CREDLY BADGE: b4dd665a-c8ca-41dc-b17b-e201fc21063d // DATE: JUL 2025 // STATUS: <span class="status-complete">VERIFIED BADGE</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert17')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="ai" data-index="18">
-                <div class="log-meta">AICTE &amp; EDUNET FOUNDATION // IBM SKILLSBUILD</div>
-                <div class="log-title">6-Week Internship on Artificial Intelligence</div>
-                <div class="log-tags">STU ID: STU659e52abbb9631704874667 // DATE: JUN-JUL 2025 // STATUS: <span class="status-complete">VERIFIED INTERNSHIP</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert18')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="ai" data-index="19">
-                <div class="log-meta">IBM SKILLSBUILD // COURSEWARE</div>
-                <div class="log-title">Machine Learning and Deep Learning (MDL-212)</div>
-                <div class="log-tags">PLAN: MDL-212 // DATE: JUL 2025 // DOMAIN: DEEP NEURAL NETWORKS // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert19')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="ai" data-index="20">
-                <div class="log-meta">MONGODB // DEVELOPER ACADEMY</div>
-                <div class="log-title">Introduction to AI and Vector Search</div>
-                <div class="log-tags">CERT ID: MDBuz304rzur4 // DATE: SEP 2024 // DOMAIN: VECTOR EMBEDDINGS &amp; RAG // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert20')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="ai" data-index="21">
-                <div class="log-meta">IBM SKILLSBUILD &amp; EDUNET FOUNDATION</div>
-                <div class="log-title">Edunet - Artificial Intelligence (PLAN-8A48645196FA)</div>
-                <div class="log-tags">RECORD: YOUR LEARNING BUILDER // DATE: JUL 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert21')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="ai" data-index="22">
-                <div class="log-meta">IBM SKILLSBUILD // MOODLE SYSTEM</div>
-                <div class="log-title">Introduction to Artificial Intelligence (MDL-211)</div>
-                <div class="log-tags">PLAN: MDL-211 // DATE: JUN 2025 // DOMAIN: APPLIED AI PRINCIPLES // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert22')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="ai" data-index="23">
-                <div class="log-meta">IBM SKILLSBUILD // ACTIVITY SUITE</div>
-                <div class="log-title">Introduction to Artificial Intelligence | IBM Activity Kit</div>
-                <div class="log-tags">ID: URL-693DE3553654 // DATE: JUN 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert23')">OPEN DATA</button>
-            </div>
-
-            <!-- STRATEGY, MANAGEMENT & PROFESSIONAL LEADERSHIP -->
-            <div class="log-card" data-category="strategy" data-index="24">
-                <div class="log-meta">GOOGLE // COURSERA</div>
-                <div class="log-title">Foundations of Project Management</div>
-                <div class="log-tags">VERIFY: 2HPF13A1Z7FC // DATE: APR 2025 // DOMAIN: AGILE &amp; RISK MANAGEMENT // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert24')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="strategy" data-index="25">
-                <div class="log-meta">UNIVERSITY OF VIRGINIA / DARDEN // COURSERA</div>
-                <div class="log-title">Design Thinking for Innovation</div>
-                <div class="log-tags">VERIFY: BK3Y2R8EA1VN // DATE: MAY 2025 // DOMAIN: RAPID HARDWARE PROTOTYPING // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert25')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="strategy" data-index="26">
-                <div class="log-meta">UNIVERSITY OF MICHIGAN // COURSERA</div>
-                <div class="log-title">Successful Negotiation: Essential Strategies and Skills</div>
-                <div class="log-tags">VERIFY: JH3S8WHVSY70 // DATE: MAR 2025 // DOMAIN: STRATEGIC CONTRACTING // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert26')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="strategy" data-index="27">
-                <div class="log-meta">INVEST INDIA / #STARTUPINDIA // UPGRAD</div>
-                <div class="log-title">#startupindia Learning Program</div>
-                <div class="log-tags">CREDENTIAL ID: 671a2186fda55b088cdabed5 // DATE: OCT 2024 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert27')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="strategy" data-index="28">
-                <div class="log-meta">WADHWANI FOUNDATION // MICROCREDENTIAL</div>
-                <div class="log-title">Professionalism &amp; Workplace Ethics</div>
-                <div class="log-tags">HOURS: 10.25 HRS // DATE: OCT 2024 // DOMAIN: ENGINEERING GOVERNANCE // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert28')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="strategy" data-index="29">
-                <div class="log-meta">WADHWANI FOUNDATION // MICROCREDENTIAL</div>
-                <div class="log-title">Effective Speaking and Listening Skills</div>
-                <div class="log-tags">HOURS: 9.75 HRS // DATE: OCT 2024 // DOMAIN: EXECUTIVE COMMUNICATION // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert29')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="strategy" data-index="30">
-                <div class="log-meta">TCS iON // TATA CONSULTANCY SERVICES</div>
-                <div class="log-title">Career Edge - Young Professional</div>
-                <div class="log-tags">CERT ID: 240640-28433637-1016 // DATE: JUN 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert30')">OPEN DATA</button>
-            </div>
-
-            <div class="log-card" data-category="strategy" data-index="31">
-                <div class="log-meta">IBM SKILLSBUILD &amp; EDUNET FOUNDATION</div>
-                <div class="log-title">Edunet - SkillsBuild Orientation</div>
-                <div class="log-tags">PLAN: PLAN-04138CD348A7 // DATE: JUL 2025 // STATUS: <span class="status-complete">VERIFIED CREDENTIAL</span></div>
-                <button class="open-data-btn" onclick="openTerminalViewport('cert31')">OPEN DATA</button>
+            <!-- 15: GOOGLE PROJECT MANAGEMENT -->
+            <div class="log-card cert-card-pro" data-category="strategy" data-index="15">
+                <div class="cert-card-topbar">
+                    <div class="cert-issuer-badge">
+                        <span class="cert-issuer-dot"></span>
+                        <span class="cert-issuer-name font-mono">GOOGLE // COURSERA</span>
+                    </div>
+                    <span class="cert-domain-tag font-mono">PROJECT MGT.</span>
+                </div>
+                <h3 class="cert-title">Foundations of Project Management</h3>
+                <div class="cert-meta-specs font-mono">
+                    <div class="cert-spec-item"><span class="spec-k">ACCREDITATION:</span> <span class="spec-v">GOOGLE PROFESSIONAL CERTIFICATE</span></div>
+                    <div class="cert-spec-item"><span class="spec-k">DOMAIN:</span> <span class="spec-v">AGILE WORKFLOWS &amp; ENGINEERING OPS</span></div>
+                    <div class="cert-status-badge status-complete">VERIFIED CREDENTIAL</div>
+                </div>
+                <button class="cert-open-btn font-mono" onclick="openTerminalViewport('cert24')">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>INSPECT CREDENTIAL DATA [⤢]</span>
+                </button>
             </div>
         </div>
       </div>
@@ -1249,7 +1344,7 @@
     <span>TOP</span>
   </button>
 
-  <script src="app.js?v=28.0" defer></script>
+  <script src="app.js?v=29.0" defer></script>
 </body>
 </html>
 
