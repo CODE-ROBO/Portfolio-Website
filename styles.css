@@ -4409,4 +4409,308 @@ html, body {
   .skill-minimal-card {
     padding: 18px;
   }
-}
+}
+
+/* ==========================================================================
+   ENHANCEMENTS: HERO METRICS, BLUEPRINT BANNERS, CERT SEARCH & BACK-TO-TOP
+   ========================================================================== */
+
+/* Executive Quantitative Impact Ribbon */
+.hero-metrics-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 10px 16px;
+  background: #F8F9FA;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 3px solid var(--color-accent-gold);
+  border-radius: 2px;
+  margin: 18px 0 8px 0;
+}
+
+.hero-metric-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.hero-metric-num {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.02em;
+}
+
+.hero-metric-lbl {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #555555;
+  letter-spacing: 0.05em;
+}
+
+.hero-metric-sep {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 0.75rem;
+}
+
+/* Hero Resume CTA Button */
+.hero-resume-btn {
+  background: #FFFFFF;
+  color: #111111;
+  border: 1px solid #111111;
+  padding: 12px 18px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-resume-btn:hover {
+  background: #111111;
+  color: #FFFFFF;
+  border-color: #111111;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Hero Scholarly & Professional Profile Badges */
+.hero-social-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.hero-social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  background: #F1F3F5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: all 0.15s ease;
+}
+
+.hero-social-pill:hover {
+  background: #111111;
+  color: #FFFFFF;
+  border-color: #111111;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Embedded Blueprint Visual Previews */
+.project-card-media-banner {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  max-height: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  background: #0B0E14;
+  cursor: pointer;
+  margin: 4px 0 8px 0;
+}
+
+.project-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.35s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.2s ease;
+  opacity: 0.93;
+  display: block;
+}
+
+.project-card-media-banner:hover .project-banner-img {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.project-banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+/* Certifications Real-Time Search Bar */
+.cert-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 16px auto;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-left: 3px solid var(--color-accent-crimson);
+  border-radius: 2px;
+  padding: 0 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-search-wrapper:focus-within {
+  border-color: #111111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cert-search-icon {
+  color: #666666;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+#cert-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 0;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: #111111;
+  letter-spacing: 0.03em;
+}
+
+#cert-search-input::placeholder {
+  color: #888888;
+}
+
+.cert-search-clear-btn {
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  display: none;
+}
+
+.cert-search-clear-btn:hover {
+  color: var(--color-accent-crimson);
+}
+
+.cert-search-clear-btn.active {
+  display: block;
+}
+
+/* Accreditations Responsive 2-Column Grid on Desktop */
+#certifications-logs-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 16px !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+#certifications-logs-container .log-card {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+/* Floating Back-to-Top Button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99;
+  background: #111111;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 10px 14px;
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease, visibility 0.25s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background: var(--color-accent-crimson);
+  border-color: var(--color-accent-crimson);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(214, 5, 5, 0.3);
+}
+
+/* Mobile Responsive Optimization for Log Cards & Grids */
+@media screen and (max-width: 768px) {
+  #certifications-logs-container {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .log-meta, .log-title, .log-tags,
+  .test-meta, .test-title, .test-tags {
+    padding-right: 0 !important;
+  }
+
+  .log-card .open-data-btn {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+  }
+
+  .hero-metrics-ribbon {
+    gap: 10px;
+    padding: 8px 12px;
+  }
+
+  .hero-metric-item {
+    font-size: 0.95rem;
+  }
+
+  .project-card-media-banner {
+    height: 180px;
+  }
+
+  .back-to-top-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 8px 12px;
+    font-size: 0.65rem;
+  }
+}

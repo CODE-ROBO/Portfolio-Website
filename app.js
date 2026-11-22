@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSPARouting();
   initResearchModule();
   initCertificationsModule();
+  initBackToTop();
   initProjectLightbox();
   initContactForm();
   initContactValidationModule();
@@ -1457,21 +1458,74 @@ function initResearchModule() {
 function initCertificationsModule() {
     const cards = document.querySelectorAll("#certifications .log-card");
     const filterButtons = document.querySelectorAll("#cert-filter-bar .filter-btn");
+    const searchInput = document.getElementById("cert-search-input");
+    const clearBtn = document.getElementById("cert-search-clear");
+
+    let currentFilter = "all";
+    let searchQuery = "";
+
+    function filterCards() {
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute("data-category") || "";
+            const textContent = card.textContent.toLowerCase();
+            const matchesCategory = currentFilter === "all" || cardCategory === currentFilter;
+            const matchesSearch = !searchQuery || textContent.includes(searchQuery);
+
+            const shouldHide = !matchesCategory || !matchesSearch;
+            card.classList.toggle("filtered-out", shouldHide);
+        });
+
+        if (clearBtn) {
+            clearBtn.classList.toggle("active", searchQuery.length > 0);
+        }
+    }
 
     filterButtons.forEach(btn => {
         btn.addEventListener("click", () => {
             filterButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
-
-            const filterType = btn.getAttribute("data-filter");
-
-            cards.forEach(card => {
-                const cardCategory = card.getAttribute("data-category");
-                const shouldHide = filterType !== "all" && cardCategory !== filterType;
-                card.classList.toggle("filtered-out", shouldHide);
-            });
+            currentFilter = btn.getAttribute("data-filter") || "all";
+            filterCards();
         });
     });
+
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value.trim().toLowerCase();
+            filterCards();
+        });
+    }
+
+    if (clearBtn) {
+        clearBtn.addEventListener("click", () => {
+            if (searchInput) {
+                searchInput.value = "";
+                searchInput.focus();
+            }
+            searchQuery = "";
+            filterCards();
+        });
+    }
+}
+
+function initBackToTop() {
+    const btn = document.getElementById("back-to-top-btn");
+    if (!btn) return;
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            btn.classList.add("visible");
+        } else {
+            btn.classList.remove("visible");
+        }
+    }, { passive: true });
+
+    window.scrollToTop = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
 }
 
 let cachedTerminalModal = null;
